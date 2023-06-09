@@ -11,3 +11,6 @@
 [submodule "PasswordsExt"]
 	path = PasswordsExtension/PasswordsExt
 	url = https://github.com/umer936/PasswordsExt.git
+[submodule "2016scouting"]
+	path = scouting
+	url = https://github.com/umer936/Scouting.git

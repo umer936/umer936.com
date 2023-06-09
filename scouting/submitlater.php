@@ -1,5 +1,0 @@
-<?
-
-$matchnum = $_GET['match'];
-
-?>
