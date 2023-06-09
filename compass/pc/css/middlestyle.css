@@ -1,0 +1,91 @@
+.boxes {
+border:2px groove blue;
+background-color:#FFF;
+opacity:0.4;
+filter:alpha(opacity=40);
+text-align:center;
+border-radius:25px;
+-moz-border-radius:25px;
+}
+
+#notifications {
+position:fixed;
+right:3%;
+top:10%;
+height:50%;
+width:25%;
+overflow:auto;
+}
+
+#news {
+position:fixed;
+left:0;
+top:25%;
+height:25%;
+width:70%;
+}
+
+.alert {
+border:2px groove blue;
+background-color:#FFF;
+opacity:1px;
+filter:alpha(opacity=80);
+text-align:center;
+border-radius:25px;
+position:fixed;
+top:10%;
+left:10%;
+width:80%;
+height:80%;
+background:url('/images/PC%20simple.png');
+background-size:100%;
+margin:0 auto;
+}
+
+.chat-bubble {
+background-color:#EDEDED;
+border:2px solid #666;
+font-size:35px;
+line-height:1.3em;
+position:absolute;
+top:8%;
+right:5%;
+text-align:center;
+width:300px;
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+-moz-box-shadow:0 0 5px #888;
+-webkit-box-shadow:0 0 5px #888;
+margin:10px auto;
+padding:10px;
+}
+
+.chat-bubble-arrow-border {
+height:0;
+width:0;
+position:absolute;
+top:-22px;
+left:100px;
+border-color:transparent transparent #666;
+border-style:solid;
+border-width:10px;
+}
+
+.chat-bubble-arrow {
+height:0;
+width:0;
+position:absolute;
+top:-19px;
+left:100px;
+border-color:transparent transparent #EDEDED;
+border-style:solid;
+border-width:10px;
+}
+
+iframe {
+-webkit-border-radius: 10px;
+}
+
+body {
+font-family: Stardos Stencil, Arial, sans-serif;
+}

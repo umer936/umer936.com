@@ -1,0 +1,23 @@
+{
+  "short_name": "umer936",
+  "name": "Umer Salman",
+  "description": "Umer Salman's Homepage",
+  "icons": [
+    {
+      "src": "https://tipsandtricks.dev/assets/upload/tip-and-tricks-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://tipsandtricks.dev/assets/upload/tip-and-tricks-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/new",
+  "background_color": "#3367D6",
+  "display": "standalone",
+  "id": "/new",
+  "scope": "/new",
+  "theme_color": "#3367D6"
+}
