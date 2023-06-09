@@ -1,0 +1,16 @@
+#hide{line-height:300%;text-shadow:0 0 11px #0F0;width:200px;border:double 4px #F5F5DC;background-color:#000;position:fixed;top:18px;left:15px;font-size:12px}
+#comment:hover{-webkit-box-shadow:2px 3px 4px #FFF}
+#percent{http://americaniphone.com/wp-content/uploads/2010/03/Apple-space-wallpaper.jpg}
+#content{width: 100%;-webkit-box-shadow:3px 4px 5px #FFF;text-shadow:0 1px 1px #000;-webkit-border-radius:3px;border:2px solid #000;color:#FFF}
+a{color:#FFF}
+a:link{color:#F5DEB3;text-shadow:0 1px 1px #000}
+#hideme{background:transparent;width:100px;color:#000;height:50px;position:absolute;top:98px;left:150px;border:none}
+textarea,input{background-color:#FFF;border:2px solid #000}
+img{border:none}
+#content{color:#000;background-color:grey;border:2px solid #000}
+#demo{background-color: silver; color:white; width: 85%; border-radius:20px; border: #fff 2px;} 
+.icon{width: 100px; margin: 25px; background: url('http://img835.imageshack.us/img835/4668/mylogoh.png'); 
+height: 100px; -webkit-border-radius: 30px;-webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);}
+.left{float: left;} 
+.right{float: right;}
+.clear { clear: both;}

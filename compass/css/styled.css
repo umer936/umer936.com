@@ -1,0 +1,214 @@
+#top {
+margin-bottom:59px;
+margin-left:0;
+background-image:url(/bar.jpg);
+border-left:1px solid red;
+border-bottom:1px solid red;
+border-right:1px solid red;
+border-left-bottom:0;
+border-right-bottom:0;
+}
+
+#topscreen {
+height:15px;
+-moz-box-shadow:0 0 2px 2px green;
+-webkit-box-shadow:0 0 2px 2px green;
+box-shadow:0 0 2px 2px green;
+margin-top:33px;
+margin-bottom:0;
+width:240px;
+position:absolute;
+top:0;
+left:0;
+overflow:hidden;
+z-index:1;
+border-top:2px ridge #FFF;
+border-bottom:2px ridge #FFF;
+padding-top:22px;
+background:rgba(0, 0, 0, 0.6);
+text-shadow:0 1px 1px silver;
+color:#FFF;
+}
+
+#content3 {
+background:rgba(0, 0, 0, 0.6);
+text-shadow:0 1px 1px silver;
+color:#FFF;
+width:210px;
+border:2px solid #FFF;
+-webkit-border-radius:4px;
+-webkit-box-shadow:0 0 2px 2px #00008B;
+}
+
+#content2 {
+background:rgba(0, 0, 0, 0.6);
+text-shadow:0 1px 1px silver;
+color:#FFF;
+width:210px;
+border:2px solid #FFF;
+-webkit-border-radius:4px;
+-webkit-box-shadow:0 0 2px 2px red;
+}
+
+.textfield,input:hover {
+-webkit-box-shadow:0 0 2px 2px #FF0;
+box-shadow:0 0 2px 2px #FF0;
+}
+
+.textfield,input {
+background-image:url(/bar.jpg);
+-webkit-box-shadow:0 0 2px 2px #FFF;
+box-shadow:0 0 2px 2px #FFF;
+}
+
+img {
+backgound-color:transparent;
+border:none;
+}
+
+#none {
+width:240px;
+-moz-box-shadow:0 0 2px 2px lime;
+-webkit-box-shadow:0 0 2px 2px lime;
+box-shadow:0 0 2px 2px lime;
+}
+
+#focus {
+-moz-box-shadow:0 0 2px 2px #FFF;
+-webkit-box-shadow:0 0 2px 2px #FFF;
+box-shadow:0 0 2px 2px #FFF;
+}
+
+#hi5 {
+text-shadow:0 1px 1px transparent;
+}
+
+#hideme {
+background:transparent;
+width:60px;
+color:#000;
+height:52px;
+position:absolute;
+bottom:137px;
+left:157px;
+border:none;
+}
+
+#copyright {
+position:absolute;
+top:35px;
+right:11px;
+z-index:2;
+width:auto;
+background:#000;
+background-color:rgba(0, 0, 0, 0.5);
+border-right:1px solid #FFF;
+border-bottom:1px solid #FFF;
+border-left:1px solid #FFF;
+padding:2px;
+}
+
+#inside {
+width:200px;
+border-top:2px ridge #A9A9A9;
+border-bottom:2px ridge #A9A9A9;
+-webkit-box-shadow:0 0 2px 2px #FFF;
+}
+
+  #hide {
+line-height:300%;
+text-shadow:0 0 11px #0F0;
+width:200px;
+border:double 4px #F5F5F5;
+background-color:#000;
+position:fixed;
+top:18px;
+left:15px;
+font-size:12px;
+}
+
+#comment:hover {
+-webkit-box-shadow:2px 3px 4px blue;
+}
+
+#percent {
+http://americaniphone.com/wp-content/uploads/2010/03/Apple-space-wallpaper.jpg;
+}
+
+#content {
+-webkit-box-shadow:3px 4px 5px #000;
+background:rgba(0, 0, 0, 0.6);
+text-shadow:0 1px 1px silver;
+border:2px solid #000;
+color:#FFF;
+}
+
+a {
+color:grey;
+}
+
+a:link {
+color:grey;
+text-shadow:0 1px 1px #000;
+}
+
+#fun {
+display:none;
+-webkit-border-radius:400px;
+width:60px;
+height:60px;
+border:2px solid #000;
+}
+
+body {
+background-image:url(http://bluefaqs.com/wp-content/uploads/2009/07/metal_texture_4_by_wojtar_stock.jpg);
+margin:0;
+}
+
+#comment {
+border-top:2px ridge #FFF;
+border-bottom:2px ridge #FFF;
+border-left:none;
+border-right:none;
+}
+
+#klub2 {
+border:1px solid blue;
+-webkit-border-radius:4px;
+background-image:url(/dotted.png);
+width:200px;
+}
+
+#klub {
+text-shadow:1px 1px 1px #000;
+}
+
+#cooll {
+text-shadow:1px 1px 1px #0FF;
+}
+
+#coll {
+text-shadow:1px 1px 1px blue;
+}
+
+#cool {
+text-shadow:1px 1px 1px red;
+}
+
+textfield,inpu {
+background-color:#FFF;
+border:2px solid #000;
+}
+
+ 
+#top {
+-webkit-border-radius:4px;
+background-image:url(/bar.jpg);
+width:240px;
+}
+
+ #content {
+color:#000;
+background-color:#FFF;
+border:2px ridge silver;
+}

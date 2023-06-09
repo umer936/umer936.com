@@ -1,0 +1,138 @@
+body {
+font-family:Helvetica;
+background:#FFF;
+color:#000;
+overflow:hidden;
+-webkit-text-size-adjust:none;
+margin:0;
+}
+
+body > h1 {
+box-sizing:border-box;
+line-height:20px;
+font-size:20px;
+font-weight:700;
+text-align:center;
+text-shadow:rgba(0, 0, 0, 0.6) 0 -1px 0;
+text-overflow:ellipsis;
+color:#FFF;
+background:url(iPhoneToolbar.png) #6d84a2 repeat-x;
+border-bottom:1px solid #2d3642;
+margin:0;
+padding:10px;
+}
+
+.button {
+position:absolute;
+top:8px;
+right:6px;
+-webkit-border-image:url(iPhoneButton.png) 0 5px 0 5px;
+-webkit-border-radius:0;
+height:28px;
+line-height:28px;
+font-size:12px;
+font-weight:700;
+color:#FFF;
+text-shadow:rgba(0, 0, 0, 0.6) 0 -1px 0;
+text-decoration:none;
+background:none;
+border-width:0 5px;
+padding:0;
+}
+
+#homeButton {
+display:none;
+left:6px;
+right:auto;
+-webkit-border-image:url(iPhoneBackButton.png) 0 8px 0 14px;
+border-width:0 8px 0 14px;
+}
+
+.goButton {
+-webkit-border-image:url(iPhoneGoButton.png) 0 5px 0 5px;
+border-width:0 5px;
+}
+
+body > div,body > form,body > ul {
+display:none;
+position:absolute;
+left:0;
+top:41px;
+width:100%;
+min-height:418px;
+margin:0;
+padding:0;
+}
+
+body > *[selected="true"] {
+display:block;
+}
+
+body > ul > li {
+border-bottom:1px solid #E0E0E0;
+background:url(iPhoneArrow.png) no-repeat right center;
+font-size:20px;
+font-weight:700;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+body > ul > li > a {
+display:block;
+text-decoration:none;
+color:inherit;
+padding:8px 32px 8px 8px;
+}
+
+.panel {
+box-sizing:border-box;
+background:#c8c8c8 url(pinstripes.png);
+padding:10px;
+}
+
+.dialog {
+position:absolute;
+top:0;
+width:100%;
+min-height:468px;
+z-index:2;
+background:rgba(0, 0, 0, 0.8);
+text-align:right;
+padding:0;
+}
+
+fieldset {
+box-sizing:border-box;
+width:100%;
+border:none;
+background:url(iPhoneToolbar.png) #7388a5 repeat-x;
+margin:0;
+padding:10px 6px;
+}
+
+fieldset > h1 {
+font-size:20px;
+font-weight:700;
+color:#FFF;
+text-shadow:rgba(0, 0, 0, 0.6) 0 -1px 0;
+text-align:center;
+margin:0 10px;
+padding:0;
+}
+
+label {
+position:absolute;
+font-size:14px;
+color:#BBB;
+margin:14px 0 0 6px;
+}
+
+input {
+box-sizing:border-box;
+width:100%;
+font-size:16px;
+font-weight:400;
+margin:6px 0 0;
+padding:6px 6px 6px 44px;
+}

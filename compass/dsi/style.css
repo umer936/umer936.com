@@ -1,0 +1,25 @@
+body
+{
+margin: 0px;
+font-size: 20px;
+text-align: center;
+}
+#top, #bottom {
+width: 240px;
+height: 176px;
+overflow: hidden;
+}
+#top {
+background: url(top.png);
+}
+#bottom {
+background: url(bottom.png);
+}
+a {
+background-color: red;
+}
+
+
+
+
+#notifications {width: 200px;border: 4px solid grey;border-radius: 5px;overflow-y: scroll;overflow-x: hidden;z-index: 9; height: 80px;margin:auto;}

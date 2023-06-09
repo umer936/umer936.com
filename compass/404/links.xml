@@ -1,0 +1,96 @@
+<pages>
+<link>
+<title>Browser</title>
+<url>browser.html</url>
+</link>
+<link>
+<title>Notepad</title>
+<url>
+notepad.html
+</url>
+</link>
+<link>
+<title>HTML Editor</title>
+<url>html-editor.html</url>
+</link>
+<link>
+<title>Pictures</title>
+<url>mypictures/</url>
+</link>
+<link>
+<title>File Manager</title>
+<url>http://file-manager.000webhost.com/</url>
+</link>
+<link>
+<title>Opera Browser</title>
+<url>opera.html</url>
+</link>
+<link>
+<title>HTML Box Home</title>
+<url>/</url>
+</link>
+<link>
+<title>Echoer</title>
+<url>echoer.php</url>
+</link>
+<link>
+<title>Calculator</title>
+<url>calc.html</url>
+</link>
+<link>
+<title>HTML Editor Pro</title>
+<url>editor_pro/</url>
+</link>
+<link>
+<title>W3Schools</title>
+<url>http://w3schools.com</url>
+</link>
+<link>
+<title>Apps/Games</title>
+<url>apps</url>
+</link>
+<link>
+<title>Wall</title>
+<url>wall</url>
+</link>
+<link>
+<title>Administrator</title>
+<url>admin</url>
+</link>
+<link>
+<title>Search</title>
+<url>search.php</url>
+</link>
+<link>
+<title>HTML Editor Full</title>
+<url>editor_full.html</url>
+</link>
+<link>
+<title>HTML Box Blog</title>
+<url>http://dan-blog.netau.net</url>
+</link>
+<link>
+<title>Virtual Mac</title>
+<url>http://virtual-mac.netau.net</url>
+</link>
+<link>
+<title>3DS Box</title>
+<url>http://3ds.htmlbox.comxa.com</url>
+</link>
+<link>
+<title>DSi Box</title>
+<url>http://ds.htmlbox.comxa.com</url>
+</link>
+<link>
+<title>Mobile HTML Box</title>
+<url>http://m.htmlbox.comxa.com</url>
+</link>
+<link>
+<title>Jailbreak</title>
+<url>http://jailbreak.htmlbox.comxa.com</url>
+</link>
+<link>
+<title>RSS Feed</title>
+<url>rss.php</url>
+</link>
+</pages>
