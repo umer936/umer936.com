@@ -1,0 +1,12 @@
+ErrorDocument 404 /404/notfound.html
+php_value output_handler ob_gzhandler
+
+AddDefaultCharset UTF-8
+
+IndexIgnore .htaccess *.htm *.txt *.css *.js *.cgi *.php *.html
+
+LimitRequestBody 10240000
+
+<FilesMatch "\.(eot|woff|ttf|svg)$">
+Header set Expires "Thu, 15 Apr 2020 20:00:00 GMT"
+</FilesMatch>

@@ -1,0 +1,16 @@
+http://compass.free
+http://go.to/compass
+http://welcome.to/compass
+http://beam.to/compass
+http://doiop.com/compass
+http://nutshellurl.com/compass
+http://xrl.us/compass
+http://myurl.in/compass
+http://urlgator.com/compass
+http://url.ie/f2tt
+http://got.to/compass
+http://compass.got.to
+http://return.to/compass
+http://compass.return.to
+http://way.to/compass
+http://compass.way.to

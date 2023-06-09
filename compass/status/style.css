@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('/Roboto Font/roboto-regular-webfont.eot');
+    src: url('/Roboto Font/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/Roboto Font/roboto-regular-webfont.woff') format('woff'),
+         url('/Roboto Font/roboto-regular-webfont.ttf') format('truetype'),
+         url('/Roboto Font/roboto-regular-webfont.svg#DroidSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#first,#last {
+border-radius:25px;
+}
+
+#first {
+border:1px solid silver;
+width:50%;
+border-top:none;
+border-top-left-radius:0 0;
+border-top-right-radius:0 0;
+}
+
+#status {
+border:3px groove #000;
+width:95%;
+margin-bottom:10px;
+background:url(http://images.ientrymail.com/photoshoppoint/www/tutorials/16/02.jpg);
+border-radius:10px;
+font-family: RobotoRegular; 
+}
+
+#status:hover {
+transition-duration:1.5s;
+margin-bottom:20px;
+text-shadow:-1px -1px 2px yellow, red 0 2px 3px;
+}
+
+#last {
+border:1px solid silver;
+width:30%;
+border-bottom:none;
+border-bottom-left-radius:0 0;
+border-bottom-right-radius:0 0;
+}
+
+iframe {
+width:90%;
+margin:10px;
+}
+
+input[type="submit"] {
+color:#6f6f6f;
+background-color:#EEE;
+border:solid 2px #000;
+}
+
+input[type="submit"]:hover {
+border:solid 2px blue;
+color:#333;
+}
+
+#first:hover,#last:hover {
+box-shadow:0 0 50px rgba(0, 0, 255, 1);
+-webkit-transition-duration:1.5s;
+}
