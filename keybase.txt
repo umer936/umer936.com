@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/umer936
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://umer936.com
+  * I am umer936 (https://keybase.io/umer936) on keybase.
+  * I have a public key ASACBDikQhpEJEyKTC6ljG2ijqYcXCng8270FmQdDqTaiQo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101d1582769cc70d305675f49a05e99eab7e1372eeb1b697fce0bda45e5a2d7d7180a",
+            "host": "keybase.io",
+            "kid": "0120020438a4421a44244c8a4c2ea58c6da28ea61c5c29e0f36ef416641d0ea4da890a",
+            "uid": "6c9b1870b9415827aa61692008eeca19",
+            "username": "umer936"
+        },
+        "service": {
+            "hostname": "umer936.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.18"
+    },
+    "ctime": 1480975429,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1480975354,
+        "hash": "ea8e741c49f97b1c0f9ee214d8a758f1fda3677c2aea3ad81e7a1653f31b582cb60b97a52c8cfd65f32d3e9230e37c6526f5438dacca987b7cfe5c0f6244d8d5",
+        "seqno": 748723
+    },
+    "prev": "7a5db4f76b9f6bead299139a157e8aa26226c063440eca4db5633b4cf66edf24",
+    "seqno": 12,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgAgQ4pEIaRCRMikwupYxtoo6mHFwp4PNu9BZkHQ6k2okKp3BheWxvYWTFAvJ7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxZDE1ODI3NjljYzcwZDMwNTY3NWY0OWEwNWU5OWVhYjdlMTM3MmVlYjFiNjk3ZmNlMGJkYTQ1ZTVhMmQ3ZDcxODBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMDIwNDM4YTQ0MjFhNDQyNDRjOGE0YzJlYTU4YzZkYTI4ZWE2MWM1YzI5ZTBmMzZlZjQxNjY0MWQwZWE0ZGE4OTBhIiwidWlkIjoiNmM5YjE4NzBiOTQxNTgyN2FhNjE2OTIwMDhlZWNhMTkiLCJ1c2VybmFtZSI6InVtZXI5MzYifSwic2VydmljZSI6eyJob3N0bmFtZSI6InVtZXI5MzYuY29tIiwicHJvdG9jb2wiOiJodHRwOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xOCJ9LCJjdGltZSI6MTQ4MDk3NTQyOSwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDgwOTc1MzU0LCJoYXNoIjoiZWE4ZTc0MWM0OWY5N2IxYzBmOWVlMjE0ZDhhNzU4ZjFmZGEzNjc3YzJhZWEzYWQ4MWU3YTE2NTNmMzFiNTgyY2I2MGI5N2E1MmM4Y2ZkNjVmMzJkM2U5MjMwZTM3YzY1MjZmNTQzOGRhY2NhOTg3YjdjZmU1YzBmNjI0NGQ4ZDUiLCJzZXFubyI6NzQ4NzIzfSwicHJldiI6IjdhNWRiNGY3NmI5ZjZiZWFkMjk5MTM5YTE1N2U4YWEyNjIyNmMwNjM0NDBlY2E0ZGI1NjMzYjRjZjY2ZWRmMjQiLCJzZXFubyI6MTIsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RA/GdEYnVuUB3Nmws1C061mSewD71qAC3zyMZBQy+SsDvGlhlehOmINjOAXYqgV75KUh2Ao6FQJ+7jXomCXkVgDahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIPvsB9261f89+2n6dQxdcVnC2UipBDW5ULWTeiFdZn/uo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/umer936
+
+==================================================================

@@ -1,0 +1,21 @@
+{
+  "background_color": "#ffffff",
+  "description": "Umer Salman",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "umer936",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "umer936",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "categories": [],
+  "screenshots": [],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "type": "image/x-icon"
+    }
+  ],
+  "shortcuts": []
+}

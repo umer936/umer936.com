@@ -1,0 +1,108 @@
+<title>BATTLESHIP &#x1F6A2;</title>
+<style>
+    .btn-group button {
+        background-color: gray;
+        border: 1px solid black;
+        color: white;
+        padding: 10px 24px;
+        cursor: pointer;
+        float: left
+    }
+
+    .btn-group:after {
+        content: '';
+        clear: both;
+        display: table
+    }
+
+    .btn-group button:not(:last-child) {
+        border-right: none
+    }
+
+    .btn-group button:hover {
+        background-color: #3e8e41
+    }
+
+    .clicked::before {
+        content: "\\01F6A2"
+    }
+
+    .hit::before {
+        content: "\\01F525"
+    }
+
+    .miss::before {
+        content: "\\0274C"
+    }
+
+    .sunk::before {
+        content: "\\02620"
+    }
+
+    .btn-group button:not(.clicked):not(.hit):not(.miss):not(.sunk)::before {
+        content: "\\01F30A"
+    }
+
+    #attForm {
+        display: none
+    }
+</style>
+
+<h1>Battleship</h1>
+
+<form id=theForm accept-charset=utf-8><input id=cmd name=move><input type=submit value=PlaceShip></form>
+<form id=attForm accept-charset=utf-8><input id=attack name=att>
+</form>
+<script>
+    var d = document;
+    window.onload = function() {
+        d.getElementById('theForm').onsubmit = function() {
+            var txt = d.getElementById('cmd');
+            var currBoats = d.querySelectorAll('button.clicked.currBoat');
+            var x = currBoats[0].name;
+            var y = currBoats[currBoats.length - 1].name;
+            txt.value = ("00" + x).slice(-2) + ("00" + y).slice(-2);
+            for (i = 0; i < currBoats.length; ++i) {
+                currBoats[i].classList.remove('currBoat')
+            };
+        };
+    };
+
+    function fire(x) {
+        d.getElementById('attack').value = x;
+        d.getElementById('attForm').submit();
+    }
+    d.write("<div id=playerboard><h3>PlayerBoard</h3>");
+    for (var a = 0; a < 8; a++) {
+        d.write("<div class=btn-group style='width:100%'>");
+        for (var b = 0; b < 8; b++) {
+            d.write("<button onclick=this.classList.toggle('clicked');this.classList.toggle('currBoat'); name='" + eval(a * 8 + b) + "' style='width:10%'></button>");
+        }
+        d.write("</div>");
+    }
+    d.write("</div><hr><div id=CPUboard><h3>CPUBoard</h3>");
+    for (var a = 0; a < 8; a++) {
+        d.write("<div class=btn-group style='width:100%'>");
+        for (var b = 0; b < 8; b++) {
+            var q = eval(a * 8 + b);
+            var cN = "n";
+            if (d.getElementById('R') !== null) {
+                var p = new URL(window.location.href).searchParams.get('att');
+                var h = d.getElementById('R').innerText;
+                if (q == p) {
+                    console.log(h);
+                    if (h == 'H') {
+                        cN = 'hit'
+                    } else if (h == 'M') {
+                        cN = 'miss'
+                    } else {
+                        cN = 'sunk'
+                    }
+                }
+            }
+            d.write("<button class=" + cN + " onclick=fire(" + q + ");name=" + q + " style='width:10%'></button>");
+        }
+        d.write("</div>");
+    }
+    d.write("</div>");
+</script>
