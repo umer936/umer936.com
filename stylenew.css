@@ -1,0 +1,264 @@
+:root {
+  --primary-color: #39B7CD;
+  --secondary-color: #00CDCD;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(/fonts/Oswald.woff) format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Play-Bold'), url(/fonts/Play.woff) format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Quicksand Regular'), local('Quicksand-Regular'), url(/fonts/Quicksand.woff) format('woff');
+  font-display: swap;
+}
+
+@media screen and (max-width: 600px),
+all and (orientation: portrait) {
+  #nav,
+  #phonenav {
+    display: none !important;
+  }
+  #phonenav {
+    display: inline !important;
+  }
+}
+
+body {
+  background: #13efed url("/images/umer936.png") no-repeat fixed center center;
+  background-size: cover;
+  height: 90%;
+  overflow-x: hidden;
+  color: var(--primary-color);
+  margin: 0;
+  user-select: none;
+}
+
+#main {
+  padding-top: 15%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+a:hover {
+  background-color: #50729F;
+}
+
+#top {
+  font-family: 'Oswald', sans-serif;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: var(--secondary-color);
+  padding: 30px 30px 4px;
+  background: linear-gradient(to bottom, #000000 41%, #000000 94%, #5b5b5b 99%, rgba(109, 109, 109, 0.2) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#336d6d6d', GradientType=0);
+  user-select: none;
+}
+
+#name {
+  position: fixed;
+  top: 0;
+  padding-top: 30px;
+  padding-left: 60px;
+}
+
+.nav-bar {
+  font-family: 'Play', sans-serif;
+  position: fixed;
+  top: 30px;
+  right: 90px;
+  z-index: 9;
+  padding: 12px;
+  font-size: 1.2em;
+  color: var(--secondary-color);
+}
+
+#phonenav {
+  font-family: 'Play', sans-serif;
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  z-index: 9;
+  padding: 12px;
+  font-size: 1.2em;
+  color: var(--secondary-color);
+  display: none;
+}
+
+.nav-bar a.active {
+  color: #4A777A;
+}
+#actualphonenav li a.active {
+  color: #4A777A;
+}
+
+#actualphonenav {
+  display: none;
+  font-family: 'Play', sans-serif;
+  z-index: 89;
+  background: black;
+  border-radius: 10px 10px 0 0;
+  padding: 25%;
+  border: 2px solid rgba(109, 109, 109, 0.2);
+  border-top: 0;
+}
+
+#phonenav:hover > #actualphonenav {
+  display: block !important;
+}
+
+li ul li {
+  display: block;
+}
+
+#meatwrap {
+  text-align: center;
+}
+
+#meat {
+  font-family: 'Quicksand', sans-serif;
+  position: fixed;
+  top: 35%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  color: var(--primary-color);
+  font-size: 420%;
+}
+
+footer {
+  position: fixed;
+  top: 95%;
+  color: #6996AD;
+  user-select: none;
+}
+
+#socialwrap {
+  text-align: center;
+}
+
+#social {
+  position: fixed;
+  top: 75%;
+  color: #6996AD;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  user-select: none;
+}
+
+#destroy {
+  position: fixed;
+  top: 95%;
+  color: #6996AD;
+  right: 10px;
+  user-select: none;
+}
+
+.left {
+  background: #6e7774;
+  background: linear-gradient(to right, #6e7774 -1%, #6e7774 1%, #0a0e0a 55%, #0a0809 100%);
+}
+
+.right {
+  background: #0a0809;
+  background: linear-gradient(to right, #0a0809 0%, #0a0e0a 45%, #6e7774 99%, #6e7774 101%);
+}
+
+.left,
+.right {
+  height: 50%;
+  padding: 3%;
+}
+
+@media screen and (max-width: 1024px) {
+  .left,
+  .right {
+    font-size: 1.2em;
+    padding: 10%;
+  }
+  .leftimg {
+    height: 512px !important;
+  }
+}
+
+.leftimg {
+  height: 256px;
+}
+
+.sprites {
+  background: url('images/sprites.png') no-repeat;
+  text-indent: 100%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.sprite-Twitter {
+  background-position: 0 0;
+}
+
+.sprite-7cups {
+  background-position: 0 -114px;
+}
+
+.sprite-cube2 {
+  background-position: 0 -228px;
+}
+
+.sprite-github {
+  background-position: 0 -342px;
+}
+
+.sprite-gplus-64 {
+  background-position: 0 -456px;
+}
+
+.sprite-ig {
+  background-position: 0 -570px;
+}
+
+.sprite-reddit {
+  background-position: 0 -684px;
+}
+
+.sprite-stackoverflow {
+  background-position: 0 -798px;
+}
+
+.sprite-xda {
+  background-position: 0 -912px;
+  width: 63px;
+}
+
+.sprite-Twitter,
+.sprite-7cups,
+.sprite-cube2,
+.sprite-github,
+.sprite-gplus-64,
+.sprite-ig,
+.sprite-reddit,
+.sprite-stackoverflow,
+.sprite-xda {
+  width: 64px;
+  height: 64px;
+}
