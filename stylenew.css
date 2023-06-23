@@ -150,7 +150,7 @@ footer {
   position: fixed;
   top: 95%;
   color: #6996AD;
-  user-select: none;
+  left: 10px;
 }
 
 #socialwrap {
@@ -169,10 +169,7 @@ footer {
 
 #destroy {
   position: fixed;
-  top: 95%;
-  color: #6996AD;
   right: 10px;
-  user-select: none;
 }
 
 .left {

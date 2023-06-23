@@ -49,9 +49,15 @@
 </div>
 
 <footer>
-    ©2014 Umer Salman. Last updated: 06/15/2023
+    ©2014-2023 Umer Salman. Last updated: 06/15/2023 |
+    <a href="javascript:alert('Privacy is dead');">Privacy Policy</a>
+    <span
+        id="destroy"
+        onclick="
+        var KICKASSVERSION='2.0';var s = document.createElement('script');
+        s.type='text/javascript';document.body.appendChild(s);s.src='//hi.kickassapp.com/kickass.js';
+        void(0);">
+        Destroy this page
+    </span>
 </footer>
 
-<div id="destroy">
-    <span onclick="var KICKASSVERSION='2.0';var s = document.createElement('script');s.type='text/javascript';document.body.appendChild(s);s.src='//hi.kickassapp.com/kickass.js';void(0);">Destroy this page</span>
-</div>

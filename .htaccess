@@ -92,3 +92,21 @@ Header unset Last-Modified
 FileETag none
 ExpiresActive On
 ExpiresDefault "access plus 6 months"
+
+RewriteEngine On
+
+# Redirect requests for "/blog" to "/blog/"
+RewriteRule ^blog$ /blog/ [R=301,L]
+
+# Exclude the "/blog/" URL from further rewriting
+RewriteRule ^blog/$ - [L]
+
+# Exclude CSS files from rewriting
+RewriteRule ^blog/blog\.css$ - [L]
+
+# Rewrite requests for "/blog/some-post" to "/markdown-blog/some-post"
+RewriteRule ^blog/(.*)$ /markdown-blog/$1 [L]
+
+# Exclude existing files and directories from rewriting
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d

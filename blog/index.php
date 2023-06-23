@@ -6,9 +6,15 @@ include_once '../include.php';
 <title>Blog | Umer Salman</title>
 <div id="main">
 
+    <div style="background-color: black">
+        <h1>NEW BLOG:</h1>
+        <?php include_once '../markdown-blog/blog-posts-list.php'; ?>
+    </div>
+
+    <div style="height: 40px"></div>
 
     <div id="blog" style="background-color: black;">
-        Blog:
+        <h1>Old Blog:</h1>
 
         <br/><br/><br/><br/>
         I'm so sad.
@@ -37,3 +43,9 @@ include_once '../include.php';
 
 
 </div>
+<style>
+    .blog-post {
+        background: darkslategray;
+        color: lavender;
+    }
+</style>
