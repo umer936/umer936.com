@@ -23,39 +23,50 @@ include_once 'header.php';
         </div>
     </div>
 
-    <div class="container fw-light text-center p-5" style="color: var(--blue); font-size: 420%">
-        <span class="custom-wrap">
-            CODER. PROGRAMMER. DESIGNER.
+    <div class="container fw-light text-center p-3" style="color: var(--blue); font-size: 420%">
+        <span class="fw-bold col-12" style="font-family: Quicksand">
+            <span class="custom-wrap"><span class="section-pipe" id="hidden-pipe">|</span>CODER</span><span class="custom-wrap"><span class="section-pipe">|</span>PROGRAMMER</span><span class="custom-wrap"><span class="section-pipe">|</span>DESIGNER</span>
         </span>
     </div>
+    <br>
 
-    <div class="container fw-light fs-2 text-center pb-4" style="color: var(--primary-color)">
-        <a href="https://instagram.com/umer936?ref=badge">
-            <span class="sprites sprite-ig"></span></a>
-        |
-        <a href="https://7cupsoftea.com/@umer936/">
-            <span class="sprites sprite-7cups"></span></a>
-        |
-        <a href="https://socialcu.be/@umer936">
-            <span class="sprites sprite-cube2"></span></a>
-        |
-        <a href="https://github.com/umer936">
-            <span class="sprites sprite-github"></span></a>
-        |
-        <a href="https://www.reddit.com/user/Umer936/">
-            <span class="sprites sprite-reddit"></span></a>
-        |
-        <a href="https://stackoverflow.com/users/2646359/umer936">
-            <span class="sprites sprite-stackoverflow"></span></a>
-        |
-        <a href="https://twitter.com/umer936">
-            <span class="sprites sprite-Twitter"></span></a>
-        |
-        <a href="https://forum.xda-developers.com/member.php?u=4704799">
-            <span class="sprites sprite-xda"></span></a>
+    <div class="container text-center fw-light fs-2 p-2 my-2" style="color: var(--primary-color)">
+        <div class="row d-flex flex-wrap justify-content-center">
+            <a class="social-link col" href="https://instagram.com/umer936?ref=badge">
+                <img class="social-logo"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/132px-Instagram_logo_2016.svg.png"
+                     alt="Instagram"></a>
+            <a class="social-link col" href="https://7cupsoftea.com/@umer936/">
+                <img class="social-logo"
+                     src="https://d37v7cqg82mgxu.cloudfront.net/img/active-listeners-therapy.svg"
+                     alt="7 Cups of Tea"></a>
+            <a class="social-link col" href="https://socialcu.be/@umer936">
+                <img class="social-logo"
+                     src="https://socialcu.be/Images/cube_icon_web_min.svg"
+                     alt="SocialCube"></a>
+            <a class="social-link col" href="https://github.com/umer936">
+                <img class="social-logo"
+                     src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+                     alt="GitHub"></a>
+            <a class="social-link col" href="https://www.reddit.com/user/Umer936/">
+                <img class="social-logo"
+                     src="https://upload.wikimedia.org/wikipedia/en/b/bd/Reddit_Logo_Icon.svg"
+                     alt="Reddit"></a>
+            <a class="social-link col" href="https://stackoverflow.com/users/2646359/umer936">
+                <img class="social-logo"
+                     src="https://www.vectorlogo.zone/logos/stackoverflow/stackoverflow-icon.svg"
+                     alt="Stack Overflow"></a>
+            <a class="social-link col" href="https://forum.xda-developers.com/m/umer936.4704799/">
+                <img class="social-logo"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Xda_logo.svg/512px-Xda_logo.svg.png"
+                     alt="XDA Developers Forum">
+            </a>
+        </div>
     </div>
 
-    <div class="container fw-light fs-1 text-center p-3 text-decoration-underline" style="color: var(--primary-color)">
+
+
+    <div class="container fw-light fs-1 text-center p-3 text-decoration-underline section-header fw-bold">
         My works
     </div>
 
@@ -90,7 +101,7 @@ include_once 'header.php';
     </div>
 
 
-    <div class="container fw-light fs-1 text-center p-3 text-decoration-underline" style="color: var(--primary-color)">
+    <div class="container fw-light fs-1 text-center p-3 text-decoration-underline section-header fw-bold">
         Contact
     </div>
 <?php

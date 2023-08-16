@@ -26,53 +26,6 @@
             --secondary-color: #00CDCD;
         }
 
-        .sprites {
-            background:url(../images/sprites.png) no-repeat;
-            text-indent:100%;
-            overflow:hidden;
-            display:inline-block
-        }
-        .sprite-Twitter {
-            background-position:0 0
-        }
-        .sprite-7cups {
-            background-position:0 -114px
-        }
-        .sprite-cube2 {
-            background-position:0 -228px
-        }
-        .sprite-github {
-            background-position:0 -342px
-        }
-        .sprite-gplus-64 {
-            background-position:0 -456px
-        }
-        .sprite-ig {
-            background-position:0 -570px
-        }
-        .sprite-reddit {
-            background-position:0 -684px
-        }
-        .sprite-stackoverflow {
-            background-position:0 -798px
-        }
-        .sprite-xda {
-            background-position:0 -912px;
-            width:63px
-        }
-        .sprite-Twitter,
-        .sprite-7cups,
-        .sprite-cube2,
-        .sprite-github,
-        .sprite-gplus-64,
-        .sprite-ig,
-        .sprite-reddit,
-        .sprite-stackoverflow,
-        .sprite-xda {
-            width:64px;
-            height:64px
-        }
-
         .custom-card-text {
             display: -webkit-box;
             -webkit-box-orient: vertical;
@@ -81,23 +34,121 @@
             text-overflow: ellipsis;
         }
 
-
-        .custom-wrap {
-            overflow-wrap: normal; /* Prevents word break until word is wider than container */
-        }
-
         @media (max-width: 576px) {
             .custom-wrap {
                 overflow-wrap: break-word; /* Enable word break on small screens */
             }
         }
+
+
+        .social-link {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 10px; /* Adjust this margin as needed */
+            border-left: 2px solid transparent; /* Initial border */
+            padding-left: 10px; /* Add padding for space next to border */
+        }
+
+        .social-link:first-child {
+            border-left: none; /* Remove border on the first link */
+            padding-left: 0; /* Remove padding on the first link */
+        }
+
+        .social-link + .social-link {
+            border-left-color: var(--primary-color); /* Add border between adjacent links */
+        }
+
+        .social-logo {
+            min-width: 64px;
+            width: 64px;
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        @font-face {
+            font-family: "Mecha";
+            src: url("../fonts/mecha_cf/Mecha.ttf") format("truetype");
+        }
+
+        @font-face {
+            font-family: "Mecha Condensed";
+            src: url("../fonts/mecha_cf/Mecha_Condensed.ttf") format("truetype");
+        }
+
+        @font-face {
+            font-family: "Quicksand";
+            src: url("../fonts/Quicksand.woff") format("truetype");
+        }
+
+        @font-face {
+            font-family: "Play";
+            src: url("../fonts/Play.woff") format("truetype");
+        }
+
+        @font-face {
+            font-family: "Oswald";
+            src: url("../fonts/Oswald.woff") format("truetype");
+        }
+
+        @font-face {
+            font-family: "OpenSans";
+            src: url("../fonts/Open_Sans/static/OpenSans-Regular.ttf") format("truetype");
+        }
+
+        .section-header {
+            font-family: "Mecha", sans-serif;
+            color: var(--primary-color);
+        }
+
+
+
+
+        .custom-wrap {
+            overflow-wrap: normal; /* Prevents word break until word is wider than container */
+        }
+        #hidden-pipe {
+            display: none;
+        }
+
+        @media (max-width: 992px) {
+            #hidden-pipe {
+                display: inline;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .custom-wrap {
+                overflow-wrap: anywhere; /* Enable word break on small screens */
+                display: inline-block;
+                float: left;
+            }
+        }
+
+        .section-pipe {
+            color: var(--orange);
+            margin: 0 10px;
+            overflow-wrap: break-word;
+            position: relative;
+        }
+
+        /*.custom-wrap::before, .custom-wrap::after {*/
+        /*    content: "|";*/
+        /*    color: var(--orange);*/
+        /*    padding: 0 15px;*/
+        /*}*/
+
+        body {
+            font-family: "OpenSans";
+        }
     </style>
+    <link href="https://allfont.net/allfont.css?fonts=agency-fb" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" href="/newer">
-            <div class="row align-items-center">
+            <div class="row align-items-center" style="font-family: Play">
                 <div class="col-auto">
                     <img src="/images/logoh.png"
                          width="48"
