@@ -24,6 +24,8 @@
 
             --primary-color: #39B7CD;
             --secondary-color: #00CDCD;
+            --dark-purple: #22153f;
+            --dark-red: #4c0000;
         }
 
         .custom-card-text {
@@ -32,12 +34,6 @@
             -webkit-line-clamp: 3; /* Number of lines to show */
             overflow: hidden;
             text-overflow: ellipsis;
-        }
-
-        @media (max-width: 576px) {
-            .custom-wrap {
-                overflow-wrap: break-word; /* Enable word break on small screens */
-            }
         }
 
 
@@ -68,41 +64,51 @@
 
         @font-face {
             font-family: "Mecha";
-            src: url("../fonts/mecha_cf/Mecha.ttf") format("truetype");
+            src: url("/fonts/mecha_cf/Mecha.ttf") format("truetype");
         }
 
         @font-face {
             font-family: "Mecha Condensed";
-            src: url("../fonts/mecha_cf/Mecha_Condensed.ttf") format("truetype");
+            src: url("/fonts/mecha_cf/Mecha_Condensed.ttf") format("truetype");
         }
 
         @font-face {
             font-family: "Quicksand";
-            src: url("../fonts/Quicksand.woff") format("truetype");
+            src: url("/fonts/Quicksand.woff") format("truetype");
         }
 
         @font-face {
             font-family: "Play";
-            src: url("../fonts/Play.woff") format("truetype");
+            src: url("/fonts/Play.woff") format("truetype");
         }
 
         @font-face {
             font-family: "Oswald";
-            src: url("../fonts/Oswald.woff") format("truetype");
+            src: url("/fonts/Oswald.woff") format("truetype");
         }
 
         @font-face {
             font-family: "OpenSans";
-            src: url("../fonts/Open_Sans/static/OpenSans-Regular.ttf") format("truetype");
+            src: url("/fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
         }
 
         .section-header {
             font-family: "Mecha", sans-serif;
             color: var(--primary-color);
+            background-image: url('/images/newer/section_bar_g10.svg');
+            padding: .25rem !important;
+            text-shadow: -4px 4px 3px #22153f;
         }
 
+        .svg-header-background {
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
 
-
+        .svg-section-background {
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+        }
 
         .custom-wrap {
             overflow-wrap: normal; /* Prevents word break until word is wider than container */
@@ -111,7 +117,7 @@
             display: none;
         }
 
-        @media (max-width: 992px) {
+        @media (max-width: 825px) {
             #hidden-pipe {
                 display: inline;
             }
@@ -120,8 +126,8 @@
         @media (max-width: 576px) {
             .custom-wrap {
                 overflow-wrap: anywhere; /* Enable word break on small screens */
-                display: inline-block;
                 float: left;
+                text-align: start;
             }
         }
 
@@ -132,34 +138,41 @@
             position: relative;
         }
 
-        /*.custom-wrap::before, .custom-wrap::after {*/
-        /*    content: "|";*/
-        /*    color: var(--orange);*/
-        /*    padding: 0 15px;*/
-        /*}*/
-
         body {
             font-family: "OpenSans";
+        }
+
+        #logo-text {
+            color: var(--blue);
+            font-family: "Mecha", sans-serif;
+            font-size: 2.5rem;
+            /*text-shadow: -3px 4px 1px #22153f;*/
+            /*text-shadow: -3px 4px 2px #22153f;*/
+            text-shadow: -6px 6px 2px #22153f;
+        }
+
+        #logo-img {
+            width: 108px;
+        }
+
+        #contact {
+            background-image: url("/images/newer/section_bg_g194.svg");
+            background-repeat: no-repeat;
+            background-size: 139% auto;
         }
     </style>
     <link href="https://allfont.net/allfont.css?fonts=agency-fb" rel="stylesheet" type="text/css" />
 </head>
+<?php
+$sectionHeaderClasses = "container svg-header-background fs-1 text-center mt-5 section-header fw-bold";
+?>
 <body>
 <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" href="/newer">
-            <div class="row align-items-center" style="font-family: Play">
-                <div class="col-auto">
-                    <img src="/images/logoh.png"
-                         width="48"
-                         height="48"
-                         alt="umer936 Logo">
-                </div>
-                <div class="col">
-                    Umer Salman
-                    <br>
-                    Umer936
-                </div>
+            <div class="row align-items-center">
+                <img class="col" id="logo-img" src="/images/newer/logo_group_g464.svg" alt="umer936 Logo">
+                <div class="col fs-1" id="logo-text">Umer Salman</div>
             </div>
         </a>
         <button class="navbar-toggler"

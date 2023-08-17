@@ -3,7 +3,7 @@ include_once '../header.php';
 ?>
 
 
-    <div class="container fw-light fs-1 p-3 text-decoration-underline" style="color: var(--primary-color)">
+    <div class="<?= $sectionHeaderClasses ?> section-">
         Blog Posts
     </div>
 
