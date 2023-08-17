@@ -1,0 +1,154 @@
+
+:root {
+    --darkgray: #333333;
+    --gray: #4D4D4D;
+    --lightgray: #999999;
+
+    --green: #C2E15F;
+    --orange: #FDA333;
+    --purple: #D3A4F9;
+    --red: #FB4485;
+    --blue: #6CE0F1;
+    --yellow: #FFEB3D;
+    --lightblue: #00B9F2;
+    --pink: #FB3199;
+    --lightorange: #BF8040;
+
+    --primary-color: #39B7CD;
+    --secondary-color: #00CDCD;
+    --dark-purple: #22153f;
+    --dark-red: #4c0000;
+}
+
+.custom-card-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Number of lines to show */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.social-link {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px; /* Adjust this margin as needed */
+    border-left: 2px solid transparent; /* Initial border */
+    padding-left: 10px; /* Add padding for space next to border */
+}
+
+.social-link:first-child {
+    border-left: none; /* Remove border on the first link */
+    padding-left: 0; /* Remove padding on the first link */
+}
+
+.social-link + .social-link {
+    border-left-color: var(--primary-color); /* Add border between adjacent links */
+}
+
+.social-logo {
+    min-width: 64px;
+    width: 64px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+@font-face {
+    font-family: "Mecha";
+    src: url("/fonts/mecha_cf/Mecha.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Mecha Condensed";
+    src: url("/fonts/mecha_cf/Mecha_Condensed.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("/fonts/Quicksand.woff") format("truetype");
+}
+
+@font-face {
+    font-family: "Play";
+    src: url("/fonts/Play.woff") format("truetype");
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("/fonts/Oswald.woff") format("truetype");
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("/fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+}
+
+.section-header {
+    font-family: "Mecha", sans-serif;
+    color: var(--primary-color);
+    background-image: url('/images/newer/section_bar_g10.svg');
+    padding: .25rem !important;
+    text-shadow: -4px 4px 3px #22153f;
+}
+
+.svg-header-background {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.svg-section-background {
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.custom-wrap {
+    overflow-wrap: normal; /* Prevents word break until word is wider than container */
+}
+#hidden-pipe {
+    display: none;
+}
+
+@media (max-width: 825px) {
+    #hidden-pipe {
+        display: inline;
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-wrap {
+        overflow-wrap: anywhere; /* Enable word break on small screens */
+        float: left;
+        text-align: start;
+    }
+}
+
+.section-pipe {
+    color: var(--orange);
+    margin: 0 10px;
+    overflow-wrap: break-word;
+    position: relative;
+}
+
+body {
+    font-family: "OpenSans";
+}
+
+#logo-text {
+    color: var(--blue);
+    font-family: "Mecha", sans-serif;
+    font-size: 2.5rem;
+    /*text-shadow: -3px 4px 1px #22153f;*/
+    /*text-shadow: -3px 4px 2px #22153f;*/
+    text-shadow: -6px 6px 2px #22153f;
+}
+
+#logo-img {
+    width: 108px;
+}
+
+#contact {
+    background-image: url("/images/newer/section_bg_g194.svg");
+    background-repeat: no-repeat;
+    background-size: 139% auto;
+}
