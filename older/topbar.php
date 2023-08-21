@@ -28,20 +28,20 @@
     </a>
 
     <div class="nav-bar" id="nav">
-        <a class="<?= $homeActive ?>" href="/">Home</a> |
-        <a class="<?= $stuffActive ?>" href="/stuff">What I do</a> |
-        <a class="<?= $blogActive ?>" href="/blog">How I do it</a> |
-        <a class="<?= $aboutActive ?>" href="/about">About Me</a>
+        <a class="<?= $homeActive ?>" href="/older/">Home</a> |
+        <a class="<?= $stuffActive ?>" href="/older/stuff">What I do</a> |
+        <a class="<?= $blogActive ?>" href="/older/blog">How I do it</a> |
+        <a class="<?= $aboutActive ?>" href="/older/about">About Me</a>
     </div>
 
     <phonenav>
         <ul>
             <li id="phonenav"><a href="#">&#9776; Menu</a>
                 <ul id="actualphonenav">
-                    <li><a class="<?= $homeActive ?>" href="/">Home</a></li>
-                    <li><a class="<?= $stuffActive ?>" href="/stuff">What I do</a></li>
-                    <li><a class="<?= $blogActive ?>" href="/blog">How I do it</a></li>
-                    <li><a class="<?= $aboutActive ?>" href="/about">About Me</a></li>
+                    <li><a class="<?= $homeActive ?>" href="/older/">Home</a></li>
+                    <li><a class="<?= $stuffActive ?>" href="/older/stuff">What I do</a></li>
+                    <li><a class="<?= $blogActive ?>" href="/older/blog">How I do it</a></li>
+                    <li><a class="<?= $aboutActive ?>" href="/older/about">About Me</a></li>
                 </ul>
             </li>
         </ul>

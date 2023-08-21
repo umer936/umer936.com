@@ -25,7 +25,7 @@ AddDefaultCharset UTF-8
     ExpiresDefault "access plus 6 months"
 </IfModule>
 
-ErrorDocument 404 /404.php
+ErrorDocument 404 /older/404.php
 
 # Prevent directory listing
 Options -Indexes

@@ -1,51 +1,47 @@
 <?php
-include_once '../analytics.php';
-include_once '../topbar.php';
-include_once '../include.php';
+include_once '../header.php';
 ?>
-<title>Blog | Umer Salman</title>
-<div id="main">
 
-    <div style="background-color: black">
-        <h1>NEW BLOG:</h1>
-        <?php include_once '../markdown-blog/blog-posts-list.php'; ?>
-    </div>
 
-    <div style="height: 40px"></div>
-
-    <div id="blog" style="background-color: black;">
-        <h1>Old Blog:</h1>
-
-        <br/><br/><br/><br/>
-        I'm so sad.
-        <br/><br/>
-        My backpack is ripped, so my mom says I have to get a new one... <br/><br/>
-
-        My backpack was the best. I took it on a drive from California to Texas, from Texas to Mississippi. In the
-        United States it's been to California, Arizona, New Mexico, Texas, Mississippi, Alabama, Georgia, Tennessee, New
-        York, Philadelphia, Massachusetts, and Missouri. I've also taken it to Canada, London, Pakistan, Turkey, and
-        Greece... I'm going to miss it...
-        <br/><br/>
-        I told one of my friends this (who went on many trips with me in Mississippi and Philidelphia) and she said:
-        <br/>
-        "Oh Umer's backpack<br/>
-        We knew ye well<br/>
-        You engulfed all of Umer's stuff<br/>
-        And some of mine too haha<br/>
-        And never failed to reproduce it<br/>
-        Take care, dear backpack<br/>
-        You may be ripped<br/>
-        But you'll be intact in our hearts<br/>
-        *subtle sobs*" <br/><br/><br/>
-
-        May my backpack Rip In Pieces. May it RIP...
+    <div class="<?= $sectionHeaderClasses ?>">
+        Blog Posts
     </div>
 
 
-</div>
-<style>
-    .blog-post {
-        background: darkslategray;
-        color: lavender;
-    }
-</style>
+    <div class="container my-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <?php
+
+            for ($i = 0; $i < 10; $i++) {
+
+            ?>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body row">
+                        <img src="https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png"
+                             class="col-md-4"
+                             alt="...">
+                        <div class="col-md-8">
+                            <h5 class="card-title"><a href="#aaa">Card title</a></h5>
+                            <p class="card-text custom-card-text">
+                                This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">08/15/2023</small>
+                    </div>
+                </div>
+            </div>
+            <?php
+
+            }
+
+            ?>
+        </div>
+    </div>
+
+<?php
+
+include_once '../footer.php';

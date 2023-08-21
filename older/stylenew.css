@@ -204,7 +204,7 @@ footer {
 }
 
 .sprites {
-  background: url('images/sprites.png') no-repeat;
+  background: url('/images/sprites.png') no-repeat;
   text-indent: 100%;
   overflow: hidden;
   display: inline-block;

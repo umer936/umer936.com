@@ -1,13 +1,17 @@
 <?php
-include_once 'include.php';
-include_once 'analytics.php';
-include_once 'topbar.php';
+include_once 'header.php';
 ?>
 
-<div style="text-align: center;">
-    <br/><br/><br/><br/><br/><br/><br/>
-    <h2>404: Page Not Found</h2>
-    <div id="main">
-        Where did you come from? Go back home!
+
+    <div class="<?= $sectionHeaderClasses ?>">
+        404: Page Not Found
     </div>
-</div>
+
+    <div class="text-center">
+        Where did you come from? Go back <a href="/">home</a>!
+    </div>
+    <br/><br/><br/><br/><br/><br/><br/>
+
+<?php
+
+include_once 'footer.php';
