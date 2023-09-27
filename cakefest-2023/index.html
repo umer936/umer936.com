@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>UMER SALMAN: CakeFest 2023</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/umer936.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+          crossorigin="anonymous">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+
+
+
+<!--14:00--14:45-->
+
+<!--
+I want slide numbers and name and date in the corners
+logo by slide numbers?
+-->
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h3>Agile Deployment of CakePHP Web Applications in a Hybrid, Hybrid Kubernetes Cluster</h3>
+            Umer Salman<br>
+            <strong>CakeFest 2023</strong><br>
+        </section>
+        <section>
+            <h2>Agenda</h2>
+            <ul>
+                <li>About me</li>
+                <li>SwRI Space Science</li>
+                <li>What we needed</li>
+                <li>What we accomplished</li>
+                <li>Tools</li>
+                <li>What's next?</li>
+                <li>Wrap-up</li>
+                <li>Q&A</li>
+            </ul>
+        </section>
+        <section>
+            <h1>Who am I?</h1>
+            <div class="row">
+                <div class="col-7">
+                    <strong>Umer Salman</strong>, <em><a href="https://umer936.com">@umer936</a></em>
+                    <ul class="mt-2">
+                        <li>
+                            <a href="https://www.swri.org/">
+                                <img src="img/SwRI%20Logo%20White.webp" alt="SwRI" class="w-25 m-auto">
+                            </a>, San Antonio, TX
+                        </li>
+                        <li>
+                            BS ECE from <img src="img/utexas-primary-horizontal-logo.svg" alt="UT Austin" class="m-auto w-50">
+                        </li>
+                        <li>PHP since the Nintendo DSi<img src="img/NintendoDSi.webp" alt="Nintendo DSi" class="m-auto w-25 row"></li>
+                        <li>Robotics and cybersecurity</li>
+                        <li>Also like cars, tropical weather, building things
+                            <br>(DIY, arts and crafts, etc.)</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <img src="img/UMER.jpg" alt="Umer">
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1>SwRI Space Science</h1>
+                <ul>
+                    <li>Been using CakePHP since the 1.x versions</li>
+                    <li>45+ CakePHP Projects supporting Space Science Operations</li>
+                    <li>
+                        Constantly improving with CakePHP ecosystem
+                        <ul>
+                            <li>Plugins: User accounts, Queues</li>
+                            <li>Overrides</li>
+                            <li>Modularization</li>
+                        </ul>
+                    </li>
+                    <li>Bootstrap</li>
+                </ul>
+        </section>
+<!--        Conference Websites to show modularization
+         GeoViz -> Show params -> queue (reloading) -> result
+          - takes long. sometimes fails, locks up the webserver
+          - what if we change it?
+         UVSOps
+          - interactivity
+         GenericSOCs
+          - CuSP, VSEO, Ceres, MERiT, CoDICE, etc.
+          - Plots
+          - Access controls
+          - Data ingestion
+          - Same issues
+        -->
+        <section>
+            <a href="https://geoviz.space.swri.edu">
+                <figure>
+                    <img src="img/GeoVizv2.0_Plots.png" alt="GeoViz v2.0">
+                    <figcaption>https://geoviz.space.swri.edu</figcaption>
+                </figure>
+            </a>
+        </section>
+        <section>
+            <h1>Cloud Terminology</h1>
+            Docker / containerization (podman)
+            Galley - Alex
+            Kubernetes <em>helmsman</em> (k3s)
+            Amazon Web Services (AWS)
+            Amazon Web Services (AWS) Simple Storage Service (S3)
+            Microservices
+        </section>
+
+<!--
+needs
+
+
+-->
+
+        <section>
+            <table class="table table-sm table-dark table-striped table-hover fs-5" aria-describedby="Deploy Methods">
+                <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Pros</th>
+                    <th scope="col">Cons</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Bare-metal</th>
+                    <td>Apache/nginx, MySQL, etc.</td>
+                    <td>
+                        <ul class="m-auto">
+                            <li>Tried and tested</li>
+                            <li>Many resources</li>
+                            <li>Straightforward (ports, certs...)</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="m-auto">
+                            <li>Updates</li>
+                            <li>Security</li>
+                            <li>Conflicts</li>
+                            <li>Portability</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Cloud (AWS)</th>
+                    <td>Using a cloud provider</td>
+                    <td>
+                        <ul class="m-auto">
+                            <li>Infrastructure not your job</li>
+                            <li>Backups</li>
+                            <li>Speed</li>
+                            <li>Redundancy</li>
+                            <li>Microservices</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="m-auto">
+                            <li>
+                                $$$
+                                <ul class="m-auto fs-6">
+                                    <li>
+                                        "Amazon Prime Video dumped AWS for its video QA team...cut costs 90%." <a href="https://www.thestack.technology/amazon-prime-video-microservices-monolith/">[1]</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Complicated - AWS/GCP ecosystem</li>
+                            <li>Microservices</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Docker, WAMPP, XAMPP, Laragon</th>
+                    <td>Idea of a separate environs per app</td>
+                    <td>
+                        <ul class="m-auto">
+                            <li>Separation</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="m-auto">
+                            <li>Doesn't deploy to webserver well</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Docker-compose (Galley/Devilbox)</th>
+                    <td>docker-compose.yml to keep services separate</td>
+                    <td>
+                        <ul class="m-auto">
+                            <li>Separation</li>
+                            <li>Simple</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="m-auto">
+                            <li>Not distributable</li>
+                            <li>Scaling</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Hybrid Kubernetes</th>
+                    <td>Containerize everything. Use AWS + on-prem</td>
+                    <td>
+                        <ul class="m-auto">
+                            <li>Redundancy</li>
+                            <li>Scaling</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="m-auto">
+                            <li>Complicated... Rancher?</li>
+                            <li>All-in</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Hybrid-hybrid</th>
+                    <td>Containerize some things, deploy some places</td>
+                    <td>
+                        <ul class="m-auto">
+                            <li>Progressive enhancement</li>
+                            <li>Fallbacks</li>
+                            <li>Scaling</li>
+                            <li>No lock-ins</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="m-auto">
+                            <li>More parts to keep track of</li>
+                            <li>Not optimized</li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <a href="https://landscape.cncf.io/">
+                <figure>
+                    <img src="img/CNCF_Landscape.png" alt="CNCF Landscape">
+                    <figcaption>https://landscape.cncf.io/</figcaption>
+                </figure>
+            </a>
+        </section>
+        <section>
+            <h3>Hybrid, hybrid setup</h3>
+            <section>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dS5gSagRl74?si=ZbEOds6Tgr5BniTU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <br>
+                <a href="https://gitlab.com/amayer5125/galley">Start with Galley!</a>
+            </section>
+            <section>
+
+            </section>
+            <section>
+            <pre><code data-trim data-noescape>
+/*
+ * See https://github.com/josegonzalez/php-dotenv for API details.
+ *
+ * Uncomment block of code below if you want to use `.env` file during development.
+ * You should copy `config/.env.example` to `config/.env` and set/modify the
+ * variables as required.
+ *
+ * The purpose of the .env file is to emulate the presence of the environment
+ * variables like they would be present in production.
+ *
+ * If you use .env files, be careful to not commit them to source control to avoid
+ * security risks. See https://github.com/josegonzalez/php-dotenv#general-security-information
+ * for more information for recommended practices.
+*/
+if (!getenv('SITE_KEY')) {
+    if (!env('APP_NAME') && file_exists(CONFIG . '.env')) {
+        $dotenv = new Loader([CONFIG . '.env']);
+        $dotenv->parse()
+            ->putenv()
+            ->toEnv()
+            ->toServer();
+    }
+    if (is_string('SITE_KEY')) {
+        define('SITE_KEY', getenv('SITE_KEY'));
+    } else {
+        dd('SITE_KEY NOT DEFINED. Create config/.env file from config/.env.example');
+    }
+}
+            </code>
+            </pre>
+                bootstrap.php
+            </section>
+            <section>
+            <pre><code data-trim data-noescape>
+#!/usr/bin/env bash
+
+DEBUG=true
+
+SITE_KEY="WhiteLabel" # Cassini Mars Vseo Cluster Enpa WhiteLabel Merit Lucy
+
+# used for cake and docker-compose.yml
+DB_HOST="mysql" # mysql for docker, localhost for testserver, etc
+DB_DATABASE="sitename" # vseo
+DB_USERNAME="root"
+DB_PASSWORD="XXXXXX"
+
+# These are what we use in docker-compose.yml
+RABBITMQ_USERNAME="myuser"
+RABBITMQ_PASSWORD="mypassword"
+
+            </code>
+            </pre>
+                config/.env
+                <hr>
+                <code data-trim data-noescape>ln -s config/.env .env</code>
+        </section>
+        </section>
+        <section>
+            <h1>Modularization</h1>
+        </section>
+        <section>
+            <section>
+                <h4>Modularization</h4>
+                <h3 class="fragment">Plugins</h3>
+                <div class="row">
+                    <img src="img/pluginsDir.png" alt="Plugins Dir" class="fragment col-4">
+                    <div class="col-8 fragment">
+                <pre>
+                    <code data-trim data-noescape>
+/*
+ * Load an plugin configuration file to
+ * provide overrides to your configuration.
+ */
+$siteKey = strtolower(getenv ('SITE_KEY'));
+$pluginAppPath =
+    Configure::read('App.paths.plugins')[0] .
+    getenv ('SITE_KEY') . DS . 'config' . DS;
+
+$pluginAppFile = 'app_' . $siteKey;
+if (file_exists($pluginAppPath . $pluginAppFile . '.php')) {
+    Configure::config('plugin', new PhpConfig($pluginAppPath));
+    Configure::load($pluginAppFile, 'plugin');
+}
+                    </code>
+                </pre>
+                        bootstrap.php
+                    </div>
+                </div>
+
+            </section>
+            <section>
+                <pre>
+                    <code data-trim data-noescape>
+        $additionalPlugins = Configure::read('AdditionalPlugins');
+        if (!empty($additionalPlugins)) {
+            foreach ($additionalPlugins as $additionalPlugin => $additionalPluginConfig) {
+                if (is_array($additionalPluginConfig)) {
+                    $this->addPluginToPsr($additionalPlugin);
+                } else {
+                    $this->addPluginToPsr($additionalPluginConfig);
+                }
+            }
+        }
+                    </code>
+                </pre>
+                bootstrap()
+                <pre>
+                    <code data-trim data-noescape>
+    private function addPluginToPsr($plugin): void
+    {
+        /** @var ClassLoader $loader */
+        $loader = require ROOT . '/vendor/autoload.php';
+        $loader->addPsr4($plugin . '\\', ROOT . DS . 'plugins' . DS . $plugin . DS . 'src');
+        $this->addPlugin($plugin, ['bootstrap' => true, 'routes' => true]);
+    }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <pre>
+                    <code data-trim data-noescape>
+    'AdditionalPlugins' => [
+        'HealthAndSafety' => [
+            'configFiles' => [
+                'Telemetry Definitions' => 'tlm_def',
+                'Science Lookup Table' => 'sci_lut',
+                'Energy Tables for Hi' => 'energy_tables_hi',
+                'Energy Tables for Lo' => 'energy_tables_lo',
+            ],
+            'configFileExts' => ['xls', 'xlsx', 'xlsm', 'xtce'],
+        ],
+        'QueueableTasks'
+    ],
+
+    'Codice' => [
+        'Constants' => [
+            'SITE_THEME' => 'Codice',
+            'SITE_NAME' => 'IMAP/CoDICE',
+            'SITE_TITLE' => 'IMAP: Interstellar Mapping and Acceleration Probe / CoDICE: Compact Dual Ion Composition Experiment',
+            'POWERPOINT_COLOR' => '605ca8',
+            'SKIN' => 'grey',
+        ],
+        'Helpers' => [
+            'Treeview' => [...],
+            ],
+        ],
+    ],
+                    </code>
+                </pre>
+                app_codice.php
+                </section>
+<!--            TODO: Should I have this in here?-->
+            <section>
+                <pre>
+                    <code data-trim data-noescape>
+<?php
+declare(strict_types=1);
+
+namespace App\Middleware;
+
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\MiddlewareInterface;
+use Psr\Http\Server\RequestHandlerInterface;
+
+/**
+ * PluginRouting middleware
+ */
+class PluginRoutingMiddleware implements MiddlewareInterface
+{
+    /**
+     * Process method.
+     *
+     * @param \Psr\Http\Message\ServerRequestInterface $request The request.
+     * @param \Psr\Http\Server\RequestHandlerInterface $handler The request handler.
+     * @return \Psr\Http\Message\ResponseInterface A response.
+     */
+    public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
+    {
+        $params = $request->getAttribute('params', []);
+        // If controller does not exist in plugin, direct to Base src
+        if (
+            !empty($params['plugin']) &&
+            $params['plugin'] === SITE_KEY &&
+            !empty($params['controller']) &&
+            !class_exists($params['plugin'] . '\Controller\\' . $params['controller'] . 'Controller')
+        ) {
+            $params['plugin'] = null;
+        }
+        $request = $request->withAttribute('params', $params);
+
+        return $handler->handle($request);
+    }
+}
+
+                    </code>
+                </pre>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h4>Modularization</h4>
+                <h3 class="fragment">Queues</h3>
+                <table class="table table-sm table-dark table-striped table-hover fs-5" aria-describedby="Queues">
+
+                </table>
+            </section>
+        </section>
+        <section>
+            Rancher, Gitea, DependencyTrack, Watchtower, Longhorn, MinIO
+            Prometheus, Grafana
+        </section>
+        <section id="wrap-up">
+            These slides are available @ <br>
+            <a href="https://umer936.com/cakefest-2023/">https://umer936.com/cakefest-2023/</a>
+            <hr>
+            Feel free to contact:<br>
+            Slack: umer936<br>
+            <a href="mailto:umer936@gmail.com">umer936@gmail.com</a><br>
+            <a href="https://github.com/umer936">https://github.com/umer936</a>
+        </section>
+    </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+</script>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('.backgrounds').insertAdjacentHTML('beforeend',
+            '<footer class="top-100 position-sticky fs-6 pb-2 ps-1">Umer Salman | 09/30/2023</footer>');
+    });
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+</html>
