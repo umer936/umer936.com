@@ -23,16 +23,79 @@
 
 <!--14:00--14:45-->
 
-<!--
-I want slide numbers and name and date in the corners
-logo by slide numbers?
--->
 <div class="reveal">
     <div class="slides">
         <section>
-            <h3>Agile Deployment of CakePHP Web Applications in a Hybrid, Hybrid Kubernetes Cluster</h3>
-            Umer Salman<br>
-            <strong>CakeFest 2023</strong><br>
+            <section>
+                <h3>Agile Deployment of CakePHP Web Applications in a Hybrid, Hybrid Kubernetes Cluster</h3>
+                Umer Salman<br>
+                <strong>CakeFest 2023</strong>
+            </section>
+            <section>
+                <h1>Intro</h1>
+                <br>
+                Space probe sensors are higher precision and take more readings per second than ever before
+                <hr>
+                <em>What does that mean?</em>
+                <br>
+                It means we need a better, faster, and more robust way
+                <br>
+                <br>
+                Rather than moving the data to the software (e.g. Excel files, CSVs)...
+                <br>
+                Let's move the software to the data
+                                <!--
+                Space science data has exploded.
+                The data received from space probes was
+                smaller than the software. That has changed
+                as sensors have gone to higher precision and
+                more readings per second. Instead of moving and
+                ingesting the data to the software, we needed
+                a better way - moving the software to the data
+                (on the cloud).
+
+                Recently (within the last year) we've fleshed
+                out a Kubernetes deployable system and have
+                modularized CakePHP web applications. These web
+                applications are primarily for data
+                visualization of science and engineering
+                data. We'll showcase how to deploy the apps
+                in a hybrid Kubernetes cluster, which includes
+                on-premises servers, a high-performance
+                computing cluster (for the resource-intensive
+                jobs), and AWS. We'll also demonstrate how to
+                deploy in a Docker environment using the Galley
+                plugin as well as a "normal" deployment on a
+                webserver with apache/mysql/etc. That way any
+                performance is progressive and you don't lose
+                the ability to do a normal system deployment
+                if the client needs it to be so.
+
+                The talk will show how to scale these services
+                to meet customer needs, queuing with
+                dereuromark-queue and the cakephp queue
+                plugins, and other associated tools we
+                have found for dependency management,
+                on-prem repositories, etc.
+                -->
+            </section>
+        </section>
+        <section>
+            <h1>Prior CakeFest Talks</h1>
+            <small>on this topic</small>
+            <div class="row">
+                <div class="col-6">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fPER7au2cmA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <br>
+                    <a href="https://youtu.be/fPER7au2cmA">https://youtu.be/fPER7au2cmA</a>
+                    <!-- - Rancher etc, more CI/CD, testing-->
+                </div>
+                <div class="col-6">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dS5gSagRl74" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <br>
+                    <a href="https://youtu.be/dS5gSagRl74">https://youtu.be/dS5gSagRl74</a>
+                </div>
+            </div>
         </section>
         <section>
             <h2>Agenda</h2>
@@ -86,6 +149,7 @@ logo by slide numbers?
                         </ul>
                     </li>
                     <li>Bootstrap</li>
+                    <li>Integrate with IDL, Python, and other space science codebases</li>
                 </ul>
         </section>
 <!--        Conference Websites to show modularization
@@ -102,29 +166,68 @@ logo by slide numbers?
           - Same issues
         -->
         <section>
-            <a href="https://geoviz.space.swri.edu">
-                <figure>
-                    <img src="img/GeoVizv2.0_Plots.png" alt="GeoViz v2.0">
-                    <figcaption>https://geoviz.space.swri.edu</figcaption>
-                </figure>
-            </a>
+            <section>
+                <h4>GeoViz v2.0</h4>
+                <a href="https://geoviz.space.swri.edu">
+                    <figure>
+                        <div class="r-stack">
+                            <img class="fragment fade-out" src="img/gv_intro.png" alt="GeoViz v2.0">
+                            <img class="fragment fade-in-then-out" src="img/gv_prog.png" alt="GeoViz v2.0">
+                            <img class="fragment fade-in-then-out" src="img/gv_output.png" alt="GeoViz v2.0">
+                            <img class="fragment" src="img/gv_queue.png" alt="GeoViz v2.0">
+                        </div>
+                        <figcaption>https://geoviz.space.swri.edu</figcaption>
+                    </figure>
+                </a>
+            </section>
+            <section>
+                <h4>Hot Plasma Composition Analyzer (HPCA)</h4>
+                <a href="https://hpca.space.swri.edu">
+                    <figure>
+                        <img src="img/HPCA.png" alt="HPCA" class="w-50">
+                        <figcaption>https://hpca.space.swri.edu</figcaption>
+                    </figure>
+                </a>
+            </section>
+            <section>
+                <h4>Generic Conference</h4>
+                <a href="https://junoworkshop.space.swri.edu">
+                    <figure>
+                        <img src="img/JunoWorkshops.png" alt="Juno Workshops">
+                        <figcaption>https://junoworkshop.space.swri.edu</figcaption>
+                    </figure>
+                </a>
+            </section>
+            <section>
+                <h4>Generic Conference</h4>
+                <a href="https://junoworkshop.space.swri.edu/saoct2023">
+                    <figure>
+                        <img src="img/JunoWorkshop.png" class="w-50" alt="Juno Workshop">
+                        <figcaption>https://junoworkshop.space.swri.edu/saoct2023</figcaption>
+                    </figure>
+                </a>
+            </section>
+            <section>
+                <h4>WebSOC (Science Operations Center)</h4>
+                <div class="r-stack">
+                    <img src="img/cusp_home.png" alt="cusp_home">
+                    <img class="fragment fade-in-then-out" src="img/lucy_home.png" alt="lucy_home">
+                    <img class="fragment fade-in-then-out" src="img/merit_home.png" alt="merit_home">
+                    <img class="fragment fade-in-then-out" src="img/vseo_home.png" alt="vseo_home">
+                </div>
+            </section>
         </section>
         <section>
             <h1>Cloud Terminology</h1>
-            Docker / containerization (podman)
-            Galley - Alex
-            Kubernetes <em>helmsman</em> (k3s)
-            Amazon Web Services (AWS)
-            Amazon Web Services (AWS) Simple Storage Service (S3)
-            Microservices
+            <ul>
+                <li>Docker / containerization / podman</li>
+                <li>Galley - Alex Mayer CakePHP plugin</li>
+                <li>Kubernetes <em>helmsman</em><!--means pilot--> (k3s)</li>
+                <li>Amazon Web Services (AWS)</li>
+                <li>AWS Simple Storage Service (S3)</li>
+                <li>Microservices</li>
+            </ul>
         </section>
-
-<!--
-needs
-
-
--->
-
         <section>
             <table class="table table-sm table-dark table-striped table-hover fs-5" aria-describedby="Deploy Methods">
                 <thead>
@@ -142,7 +245,7 @@ needs
                     <td>
                         <ul class="m-auto">
                             <li>Tried and tested</li>
-                            <li>Many resources</li>
+                            <li>Many docs/guides</li>
                             <li>Straightforward (ports, certs...)</li>
                         </ul>
                     </td>
@@ -156,7 +259,7 @@ needs
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row">Cloud (AWS)</th>
+                    <th scope="row">Cloud (AWS/GCP/Azure/Oracle Cloud)</th>
                     <td>Using a cloud provider</td>
                     <td>
                         <ul class="m-auto">
@@ -203,6 +306,7 @@ needs
                         <ul class="m-auto">
                             <li>Separation</li>
                             <li>Simple</li>
+                            <li>Easy to add <a href="#/tools" class="text-light">Tools</a></li>
                         </ul>
                     </td>
                     <td>
@@ -250,6 +354,54 @@ needs
             </table>
         </section>
         <section>
+            <h3>Containers</h3>
+            <ul class="overflow-y-auto" style="height: 600px">
+                <li>
+                    SDDAS (plotting library) Container
+                    <ul>
+                        <li>Development Container</li>
+                        <li>Ubuntu</li>
+                        <li>Needs GUI</li>
+                    </ul>
+                </li>
+                <li>
+                    Web pod - based on <a href="https://gitlab.com/amayer5125/galley">Galley</a>
+                    <ul>
+                        <li>Ubuntu</li>
+                        <li>Nginx</li>
+                        <li>PHP</li>
+                        <li>CakePHP app</li>
+                        <li>npm?</li>
+                    </ul>
+                </li>
+                <li>
+                    Messaging Container - rabbitmq
+                </li>
+                <li>
+                    Database Container - MySQL/Postgres
+                </li>
+                <li>
+                    NodeJS?
+                </li>
+                <li>
+                    Data Processing Container - Python
+                </li>
+                <li>
+                    Visualization Container
+                    <ul>
+                        <li>SDDAS</li>
+                        <li>Python</li>
+                    </ul>
+                </li>
+                <li>
+                    Certs Volume
+                </li>
+                <li>
+                    Workerspace Volume
+                </li>
+            </ul>
+        </section>
+        <section>
             <a href="https://landscape.cncf.io/">
                 <figure>
                     <img src="img/CNCF_Landscape.png" alt="CNCF Landscape">
@@ -265,7 +417,28 @@ needs
                 <a href="https://gitlab.com/amayer5125/galley">Start with Galley!</a>
             </section>
             <section>
+            <pre><code data-trim data-noescape>
+#!/usr/bin/env bash
 
+DEBUG=true
+
+SITE_KEY="WhiteLabel" # Cassini Mars Vseo Cluster Enpa WhiteLabel Merit Lucy
+
+# used for cake and docker-compose.yml
+DB_HOST="mysql" # mysql for docker, localhost for testserver, etc
+DB_DATABASE="sitename" # vseo
+DB_USERNAME="root"
+DB_PASSWORD="XXXXXX"
+
+# These are what we use in docker-compose.yml
+RABBITMQ_USERNAME="myuser"
+RABBITMQ_PASSWORD="mypassword"
+
+            </code>
+            </pre>
+                config/.env
+                <hr>
+                Pro-tip: <code data-trim data-noescape>ln -s config/.env .env</code>
             </section>
             <section>
             <pre><code data-trim data-noescape>
@@ -301,30 +474,6 @@ if (!getenv('SITE_KEY')) {
             </pre>
                 bootstrap.php
             </section>
-            <section>
-            <pre><code data-trim data-noescape>
-#!/usr/bin/env bash
-
-DEBUG=true
-
-SITE_KEY="WhiteLabel" # Cassini Mars Vseo Cluster Enpa WhiteLabel Merit Lucy
-
-# used for cake and docker-compose.yml
-DB_HOST="mysql" # mysql for docker, localhost for testserver, etc
-DB_DATABASE="sitename" # vseo
-DB_USERNAME="root"
-DB_PASSWORD="XXXXXX"
-
-# These are what we use in docker-compose.yml
-RABBITMQ_USERNAME="myuser"
-RABBITMQ_PASSWORD="mypassword"
-
-            </code>
-            </pre>
-                config/.env
-                <hr>
-                <code data-trim data-noescape>ln -s config/.env .env</code>
-        </section>
         </section>
         <section>
             <h1>Modularization</h1>
@@ -332,10 +481,13 @@ RABBITMQ_PASSWORD="mypassword"
         <section>
             <section>
                 <h4>Modularization</h4>
-                <h3 class="fragment">Plugins</h3>
+                <h3 class="fragment" data-fragment-index="1">Plugins</h3>
                 <div class="row">
-                    <img src="img/pluginsDir.png" alt="Plugins Dir" class="fragment col-4">
-                    <div class="col-8 fragment">
+                    <div class="col-4 r-stack">
+                        <img src="img/pluginsDir.png" alt="Plugins Dir" class="fragment" data-fragment-index="2">
+                        <img src="img/plugin_codice.png" alt="Plugin Codice" class="fragment" data-fragment-index="4">
+                    </div>
+                    <div class="col-8 fragment" data-fragment-index="3">
                 <pre>
                     <code data-trim data-noescape>
 /*
@@ -358,34 +510,6 @@ if (file_exists($pluginAppPath . $pluginAppFile . '.php')) {
                     </div>
                 </div>
 
-            </section>
-            <section>
-                <pre>
-                    <code data-trim data-noescape>
-        $additionalPlugins = Configure::read('AdditionalPlugins');
-        if (!empty($additionalPlugins)) {
-            foreach ($additionalPlugins as $additionalPlugin => $additionalPluginConfig) {
-                if (is_array($additionalPluginConfig)) {
-                    $this->addPluginToPsr($additionalPlugin);
-                } else {
-                    $this->addPluginToPsr($additionalPluginConfig);
-                }
-            }
-        }
-                    </code>
-                </pre>
-                bootstrap()
-                <pre>
-                    <code data-trim data-noescape>
-    private function addPluginToPsr($plugin): void
-    {
-        /** @var ClassLoader $loader */
-        $loader = require ROOT . '/vendor/autoload.php';
-        $loader->addPsr4($plugin . '\\', ROOT . DS . 'plugins' . DS . $plugin . DS . 'src');
-        $this->addPlugin($plugin, ['bootstrap' => true, 'routes' => true]);
-    }
-                    </code>
-                </pre>
             </section>
             <section>
                 <pre>
@@ -419,33 +543,48 @@ if (file_exists($pluginAppPath . $pluginAppFile . '.php')) {
                     </code>
                 </pre>
                 app_codice.php
-                </section>
-<!--            TODO: Should I have this in here?-->
+            </section>
             <section>
                 <pre>
                     <code data-trim data-noescape>
-<?php
-declare(strict_types=1);
+        $additionalPlugins = Configure::read('AdditionalPlugins');
+        if (!empty($additionalPlugins)) {
+            foreach ($additionalPlugins as $additionalPlugin => $additionalPluginConfig) {
+                if (is_array($additionalPluginConfig)) {
+                    $this->addPluginToPsr($additionalPlugin);
+                } else {
+                    $this->addPluginToPsr($additionalPluginConfig);
+                }
+            }
+        }
+                    </code>
+                </pre>
+                bootstrap()
+                <pre>
+                    <code data-trim data-noescape>
+    private function addPluginToPsr($plugin): void
+    {
+        /** @var ClassLoader $loader */
+        $loader = require ROOT . '/vendor/autoload.php';
+        $loader->addPsr4($plugin . '\\', ROOT . DS . 'plugins' . DS . $plugin . DS . 'src');
+        $this->addPlugin($plugin, ['bootstrap' => true, 'routes' => true]);
+    }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <pre>
+                    <code data-trim data-noescape>
+            $builder->connect('/{controller}', ['action' => 'index', 'plugin' => getenv ('SITE_KEY')]);
+            $builder->connect('/{controller}/{action}/*', ['plugin' => getenv ('SITE_KEY')]);
+                    </code>
+                </pre>
+                routes.php
+            </section>
+            <section>
+                <pre>
+                    <code data-trim data-noescape>
 
-namespace App\Middleware;
-
-use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\ServerRequestInterface;
-use Psr\Http\Server\MiddlewareInterface;
-use Psr\Http\Server\RequestHandlerInterface;
-
-/**
- * PluginRouting middleware
- */
-class PluginRoutingMiddleware implements MiddlewareInterface
-{
-    /**
-     * Process method.
-     *
-     * @param \Psr\Http\Message\ServerRequestInterface $request The request.
-     * @param \Psr\Http\Server\RequestHandlerInterface $handler The request handler.
-     * @return \Psr\Http\Message\ResponseInterface A response.
-     */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
         $params = $request->getAttribute('params', []);
@@ -462,26 +601,125 @@ class PluginRoutingMiddleware implements MiddlewareInterface
 
         return $handler->handle($request);
     }
-}
-
                     </code>
                 </pre>
+               PluginRoutingMiddleware.php
             </section>
         </section>
         <section>
             <section>
                 <h4>Modularization</h4>
                 <h3 class="fragment">Queues</h3>
-                <table class="table table-sm table-dark table-striped table-hover fs-5" aria-describedby="Queues">
-
+                <table class="table table-sm table-dark table-striped table-hover fs-5 fragment" aria-describedby="Queues">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>Pros</th>
+                        <th>Cons</th>
+                        <th>What we use</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="https://github.com/dereuromark/cakephp-queue">dereuromark-queue</a></td>
+                        <td>
+                            <ul class="p-0">
+                                <li>Simple</li>
+                                <li>Local</li>
+                                <li>Progress</li>
+                                <li>Abort</li>
+                                <li>Requeue</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="p-0">
+                                <li>Config conflicts</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="p-0">
+                                <li>Models</li>
+                                <li>Templates</li>
+                                <li>Cli</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://github.com/cakephp/queue">Cake/queue</a></td>
+                        <td>
+                            <ul class="p-0">
+                                <li>Compatible</li>
+                                <li>Distributable</li>
+                                <li>Scalable</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="p-0">
+                                <li>
+                                    A little confusing
+                                    <ul class="p-0">
+                                        <li>Responsibilities</li>
+                                    </ul>
+                                </li>
+                                <li>Config conflicts</li>
+                                <li>Naming</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="p-0">
+                                <li>Controllers</li>
+                                <li>Interface</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
                 </table>
             </section>
         </section>
-        <section>
-            Rancher, Gitea, DependencyTrack, Watchtower, Longhorn, MinIO
-            Prometheus, Grafana
+        <section id="tools">
+            <h3>Tools</h3>
+            <ul class="overflow-y-auto" style="height: 600px">
+                <li>Rancher</li>
+                <li>Dashy</li>
+                <li>
+                    Gitea
+                    <ul class="p-0">
+                        <li>Container Registry</li>
+                    </ul>
+                </li>
+                <li>DependencyTrack</li>
+                <li>Watchtower</li>
+                <li>Longhorn</li>
+                <li>MinIO</li>
+                <li>Prometheus</li>
+                <li>Grafana</li>
+                <li>Traefik</li>
+                <li>Colima (containers on Linux with Mac)</li>
+<!--                commandline usage-->
+                <li>Cockpit Project</li>
+                <li>Lazy Docker / Lazy Kubernetes</li>
+            </ul>
         </section>
-        <section id="wrap-up">
+        <section>
+            <h3>What's next</h3>
+            <ul>
+                <li>Tie things together</li>
+                <li>Metrics</li>
+                <li>CI/CD - Gitea Actions</li>
+                <li>Autoscaling</li>
+                <li>Optimization - Ubuntu --> Alpine</li>
+                <!--                <li class="text-decoration-line-through"></li>-->
+                <li>Documentation</li>
+                <li>
+                    Things like SSL not trusted / CA certs
+                    <pre><code>git config --system http.sslCAPath /etc/pki/tls/certs</code></pre>
+                    <pre><code>git config --global http.sslVerify "false" </code></pre>
+                </li>
+                <li>AWS</li>
+                <li><a href="https://www.youtube.com/@TechnoTim">YouTube - TechnoTim</a></li>
+            </ul>
+        </section>
+        <section id="wrap-up-q-and-a">
             These slides are available @ <br>
             <a href="https://umer936.com/cakefest-2023/">https://umer936.com/cakefest-2023/</a>
             <hr>

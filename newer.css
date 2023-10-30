@@ -60,23 +60,8 @@
 }
 
 @font-face {
-    font-family: "Mecha Condensed";
-    src: url("/fonts/mecha_cf/Mecha_Condensed.ttf") format("truetype");
-}
-
-@font-face {
     font-family: "Quicksand";
     src: url("/fonts/Quicksand.woff") format("truetype");
-}
-
-@font-face {
-    font-family: "Play";
-    src: url("/fonts/Play.woff") format("truetype");
-}
-
-@font-face {
-    font-family: "Oswald";
-    src: url("/fonts/Oswald.woff") format("truetype");
 }
 
 @font-face {
@@ -132,7 +117,7 @@
 }
 
 body {
-    font-family: "OpenSans";
+    font-family: "OpenSans", sans-serif;
 }
 
 #logo-text {
