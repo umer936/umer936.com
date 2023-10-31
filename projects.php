@@ -102,13 +102,16 @@
     const projCardsContainer = document.getElementById('projDiv');
     let iso;
     let numProjCardsShown = 3;
+    let selectedCategories = [];
+    let selectedYear = null;
 
     // Initialize Isotope on page load
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         iso = new Isotope(projCardsContainer, {
             itemSelector: '.projCard',
             percentPosition: true
         });
+
         // Add an "arrangeComplete" event listener to Isotope
         iso.on('arrangeComplete', function (filteredItems) {
             const noItemsMessage = document.getElementById('noItemsMessage');
@@ -128,7 +131,9 @@
         // Filter and display the next set of cards
         iso.arrange({
             filter: function (element, index) {
-                return index < numProjCardsShown;
+                return index < numProjCardsShown &&
+                    (selectedYear === null || isYearInRange(element)) &&
+                    isCategorySelected(element);
             }
         });
 
@@ -137,64 +142,71 @@
     });
 
     // "Shuffle" button click event
-    document.getElementById("shuffleButton").addEventListener("click", () => iso.shuffle());
+    document.getElementById("shuffleButton").addEventListener("click", () => {
+        iso.shuffle();
+    });
+
+    document.getElementById("filterClearButton").addEventListener("click", () => {
+        document.querySelector('#yearRange').value = null;
+        document.querySelector('#yearSelected').textContent = null;
+        selectedYear = null;
+        categoryCheckboxes.forEach(checkbox => checkbox.checked = false);
+        selectedCategories = [];
+        iso.arrange({filter: '*'});
+    });
 
     // Year range filter input event
-    document.querySelector('#yearRange').addEventListener('input', function () {
+    document.querySelector('#yearRange').addEventListener('input', yearFilter);
+
+    function yearFilter() {
         // Selected year
-        const selectedYear = parseInt(this.value);
+        selectedYear = parseInt(this.value);
 
         // Update the displayed selected year
         document.querySelector('#yearSelected').textContent = selectedYear;
 
-        // Use Isotope to filter based on the selected year
+        // Reapply the filters with both year and category criteria
         iso.arrange({
             filter: function (element) {
-                // Extract the data-year attribute from the element
-                const cardYear = element.getAttribute('data-year');
-                if (cardYear) {
-                    // Parse the year range
-                    const yearRange = cardYear.split('-');
-                    const startYear = parseInt(yearRange[0]);
-                    const endYear = parseInt(yearRange[1]);
-
-                    // Check if the selected year is within the range
-                    return selectedYear >= startYear && selectedYear <= endYear;
-                }
-                // If data-year attribute is missing or invalid, show the element
-                return true;
-            },
+                return (selectedYear === null || isYearInRange(element)) && isCategorySelected(element);
+            }
         });
-    });
+    }
 
     // Category filter checkbox click event
     const categoryCheckboxes = document.querySelectorAll('.btn-check');
     categoryCheckboxes.forEach(checkbox => {
         checkbox.addEventListener('change', function () {
-            const selectedCategories = [];
+            selectedCategories = Array.from(document.querySelectorAll('.btn-check:checked'))
+                .map(cb => parseInt(cb.getAttribute('data-category-id')));
 
-            categoryCheckboxes.forEach(cb => {
-                if (cb.checked) {
-                    selectedCategories.push(parseInt(cb.getAttribute('data-category-id')));
-                }
-            });
-
+            // Reapply the filters with both year and category criteria
             iso.arrange({
                 filter: function (element) {
-                    const categoriesInElement = Array.from(element.querySelectorAll('.badge')).map(badge => {
-                        return parseInt(badge.getAttribute('data-category-id'));
-                    });
-
-                    if (selectedCategories.length === 0) {
-                        // Show all items when no categories are selected
-                        return true;
-                    } else {
-                        // Show items that have all the selected categories
-                        return selectedCategories.every(category => categoriesInElement.includes(category));
-                    }
-                },
+                    return (selectedYear === null || isYearInRange(element)) && isCategorySelected(element);
+                }
             });
         });
     });
+
+    // Function to check if the year of an element is within the selected range
+    function isYearInRange(element) {
+        const cardYear = element.getAttribute('data-year');
+        if (cardYear) {
+            const yearRange = cardYear.split('-');
+            const startYear = parseInt(yearRange[0]);
+            const endYear = parseInt(yearRange[1]);
+            return selectedYear >= startYear && selectedYear <= endYear;
+        }
+        return false;
+    }
+
+    // Function to check if the categories of an element match the selected categories
+    function isCategorySelected(element) {
+        const categoriesInElement = Array.from(element.querySelectorAll('.badge'))
+            .map(badge => parseInt(badge.getAttribute('data-category-id')));
+        return selectedCategories.length === 0
+            || selectedCategories.every(category => categoriesInElement.includes(category));
+    }
 
 </script>

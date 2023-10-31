@@ -97,8 +97,11 @@ include_once 'header.php';
     </style>
 
     <div class="container p-1">
+    <div class="text-center fs-4" style="font-family: 'Play', sans-serif">
+        <button id="shuffleButton" class="btn fs-3 py-0">🔀 Shuffle</button>
+        <button id="filterClearButton" class="btn fs-3 py-0">Clear filters</button>
+    </div>
         <div class="text-center fs-4" style="font-family: 'Play', sans-serif">
-            <button id="shuffleButton" class="btn fs-3 py-0">🔀 Shuffle</button>
 
             <?php
             $allCategories = [
