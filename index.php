@@ -1,37 +1,44 @@
 <?php
 include_once 'header.php';
 ?>
+<style>
+    .hero_image {
+        background: url('/images/newer/umers_assets-2_g1734.svg') center/cover;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+</style>
 
-    <div class="container py-5">
-        <div class="row border p-4">
-            <div class="col-8">
-                <img height="100px">
-                <div class="row">
-                    <a class="col btn btn-primary mx-3 fw-bold" href="#contact">contact me!</a>
-                    <a class="col btn btn-outline-primary mx-3 fw-bold d-none d-sm-block"
+    <div>
+        <div class="hero_image">
+            <div class="col-12">
+                <div class="py-5">
+                    <a class="col btn btn-lg btn-primary fw-bold m-1 ms-3" href="#contact">contact me!</a>
+                    <a class="col btn btn-lg btn-outline-info fw-bold m-1 ms-2 d-none d-md-inline"
                        onclick="if (!window.__cfRLUnblockHandlers) return false;
-                       alert('use arrow keys and spacebar');
-            var KICKASSVERSION='2.0';var s = document.createElement('script');
-            s.type='text/javascript';document.body.appendChild(s);s.src='//hi.kickassapp.com/kickass.js';
-            void(0);">
+                   alert('use arrow keys and spacebar');
+        var KICKASSVERSION='2.0';var s = document.createElement('script');
+        s.type='text/javascript';document.body.appendChild(s);s.src='//hi.kickassapp.com/kickass.js';
+        void(0);">
                         <noscript>enable scripts for a game</noscript>
-                        destroy this page
+                        destroy page???
                     </a>
-
                 </div>
             </div>
-            <div class="col-4 rounded border border-2">
-
+            <div style="margin-top: 4rem !important;padding: 3rem !important;">
             </div>
+<!--            <div class="col-4 rounded border border-2">-->
+<!---->
+<!--            </div>-->
         </div>
     </div>
 
     <div class="row m-0">
-        <div class="container p-3 text-center" style="color: var(--blue); font-size: 420%">
-        <span class="fw-bold text-center" style="font-family: Quicksand">
-            <span class="custom-wrap"><span class="section-pipe" id="hidden-pipe">|</span>CODER</span><span
-                    class="custom-wrap"><span class="section-pipe">|</span>PROGRAMMER</span><span
-                    class="custom-wrap"><span class="section-pipe">|</span>DESIGNER</span>
+        <div class="container p-3 text-center custom-text-container">
+        <span class="fw-bold text-center">
+            <span class="custom-wrap"><span class="section-pipe" id="hidden-pipe">|</span>CODER</span>
+            <span class="custom-wrap"><span class="section-pipe">|</span>PROGRAMMER</span>
+            <span class="custom-wrap"><span class="section-pipe">|</span>DESIGNER</span>
         </span>
         </div>
     </div>
@@ -94,12 +101,22 @@ include_once 'header.php';
             background-image: url("/images/newer/btn_bg_3_g80.svg");
             text-shadow: 3px 3px 1px black;
         }
+
+        .btn-svg-bg-3 {
+            background-image: url("/images/newer/umers_assets-2_g43.svg");
+            text-shadow: 3px 3px 1px black;
+        }
+
+        .btn-svg-bg-4 {
+            background-image: url("/images/newer/umers_assets-2_g48.svg");
+            text-shadow: 3px 3px 1px black;
+        }
     </style>
 
     <div class="container p-1">
     <div class="text-center fs-4" style="font-family: 'Play', sans-serif">
-        <button id="shuffleButton" class="btn fs-3 py-0">🔀 Shuffle</button>
-        <button id="filterClearButton" class="btn fs-3 py-0">Clear filters</button>
+        <button id="shuffleButton" class="btn svg-header-background btn-svg-bg-3 fs-3 py-0 m-2">🔀 Shuffle</button>
+        <button id="filterClearButton" class="btn svg-header-background btn-svg-bg-4 fs-3 py-0 m-2">Clear filters</button>
     </div>
         <div class="text-center fs-4" style="font-family: 'Play', sans-serif">
 
@@ -118,7 +135,7 @@ include_once 'header.php';
                 $colorClasses = $category['colorClasses'];
                 $text = $category['text'];
                 echo "<input type=\"checkbox\" class=\"btn-check\" data-category-id='$categoryId' id=\"btn-check-$categoryId\" autocomplete=\"off\">";
-                echo "<label class=\"btn fs-3 py-0 $colorClasses\" for=\"btn-check-$categoryId\">$text</label>";
+                echo "<label class=\"btn fs-3 py-0 m-2 $colorClasses\" for=\"btn-check-$categoryId\">$text</label>";
             }
             ?>
 

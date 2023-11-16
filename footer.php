@@ -5,8 +5,8 @@
             <div class="row">
                 <span class="col-12">©2014-2023 Umer Salman</span>
                 <span class="col-12">Design by
-                    <a href="https://www.behance.net/ficklative">Rosalynn Alejandro</a></span>
-                <span class="col-12">Last updated: 08/19/2023</span>
+                    <a href="https://www.behance.net/ficklative">Rosalynn Alejandro (@ficklative)</a></span>
+                <span class="col-12">Last updated: 11/19/2023</span>
                 <div class="col-12">
                     <a href="javascript:alert('Privacy is dead');">Privacy Policy</a>
                 </div>

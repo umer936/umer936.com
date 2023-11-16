@@ -6,7 +6,19 @@
 
     # Append Vary header based on the "accept" environment variable
     Header append Vary Accept env=REDIRECT_accept
+
+    # Set Content Security Policy header
+#    Header set Content-Security-Policy "default-src 'self' https://api.websitecarbon.com https://unpkg.com https://cdn.jsdelivr.net;"
+    # Set X-Frame-Options header
+    Header always append X-Frame-Options "SAMEORIGIN"
+
+    # Set Referrer-Policy header
+    Header set Referrer-Policy "no-referrer"
+
+    # Set Permissions-Policy header
+    Header set Permissions-Policy "geolocation=(self 'https://umer936.com'), microphone=()"
 </IfModule>
+
 
 <IfModule mod_deflate.c>
     AddOutputFilter DEFLATE js css less
