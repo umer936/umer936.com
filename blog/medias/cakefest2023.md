@@ -10,3 +10,4 @@ The talk will show how to scale these services to meet customer needs, queuing w
 - https://cakefest.org/
 - https://cakefest.org/archive/losangeles-2023
 - https://umer936.com/cakefest-2023/
+- https://www.cakedc.com/amanda/2023/10/12/cakefest-2023-recap

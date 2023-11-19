@@ -2,14 +2,14 @@
 include_once 'header.php';
 ?>
     <div class="hero_image">
-        <div class="col-12">
+        <div class="col-12" id="hero_image_inset">
             <div class="py-3">
-                <div class="p-2 m-3 col-8 col-md-6 col-lg-4 fs-5 rounded border border-2" style="background: #22153fba">
+                <div class="p-2 m-3 ms-lg-5 col-8 col-md-6 col-lg-4 fs-5 rounded border border-2" style="background: #22153fba">
                     Umer Salman is a computer scientist and robotics engineer. He has expertise in many domains,
                     including autonomous aerial robotics, cybersecurity, and full-stack web development.
                     He holds a B.S. in ECE from UT Austin and is employed at Southwest Research Institute.
                 </div>
-                <a class="col btn btn-lg btn-site fw-bold m-1 ms-3 d-inline" href="#contact">contact me!</a>
+                <a class="col btn btn-lg btn-site fw-bold m-1 ms-3 ms-lg-5 d-inline" href="#contact">contact me!</a>
                 <a class="col btn btn-lg btn-site fw-bold m-1 ms-2 d-none d-md-inline"
                    onclick="if (!window.__cfRLUnblockHandlers) return false;
                    alert('use arrow keys and spacebar');

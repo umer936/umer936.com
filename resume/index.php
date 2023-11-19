@@ -4,14 +4,14 @@ include_once '../header.php';
 
 <div id="pdf-container">
     <iframe id="pdf-iframe"
-            src="2020_Resume.pdf"
+            src="2023_Resume.pdf"
             class="w-100"
             style="height: 175vh">
     </iframe>
 </div>
 
 <div id="pdf-error-message" class="d-none">
-    <p>There was an issue loading the PDF. You can <a href="2020_Resume.pdf">download it here</a>.</p>
+    <p>There was an issue loading the PDF. You can <a href="2023_Resume.pdf">download it here</a>.</p>
 </div>
 
 <script>

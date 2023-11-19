@@ -1,4 +1,3 @@
-
 :root {
     --darkgray: #333333;
     --gray: #4D4D4D;
@@ -19,6 +18,7 @@
     --dark-purple: #22153f;
     --dark-red: #4c0000;
     --lightpurple: #3C1D5A;
+    --bs-body-bg: var(--dark-purple);
 }
 
 .custom-card-text {
@@ -68,6 +68,11 @@
 @font-face {
     font-family: "OpenSans";
     src: url("/fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Play";
+    src: url("/fonts/Play.woff") format("truetype");
 }
 
 .section-header {
@@ -166,10 +171,6 @@ body {
     padding-bottom: 8rem;
 }
 
-:root {
-    --bs-body-bg: var(--dark-purple);
-}
-
 .bg-nav {
     background-color: var(--lightpurple);
 }
@@ -180,4 +181,11 @@ body {
 
 .card {
     background: url("/images/newer/umers_assets-2_g218.svg") center/cover;
+}
+
+@media (min-height: 800px) {
+    #hero_image_inset {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
 }
