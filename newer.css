@@ -18,6 +18,7 @@
     --secondary-color: #00CDCD;
     --dark-purple: #22153f;
     --dark-red: #4c0000;
+    --lightpurple: #3C1D5A;
 }
 
 .custom-card-text {
@@ -75,13 +76,6 @@
     background: url('/images/newer/section_bar_g10.svg') center/cover;
     padding: .25rem !important;
     text-shadow: -4px 4px 3px #22153f;
-}
-
-.svg-header-background {
-    background-repeat: no-repeat;
-    /*background-size: 100% 100%;*/
-    background-size: cover;
-    background-position: center;
 }
 
 .svg-section-background {
@@ -147,8 +141,43 @@ body {
     width: 108px;
 }
 
+.btn-site {
+    border: 2px solid transparent;
+    background: url('/images/newer/btn-site-inactive.svg') no-repeat center;
+}
+
+.btn-site:hover {
+    border: 2px solid #fda333 !important;
+}
+
+.btn-site.active {
+    background: url('/images/newer/btn-site-active.svg') no-repeat center !important;
+    border: 2px solid transparent !important;
+}
+
+
 #contact {
-    background-image: url("/images/newer/section_bg_g194.svg");
-    background-repeat: no-repeat;
-    background-size: 139% auto;
+    background: url("/images/newer/section_bg_g194.svg") no-repeat center/cover;
+}
+
+.hero_image {
+    background: url('/images/newer/umers_banner.svg') center/cover;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+:root {
+    --bs-body-bg: var(--dark-purple);
+}
+
+.bg-nav {
+    background-color: var(--lightpurple);
+}
+
+.btn {
+    --bs-btn-font-family: 'Play', sans-serif;
+}
+
+.card {
+    background: url("/images/newer/umers_assets-2_g218.svg") center/cover;
 }

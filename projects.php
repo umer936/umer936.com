@@ -50,51 +50,47 @@
     $projects = [
             [
                     'title' => 'a',
-                'text' => 'a text',
-                'years' => '2019-2020',
-                'categories' => [3, 4],
+                    'text' => 'a text',
+                    'years' => '2019-2020',
+                    'categories' => [3, 4],
             ],
             [
                     'title' => 'b',
-                'text' => 'b text',
-                'years' => '2015-2020',
-                'categories' => [4],
+                    'text' => 'b text',
+                    'years' => '2015-2020',
+                    'categories' => [4],
             ],
             [
                     'title' => 'c',
-                'text' => 'c text',
-                'years' => '2013-2018',
-                'categories' => [3, 4],
-                'link' => ['title' => 'YouTube', 'link' => 'https://youtube.com']
+                    'text' => 'c text',
+                    'years' => '2013-2018',
+                    'categories' => [3, 4],
+                    'link' => ['title' => 'YouTube', 'link' => 'https://youtube.com'],
             ],
             [
                     'title' => 'd',
-                'text' => 'd text',
-                'years' => '2013-2020',
-                'categories' => [3, 4],
+                    'text' => 'd text',
+                    'years' => '2013-2020',
+                    'categories' => [3, 4],
             ],
             [
                     'title' => 'e',
-                'text' => 'e text',
-                'years' => '2013-2020',
-                'categories' => [3, 4],
+                    'text' => 'e text',
+                    'years' => '2013-2020',
+                    'categories' => [3, 4],
             ],
     ];
 
 
     foreach ($projects as $project) {
         include 'page_elements/proj_bootstrap_card.php';
-        ?>
-
-
-        <?php
     }
     ?>
 </div>
 
 
 <div class="text-center my-3">
-    <button id="loadMoreBtn" class="btn btn-primary">Load More</button>
+    <button id="loadMoreBtn" class="btn btn-site d-none">Load More</button>
 </div>
 
 <script>
@@ -124,6 +120,12 @@
         });
     });
 
+    function checkLoadMore() {
+        if (numProjCardsShown > <?= count($projects) ?>) {
+            document.getElementById('loadMoreBtn').classList.add('d-none');
+        }
+    }
+
     // "Load More" button click event
     document.querySelector('#loadMoreBtn').addEventListener('click', () => {
         numProjCardsShown += 4;
@@ -136,6 +138,8 @@
                     isCategorySelected(element);
             }
         });
+
+        checkLoadMore();
 
         // Relayout Isotope to adjust the layout with the newly displayed cards
         iso.layout();
@@ -150,7 +154,10 @@
         document.querySelector('#yearRange').value = null;
         document.querySelector('#yearSelected').textContent = null;
         selectedYear = null;
-        categoryCheckboxes.forEach(checkbox => checkbox.checked = false);
+        categoryCheckboxes.forEach(checkbox => {
+            checkbox.checked = false;
+            checkbox.labels[0].classList.remove('active');
+        });
         selectedCategories = [];
         iso.arrange({filter: '*'});
     });
@@ -208,5 +215,7 @@
         return selectedCategories.length === 0
             || selectedCategories.every(category => categoriesInElement.includes(category));
     }
+
+    checkLoadMore();
 
 </script>

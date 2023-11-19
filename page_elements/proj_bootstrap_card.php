@@ -5,7 +5,7 @@
             <?php
             foreach ($project['categories'] as $category) {
                 ?>
-                <span class="badge <?= $allCategories[$category]['colorClasses'] ?>"
+                <span class="badge btn-site"
                       data-category-id="<?= $category ?>">
                     <?= $allCategories[$category]['text'] ?>
                 </span>

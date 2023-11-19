@@ -49,7 +49,7 @@
     }
 
     $logoLink = '/images/newer/logo_group_g464.svg';
-    $sectionHeaderClasses = "container svg-header-background fs-1 text-center mt-5 section-header fw-bold";
+    $sectionHeaderClasses = "container fs-1 text-center mt-5 section-header fw-bold";
     foreach ($navItems as $url => $item) {
         if ($currentURL === $url) {
             $itemColor = $item['color'];
@@ -77,7 +77,7 @@
     ?>
 </head>
 <body>
-<nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
+<nav class="navbar sticky-top navbar-expand-lg bg-nav">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">
             <div class="row align-items-center">

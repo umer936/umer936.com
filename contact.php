@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 ?>
 
-<div class="container rounded w-75 m-auto" id="contact">
+<div class="container rounded w-75 m-auto text-break" id="contact">
     <?php if (isset($message)) { ?>
         <div class="alert <?= ($message === $successMsg) ? 'alert-success' : 'alert-danger' ?>">
             <?= $message ?>
@@ -85,14 +85,52 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     </div>
 
                     <div class="pt-2">
-                <span class="text-uppercase">
-                    🖥️ Website
-                </span>
+                        <span class="text-uppercase">
+                            🖥️ Find Me
+                        </span>
                         <br>
-                        umer936.com
+                        <div class="row">
+
+                            <div class="col-xxs-2 col-3 col-sm-2 col-md-4 col-lg-3 col-xl-2">
+                                <a href="https://instagram.com/umer936?ref=badge">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/132px-Instagram_logo_2016.svg.png"
+                                         alt="Instagram" class="img-fluid"></a>
+                            </div>
+
+                            <div class="col-xxs-2 col-3 col-sm-2 col-md-4 col-lg-3 col-xl-2">
+                                <a href="https://stackoverflow.com/users/2646359/umer936">
+                                    <img src="https://www.vectorlogo.zone/logos/stackoverflow/stackoverflow-icon.svg"
+                                         alt="Stack Overflow" class="img-fluid"></a>
+                            </div>
+
+                            <div class="col-xxs-2 col-3 col-sm-2 col-md-4 col-lg-3 col-xl-2">
+                                <a href="https://7cupsoftea.com/@umer936/">
+                                    <img src="https://d37v7cqg82mgxu.cloudfront.net/img/link-to-us/square/7cups-logo-text-tile.png"
+                                         alt="7 Cups of Tea" class="img-fluid"></a>
+                            </div>
+
+                            <div class="col-xxs-2 col-3 col-sm-2 col-md-4 col-lg-3 col-xl-2">
+                                <a href="https://www.reddit.com/user/Umer936/">
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/b/bd/Reddit_Logo_Icon.svg" alt="Reddit"
+                                         class="img-fluid"></a>
+                            </div>
+
+                            <div class="col-xxs-2 col-3 col-sm-2 col-md-4 col-lg-3 col-xl-2">
+                                <a href="https://github.com/umer936">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/240px-GitHub_Invertocat_Logo.svg.png"
+                                         alt="GitHub" class="img-fluid"></a>
+                            </div>
+
+                            <div class="col-xxs-2 col-3 col-sm-2 col-md-4 col-lg-3 col-xl-2">
+                                <a href="https://socialcu.be/@umer936">
+                                    <img src="https://socialcu.be/Images/cube_icon_web_min.svg" alt="SocialCube"
+                                         class="img-fluid"></a>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-                <button class="btn btn-primary" type="submit">➡️ Send</button>
+                <button class="btn btn-site" type="submit">➡️ Send</button>
             </div>
         </div>
     </form>

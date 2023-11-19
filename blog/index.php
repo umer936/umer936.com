@@ -46,12 +46,6 @@ $blogPosts = [
     <div class="<?= $sectionHeaderClasses ?>">
         Blog Posts
     </div>
-    <style>
-        .blog-bg {
-            background: url("/images/newer/umers_assets-2_g218.svg") center/cover;
-        }
-    </style>
-
 
     <div class="container my-4">
         <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -60,7 +54,7 @@ $blogPosts = [
             foreach ($blogPosts as $title => $blogPost) {
                 ?>
                 <div class="col">
-                    <div class="card blog-bg">
+                    <div class="card">
                         <div class="card-body row">
                             <img src="<?= $blogPost['img'] ?>"
                                  class="col-md-4"
@@ -131,6 +125,8 @@ $mediaPosts = [
         'FIRST5' => [
                 'url' => 'FIRST.md',
                 'date' => '08/15/2023',
+
+            
                 'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
                 'smallText' => $smallTextLorem,
         ],
@@ -141,11 +137,6 @@ $mediaPosts = [
     <div class="<?= $sectionHeaderClasses ?>">
         In the Media
     </div>
-    <style>
-        .blog-bg {
-            background: url("/images/newer/umers_assets-2_g218.svg") center/cover;
-        }
-    </style>
 
 
     <div class="container my-4">
@@ -155,7 +146,7 @@ $mediaPosts = [
             foreach ($mediaPosts as $title => $mediaPost) {
                 ?>
                 <div class="col">
-                    <div class="card blog-bg">
+                    <div class="card">
                         <div class="card-body row">
                             <img src="<?= $mediaPost['img'] ?>"
                                  class="col-md-4 <?= $mediaPost['imgClasses'] ?? '' ?>"
