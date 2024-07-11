@@ -1,1 +1,1 @@
-<?php header('Location: /stuff');
+<?php header('Location: /#sourceviewer');
