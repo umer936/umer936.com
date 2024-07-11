@@ -58,6 +58,7 @@ $blogPosts = [
                         <div class="card-body row">
                             <img src="<?= $blogPost['img'] ?>"
                                  class="col-md-4"
+                                 loading="lazy"
                                  alt="...">
                             <div class="col-md-8">
                                 <h5 class="card-title"
@@ -150,6 +151,7 @@ $mediaPosts = [
                         <div class="card-body row">
                             <img src="<?= $mediaPost['img'] ?>"
                                  class="col-md-4 <?= $mediaPost['imgClasses'] ?? '' ?>"
+                                 loading="lazy"
                                  alt="...">
                             <div class="col-md-8">
                                 <h5 class="card-title"
