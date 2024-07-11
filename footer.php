@@ -1,6 +1,8 @@
 <footer class="container-fluid pt-2 pb-3 mt-4">
     <div class="row border-top pt-4 border-3">
-        <div class="col-4"></div>
+        <div class="col-4 align-self-end">
+            <a class="text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#flashback">⏱️</a>
+        </div>
         <div class="col-4 text-center">
             <div class="row">
                 <span class="col-12">©2014-2024 Umer Salman</span>
@@ -12,7 +14,8 @@
                     <a href="javascript:alert('Privacy is dead');">Privacy Policy</a>
                     <!--look ma, no cookies-->
                 </div>
-                <div id="wcb" class="col-12 carbonbadge wcb-d"></div>
+                <br>
+                <div id="wcb" class="col-12 carbonbadge wcb-d p-0 m-0"></div>
             </div>
         </div>
         <div class="col-4 text-end align-self-center">

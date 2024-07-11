@@ -77,7 +77,6 @@
 
 .section-header {
     font-family: "Mecha", sans-serif;
-    color: var(--primary-color);
     background: url('/images/newer/section_bar_g10.svg') center/cover;
     padding: .25rem !important;
     text-shadow: -4px 4px 3px #22153f;
@@ -151,7 +150,7 @@ body {
     background: url('/images/newer/btn-site-inactive.svg') no-repeat center;
 }
 
-.btn-site:hover {
+.btn-site:hover, .btn-site:focus {
     border: 2px solid #fda333 !important;
 }
 
