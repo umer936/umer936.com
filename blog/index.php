@@ -4,42 +4,42 @@ include_once '../header.php';
 $smallTextLorem = 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.';
 
 $blogPosts = [
-        'FIRST' => [
+        'SVN2GIT' => [
+                'url' => 'svn2git.md',
+                'date' => '11/21/2023',
+                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
+                'smallText' => 'Convert SVN repo to Git',
+        ],
+        'CentOS_PHP_7-8' => [
+                'url' => 'PHP_Upgrade_7-8.md',
+                'date' => '12/27/2023',
+                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
+                'smallText' => 'RHEL (e.g. CentOS) guide to upgrading PHP from 7 to 8',
+        ],
+        'FIRST Robotics' => [
                 'url' => 'FIRST.md',
                 'date' => '08/15/2023',
                 'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
-                'smallText' => $smallTextLorem,
+                'smallText' => 'FIRST Robotics has a lot in store for different ages. Here\'s some quick notes',
         ],
-        'FIRST1' => [
-                'url' => 'FIRST.md',
-                'date' => '08/15/2023',
-                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
-                'smallText' => $smallTextLorem,
-        ],
-        'FIRST2' => [
-                'url' => 'FIRST.md',
-                'date' => '08/15/2023',
-                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
-                'smallText' => $smallTextLorem,
-        ],
-        'FIRST3' => [
-                'url' => 'FIRST.md',
-                'date' => '08/15/2023',
-                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
-                'smallText' => $smallTextLorem,
-        ],
-        'FIRST4' => [
-                'url' => 'FIRST.md',
-                'date' => '08/15/2023',
-                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
-                'smallText' => $smallTextLorem,
-        ],
-        'FIRST5' => [
-                'url' => 'FIRST.md',
-                'date' => '08/15/2023',
-                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
-                'smallText' => $smallTextLorem,
-        ],
+//        'FIRST3' => [
+//                'url' => 'FIRST.md',
+//                'date' => '08/15/2023',
+//                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
+//                'smallText' => $smallTextLorem,
+//        ],
+//        'FIRST4' => [
+//                'url' => 'FIRST.md',
+//                'date' => '08/15/2023',
+//                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
+//                'smallText' => $smallTextLorem,
+//        ],
+//        'FIRST5' => [
+//                'url' => 'FIRST.md',
+//                'date' => '08/15/2023',
+//                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
+//                'smallText' => $smallTextLorem,
+//        ],
 ]
 ?>
 
@@ -127,7 +127,7 @@ $mediaPosts = [
                 'url' => 'FIRST.md',
                 'date' => '08/15/2023',
 
-            
+
                 'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
                 'smallText' => $smallTextLorem,
         ],
