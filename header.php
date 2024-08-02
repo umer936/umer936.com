@@ -3,7 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#2b3035" />
+    <meta name="theme-color" content="#3C1D5A" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3C1D5A">
+    <meta name="apple-mobile-web-app-title" content="Umer Salman">
+    <meta name="author" content="Umer Salman">
+    <meta property="og:title" content="Umer Salman (umer936)">
+    <meta property="og:description" content="CODER | PROGRAMMER | DESIGNER">
+<!--    <meta property="og:image" content="https://example.com/your-image.jpg">-->
+    <meta property="og:url" content="https://umer936.com">
     <title>Umer Salman</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -57,18 +65,20 @@
             ?>
             <style>
                 :root {
-                    --<?= $itemColor ?>-translucent: <?= calculateTranslucentColor($$itemColor, 0.69) ?>;
+                    --<?= $itemColor ?>-translucent: <?= calculateTranslucentColor($$itemColor, 0.85) ?>;
                     --bs-border-color: var(--<?= $itemColor ?>-translucent);
-                    --bs-btn-active-border-color: var(--<?= $itemColor ?>);
                 }
 
                 .card {
-                    --<?= $itemColor ?>-translucent: <?= calculateTranslucentColor($$itemColor, 0.29) ?>;
-                    --bs-card-border-color: var(--<?= $itemColor ?>-translucent);
+                    --bs-card-border-color: <?= calculateTranslucentColor($$itemColor, 0.29) ?>;
                 }
 
                 #logo-text {
                     color: var(--<?= $itemColor ?>);
+                }
+
+                .section-header {
+                    color: var(--<?= $itemColor ?>-translucent);
                 }
             </style>
             <?php
