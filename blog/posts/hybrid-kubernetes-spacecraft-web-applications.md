@@ -1,6 +1,9 @@
 ## Spacecraft Web Applications in a Hybrid Kubernetes Cluster
 
-<!-- todo: add image here -->
+![Spacecraft Web Applications in a Hybrid Kubernetes Cluster](./hybrid-kubernetes-spacecraft-web-applications_1.png)
+
+**Type**: Professional
+**Role**: Team of 3 (Personally did software and cloud development research and implementation, includes web application UI/UX)
 
 ### Project Overview
 
@@ -11,6 +14,8 @@ In 2023, I had the opportunity to work on an innovative project focused on devel
 As space science data continues to expand exponentially, traditional methods of data handling have become inadequate. Historically, the data received from space probes was smaller than the software required to process it. However, advancements in sensor technology have led to higher precision measurements and increased data throughput. Consequently, we needed a more efficient approach: instead of moving vast amounts of data to the software, we migrated the software to the data, leveraging cloud capabilities.
 
 ### Project Implementation
+
+![Spacecraft Web Applications in a Hybrid Kubernetes Cluster](./hybrid-kubernetes-spacecraft-web-applications_2.png)
 
 Our project involved the creation of a robust Kubernetes cluster that integrated on-premises servers, a high-performance computing cluster for resource-intensive tasks, and Amazon Web Services (AWS). This hybrid setup allowed us to effectively visualize science and engineering data, as well as facilitate spacecraft flyby planning.
 
