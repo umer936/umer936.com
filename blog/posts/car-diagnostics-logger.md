@@ -1,8 +1,9 @@
 ## Car Diagnostics Monitor and Logger
 
-Car Diagnostics Monitor
+**Type**: Personal
+**Role**: Independent Creator
 
-<!-- todo: add image here -->
+![Car Diagnostics Monitor and Logger](./car-diagnostics-monitor_1.png)
 
 ### Project Overview
 
