@@ -1,4 +1,3 @@
-
 <div class="col projCard" data-year="<?= $project['years'] ?>">
     <div class="card">
         <div class="position-absolute top-0 end-0">
@@ -9,7 +8,7 @@
                       data-category-id="<?= $category ?>">
                     <?= $allCategories[$category]['text'] ?>
                 </span>
-            <?php
+                <?php
             }
             ?>
         </div>
@@ -26,7 +25,7 @@
             if (isset($project['link'])) {
                 ?>
                 <a class="float-end small" href="<?= $project['link']['link'] ?>"><?= $project['link']['title'] ?></a>
-            <?php
+                <?php
             }
             ?>
         </div>

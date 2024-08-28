@@ -1,31 +1,47 @@
 ## Spacecraft Web Applications in a Hybrid Kubernetes Cluster
 
-![Spacecraft Web Applications in a Hybrid Kubernetes Cluster](./hybrid-kubernetes-spacecraft-web-applications_1.png)
+![Spacecraft Web Applications in a Hybrid Kubernetes Cluster](./posts/hybrid-kubernetes-spacecraft-web-applications_1.png)
 
 **Type**: Professional
-**Role**: Team of 3 (Personally did software and cloud development research and implementation, includes web application UI/UX)
+
+**Role**: Team of 3 (Personally did software and cloud development research and implementation, includes web application
+UI/UX)
 
 ### Project Overview
 
-In 2023, I had the opportunity to work on an innovative project focused on developing spacecraft web applications within a hybrid Kubernetes cluster. This initiative was part of a year-long grant awarded to the Southwest Research Institute, where I collaborated with a talented team of three. My primary responsibilities included software and cloud development research and implementation, along with the design of the web application UI/UX.
+In 2023, I had the opportunity to work on an innovative project focused on developing spacecraft web applications within
+a hybrid Kubernetes cluster. This initiative was part of a year-long grant awarded to the Southwest Research Institute,
+where I collaborated with a talented team of three. My primary responsibilities included software and cloud development
+research and implementation, along with the design of the web application UI/UX.
 
 ### The Challenge
 
-As space science data continues to expand exponentially, traditional methods of data handling have become inadequate. Historically, the data received from space probes was smaller than the software required to process it. However, advancements in sensor technology have led to higher precision measurements and increased data throughput. Consequently, we needed a more efficient approach: instead of moving vast amounts of data to the software, we migrated the software to the data, leveraging cloud capabilities.
+As space science data continues to expand exponentially, traditional methods of data handling have become inadequate.
+Historically, the data received from space probes was smaller than the software required to process it. However,
+advancements in sensor technology have led to higher precision measurements and increased data throughput. Consequently,
+we needed a more efficient approach: instead of moving vast amounts of data to the software, we migrated the software to
+the data, leveraging cloud capabilities.
 
 ### Project Implementation
 
-![Spacecraft Web Applications in a Hybrid Kubernetes Cluster](./hybrid-kubernetes-spacecraft-web-applications_2.png)
+![Spacecraft Web Applications in a Hybrid Kubernetes Cluster](./posts/hybrid-kubernetes-spacecraft-web-applications_2.png)
 
-Our project involved the creation of a robust Kubernetes cluster that integrated on-premises servers, a high-performance computing cluster for resource-intensive tasks, and Amazon Web Services (AWS). This hybrid setup allowed us to effectively visualize science and engineering data, as well as facilitate spacecraft flyby planning.
+Our project involved the creation of a robust Kubernetes cluster that integrated on-premises servers, a high-performance
+computing cluster for resource-intensive tasks, and Amazon Web Services (AWS). This hybrid setup allowed us to
+effectively visualize science and engineering data, as well as facilitate spacecraft flyby planning.
 
-The web applications we developed, collectively known as GeoViz, were designed for intuitive use, even when dealing with complex datasets like stellar catalogs. The user interface was crafted to enable scientists to queue thousands of flybys and monitor the status of their jobs seamlessly.
+The web applications we developed, collectively known as GeoViz, were designed for intuitive use, even when dealing with
+complex datasets like stellar catalogs. The user interface was crafted to enable scientists to queue thousands of flybys
+and monitor the status of their jobs seamlessly.
 
 #### Key Features
 
-- **Progressive Web App (PWA)**: GeoViz was developed as a PWA, allowing users to install the application on mobile devices. This feature enables scientists to access real-time updates on their plots and generated flight plans from anywhere.
+- **Progressive Web App (PWA)**: GeoViz was developed as a PWA, allowing users to install the application on mobile
+  devices. This feature enables scientists to access real-time updates on their plots and generated flight plans from
+  anywhere.
 
-- **User-Centric Design**: The UI was meticulously designed to ensure that even complex functionalities were understandable and accessible to users, enhancing the overall user experience.
+- **User-Centric Design**: The UI was meticulously designed to ensure that even complex functionalities were
+  understandable and accessible to users, enhancing the overall user experience.
 
 ### Presentations and Recognition
 
@@ -52,4 +68,8 @@ For those interested in exploring our project further, here are some useful link
 
 ### Conclusion
 
-The development of the spacecraft web applications in a hybrid Kubernetes cluster not only addressed the challenges posed by the growing volume of space science data but also set a precedent for future projects in the field. By moving the software to the data, we have created a scalable and efficient solution that empowers scientists to visualize and analyze complex datasets effectively. This project exemplifies the potential of cloud technology in advancing space research and the importance of user-friendly design in scientific applications.
+The development of the spacecraft web applications in a hybrid Kubernetes cluster not only addressed the challenges
+posed by the growing volume of space science data but also set a precedent for future projects in the field. By moving
+the software to the data, we have created a scalable and efficient solution that empowers scientists to visualize and
+analyze complex datasets effectively. This project exemplifies the potential of cloud technology in advancing space
+research and the importance of user-friendly design in scientific applications.

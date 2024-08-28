@@ -22,27 +22,33 @@ $blogPosts = [
                 'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
                 'smallText' => 'FIRST Robotics has a lot in store for different ages. Here\'s some quick notes',
         ],
-//        'FIRST3' => [
-//                'url' => 'FIRST.md',
-//                'date' => '08/15/2023',
-//                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
-//                'smallText' => $smallTextLorem,
-//        ],
-//        'FIRST4' => [
-//                'url' => 'FIRST.md',
-//                'date' => '08/15/2023',
-//                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
-//                'smallText' => $smallTextLorem,
-//        ],
-//        'FIRST5' => [
-//                'url' => 'FIRST.md',
-//                'date' => '08/15/2023',
-//                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
-//                'smallText' => $smallTextLorem,
-//        ],
+    // later will move these to projects, but this is good for now
+        'Car Diagnostics Logger' => [
+                'url' => 'car-diagnostics-logger.md',
+                'date' => '12/15/2015',
+                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
+                'smallText' => $smallTextLorem,
+        ],
+        'DIY Circuits' => [
+                'url' => 'diy-circuits.md',
+                'date' => '08/15/2023',
+                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
+                'smallText' => $smallTextLorem,
+        ],
+        'Intelligent Quads' => [
+                'url' => 'intelligent-quads.md',
+                'date' => '08/15/2023',
+                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
+                'smallText' => $smallTextLorem,
+        ],
+        'Hybrid-Hybrid Kubernetes Cluster' => [
+                'url' => 'hybrid-kubernetes-spacecraft-web-applications.md',
+                'date' => '10/15/2023',
+                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
+                'smallText' => $smallTextLorem,
+        ],
 ]
 ?>
-
     <div class="<?= $sectionHeaderClasses ?>">
         Blog Posts
     </div>
@@ -80,9 +86,7 @@ $blogPosts = [
                     </div>
                 </div>
                 <?php
-
             }
-
             ?>
         </div>
     </div>
