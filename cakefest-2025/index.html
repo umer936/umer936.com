@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>UMER SALMAN: CakeFest 2025</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/dracula.css">
+    <link rel="stylesheet" href="dist/theme/powerup.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+          crossorigin="anonymous">
+
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+<!--
+    Hello everyone. Today I'm going to be talking about UVSOps, which stands for Ultraviolet Spectrometer Operations. I'll get to what each of the words mean in a bit, but first, a bit of intro of the mission, me and my team, and what we needed to build a CakePHP application for. 
+v
+Europa Clipper is a roughly $5B NASA spacecraft launching this October and on it is an instrument made by the organization I work for in San Antonio, TX, USA. 
+>
+Who am I? 
+If you were at CakeFest last year, you've seen this slide before.
+- That one was on distributed Docker/Kubernetes environments and a lot more technical.  
+I'm a Research Computer Scientist at Southwest Research Institute in SATX. We're a non-profit dedicated to R&D from Deep Sea to Deep Space. This includes Oil Pipeline crush testing, creating fire resistant materials, EV battery crush testing, the cybersecurity on that same vehicle, fire resistant materials, and the department I'm in - space research. 
+I have a degree in Electrical and Computer Engineering from The University of Texas which makes sense because I like a whole gamut of Engineering fields, having previously done work in robotics and cybersecurity prior to space science. 
+But that doesn't mean I'm new to PHP and webdev! 
+When I was in 5th grade or so, my sister and I got a Nintendo DSi. While it was neat, we didn't have many games for it, but it could browse the internet. And on there, I found out that the browser could run JavaScript. In that, I also found that there was a whole Nintendo DSi Community building social networking sites for the console and decided to do the same. 
+There's a whole number of things I enjoy including cars, reading, tropical weather, and building things. 
+>
+As for my group, we're a small group of 3. The others on my team have been using CakePHP 1.x but I joined 3.52yrs ago, to be exact. 
+-->
+
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <!--
+            Hello everyone. Today I'm going to be talking about UVSOps, 
+            or Ultraviolet Spectrometer Operations for long. 
+            I'll get to what each of the words mean in a bit, but first, 
+            a bit of intro of me, the instrument, and our CakePHP project. 
+            -->
+            <section>
+                <h3>Ultraviolet Spectrometer (UVS) Operations - CakePHP project showcase</h3>
+                Umer Salman<br>
+                <strong>CakeFest 2025</strong>
+            </section>
+        </section>
+        <section>
+            <h2>Agenda</h2>
+            <ul>
+                <li>About me</li>
+                <li>SwRI Space Science</li>
+                <li>Europa Clipper Mission</li>
+                <li>UVSOps Tools / Libraries</li>
+                <li>UVSOps App Walkthrough</li>
+                <li>Wrap-up / Q&A</li>
+            </ul>
+        </section>
+        <section>
+            <h1>Who am I?</h1>
+            <div class="row">
+                <div class="col-7">
+                    <strong>Umer Salman</strong>, <em><a href="https://umer936.com">@umer936</a></em>
+                    <ul class="mt-2">
+                        <li>
+                            <a href="https://www.swri.org/">
+                                <img src="img/SwRI%20Logo%20White.webp" alt="SwRI" class="w-25 m-auto">
+                            </a>, San Antonio, TX
+                        </li>
+                        <li>
+                            BS ECE from <img src="img/utexas-primary-horizontal-logo.svg" alt="UT Austin" class="m-auto w-50">
+                        </li>
+                        <li>PHP since the Nintendo DSi<img src="img/NintendoDSi.webp" alt="Nintendo DSi" class="m-auto w-25 row"></li>
+                        <li>Robotics and cybersecurity</li>
+                        <li>Also like cars, tropical weather, building things
+                            <br>(DIY, arts and crafts, etc.)</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <img src="img/UMER.jpg" alt="Umer">
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1>SwRI Space Science</h1>
+                <ul>
+                    <li>Been using CakePHP since the 1.x versions</li>
+                        <ul>
+                            <li>
+                                I joined the org 3.52yrs ago
+                            </li>
+                        </ul>
+                    <li>45+ CakePHP Projects supporting Space Science Operations</li>
+                    <li>
+                        Constantly improving with 
+                        the CakePHP ecosystem through plugins and modularization</li>
+                    </li>
+                    <li>Bootstrap</li>
+                    <li>Integrate with IDL, Python, and other space science codebases</li>
+                </ul>
+        </section>
+        <!--
+        Clipper Model: https://g.co/kgs/UdSjaiK 
+        .qk7LXc {width: 100%; height: 100%}
+        .F7N1ab {--height: min(600px,55vmin);--width: 100%;--}
+        .qgqiKc {--height: min(600px,55vmin);----width: min(375px,50vmin);--}
+
+        The spacecraft will be about 16 feet (5 meters) in height. With its arrays deployed, 
+        the spacecraft spans more than 100 feet (30.5 meters) 
+        and has a dry mass (no propellant in the tanks) of 7,145 pounds (3,241 kg).
+        Europa UVS - 35.7 centimeters x 36.2 centimeters x 15.8 centimeters
+        UVS observes ultraviolet light within the spectral range of 55 nm to 210 nm.
+        MASPEX - MASPEX is a mass spectrometer that will help scientists study chemical compounds in complex mixtures during the Europa Clipper mission.
+
+        JUICE Flybys: https://dlmultimedia.esa.int/download/public/videos/2022/03/007/2203_007_AR_EN.mp4
+        JUICE Model: https://sketchfab.com/3d-models/the-esa-satellite-juice-ddde39cb6b594adcbce09dc35e4d542e
+
+        https://europa.nasa.gov/why-europa/ingredients-for-life/
+        -->
+        <section>
+            <h3>Europa Clipper</h3>
+            <a href="https://europa.nasa.gov/spacecraft/meet-europa-clipper/">
+                <figure>
+                    <img src="img/Europa_Clipper_patch.png" alt="Europa Clipper Mission patch" class="w-50">
+                    <figcaption>https://europa.nasa.gov/spacecraft/meet-europa-clipper/</figcaption>
+                </figure>
+            </a>
+        </section>
+        <section>
+
+        <section>
+            <h3>Libraries We Use</h3>
+            <table class="table table-dark table-striped table-hover fs-5">
+                <tbody>
+                    <tr>
+                        <th scope="row">CakePHP</th>
+                        <td>ORM, User Accounts, PHP (server-side), etc.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">fabric.js</th>
+                        <td>HTML Canvas for interfaces</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">vis-timeline</th>
+                        <td>The final Flyby outcome</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">jQuery</th>
+                        <td>AJAXing, etc.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">jQuery UI</th>
+                        <td>Windowed calculator</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">jQuery Xcalx</th>
+                        <td>Excel-type calculator</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">jQuery Timepicker</th>
+                        <td>Only timepicker with &lt;1 sec timepicking</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Bootstrap</th>
+                        <td>Layout/styling/components</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Sweetalert2</th>
+                        <td>Error notifications</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Plotly</th>
+                        <td>Graphing</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">momentjs</th>
+                        <td>Timekeeping</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Font Awesome</th>
+                        <td>Icon graphics</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Spectrum</th>
+                        <td>Colorpicker</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+            <section>
+            <h3>To the Cake Application!</h3>
+            <a href="https://uvsops.space.swri.edu">
+                <figure>
+                    <img src="img/UVSOps_home.png" alt="UVSOps Homepage"
+                    class="w-50">
+                    <figcaption>https://uvsops.space.swri.edu</figcaption>
+                </figure>
+            </a>
+        </section>
+        </section>
+        <section id="wrap-up-q-and-a">
+            These slides are available @ <br>
+            <a href="https://umer936.com/cakefest-2025/">https://umer936.com/cakefest-2025/</a>
+            <hr>
+            Feel free to contact:<br>
+            Slack: umer936<br>
+            <a href="mailto:umer936@gmail.com">umer936@gmail.com</a><br>
+            <a href="https://github.com/umer936">https://github.com/umer936</a>
+        </section>
+    </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+</script>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('.backgrounds').insertAdjacentHTML('beforeend',
+            '<footer class="top-100 position-sticky fs-6 pb-2 ps-1">Umer Salman | 08/10/2025</footer>');
+    });
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+        crossorigin="anonymous"></script>
+</body>
+</html>

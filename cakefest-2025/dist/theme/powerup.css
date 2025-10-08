@@ -1,0 +1,172 @@
+/**
+ * PowerUp Theme for reveal.js (CakeFest 2025)
+ * Author: Umer (for CakePHP PowerUps)
+ * A glowing neon evolution of the Dracula base.
+ */
+
+ /* === Local Fonts === */
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 300 800;
+  src: url('fonts/Exo_2/Exo2-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Exo 2';
+  font-style: italic;
+  font-weight: 300 800;
+  src: url('fonts/Exo_2/Exo2-Italic-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 400 900;
+  src: url('fonts/Orbitron/Orbitron-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+
+
+:root {
+  --r-background-color: #0c0f17;
+  --r-main-font: 'Exo 2', system-ui, sans-serif;
+  --r-main-font-size: 38px;
+  --r-main-color: #e8f7ff;
+
+  --r-heading-font: 'Orbitron', sans-serif;
+  --r-heading-color: #00ffe0;
+  --r-heading-line-height: 1.2;
+  --r-heading-font-weight: 700;
+
+  --r-link-color: #ff3df2;
+  --r-link-color-hover: #ffee58;
+  --r-selection-background-color: #2a004f;
+  --r-selection-color: #fff;
+
+  --r-code-font: 'Fira Code', monospace;
+
+  --accent-cyan: #00ffe0;
+  --accent-magenta: #ff3df2;
+  --accent-yellow: #ffee58;
+  --accent-glow: rgba(0,255,224,0.4);
+}
+
+/* Animated background pulse */
+.reveal-viewport {
+  background: radial-gradient(circle at center, #0c0f17 0%, #000000 100%);
+  background-size: 300% 300%;
+  animation: pulseBG 18s ease-in-out infinite;
+}
+@keyframes pulseBG {
+  0%,100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.reveal {
+  font-family: var(--r-main-font);
+  font-size: var(--r-main-font-size);
+  color: var(--r-main-color);
+  letter-spacing: 0.02em;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  font-family: var(--r-heading-font);
+  color: var(--r-heading-color);
+  text-transform: uppercase;
+  text-shadow:
+    0 0 12px var(--accent-glow),
+    0 0 30px rgba(255,255,255,0.15);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.3em;
+}
+
+.reveal h1 { font-size: 3em; }
+.reveal h2 { font-size: 2.1em; color: var(--accent-magenta); }
+.reveal h3 { font-size: 1.6em; color: var(--accent-yellow); }
+
+/* Paragraphs */
+.reveal p {
+  line-height: 1.4;
+  margin: 0.8em 0;
+}
+
+/* Links */
+.reveal a {
+  color: var(--r-link-color);
+  text-shadow: 0 0 8px currentColor;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+.reveal a:hover {
+  color: var(--r-link-color-hover);
+  text-shadow: 0 0 12px currentColor, 0 0 24px currentColor;
+}
+
+/* Lists */
+.reveal ul, .reveal ol {
+  text-align: left;
+}
+.reveal li {
+  margin: 0.3em 0;
+}
+.reveal ul li::marker {
+  color: var(--accent-cyan);
+}
+
+/* Code blocks */
+.reveal pre {
+  background: rgba(255,255,255,0.05);
+  padding: 0.8em 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,255,224,0.15);
+}
+.reveal code {
+  font-family: var(--r-code-font);
+  color: #7afaff;
+}
+
+/* Inline code */
+.reveal p code {
+  background: rgba(255,255,255,0.05);
+  border-radius: 4px;
+  padding: 0.15em 0.35em;
+  color: #7afaff;
+}
+
+/* Blockquotes */
+.reveal blockquote {
+  font-style: italic;
+  color: #ffee58;
+  border-left: 4px solid var(--accent-magenta);
+  padding-left: 1em;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 0 20px rgba(255,61,242,0.15);
+}
+
+/* Progress bar (energy meter style) */
+.reveal .progress {
+  background: rgba(255,255,255,0.05);
+}
+.reveal .progress span {
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-magenta));
+  box-shadow: 0 0 10px var(--accent-cyan), 0 0 20px var(--accent-magenta);
+}
+
+/* Navigation arrows */
+.reveal .controls {
+  color: var(--accent-magenta);
+}
+.reveal .controls button {
+  text-shadow: 0 0 10px var(--accent-magenta);
+}
+
+/* Footer or slide footnotes */
+footer {
+  font-size: 0.6em;
+  opacity: 0.7;
+  color: #9ee8ff;
+  text-shadow: 0 0 6px rgba(0,255,224,0.3);
+  margin-top: 1em;
+}
