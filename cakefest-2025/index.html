@@ -88,11 +88,20 @@
 <script>
 Reveal.initialize({ hash:true, plugins: [RevealMarkdown, RevealHighlight, RevealNotes] });
 </script>
-<script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('.backgrounds').insertAdjacentHTML('beforeend',
-            '<footer class="top-100 position-sticky fs-6 pb-2 ps-1">Umer Salman | 08/10/2025</footer>');
-    });
+<!-- Add this after initializing Reveal.js -->
+<script>
+  Reveal.on('ready', function () {
+    addBootstrapFooter();
+  });
+
+  function addBootstrapFooter() {
+    if (!document.querySelector('.reveal footer')) {
+      const footer = document.createElement('footer');
+      footer.className = 'footer text-white-50 fs-5 py-2 ps-3 position-fixed bottom-0 start-0 w-100';
+      footer.textContent = 'Umer Salman | 08/10/2025';
+      document.querySelector('.reveal').appendChild(footer);
+    }
+  }
 </script>
 </body>
 </html>

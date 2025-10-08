@@ -92,3 +92,8 @@
 .reveal .progress{ height:6px; background:rgba(255,255,255,0.1); box-shadow: inset 0 0 10px rgba(255,221,0,0.3);}
 .reveal .progress span{ background: linear-gradient(90deg,var(--primary-color),var(--accent-color)); box-shadow:0 0 20px var(--primary-color); animation: progressPulse 2s ease-in-out infinite; }
 @keyframes progressPulse{0%,100%{box-shadow:0 0 20px var(--primary-color);}50%{box-shadow:0 0 40px var(--accent-color);}}
+
+.reveal .controls {
+  color: var(--accent-color);
+  text-shadow: 0 0 10px var(--accent-color);
+}
