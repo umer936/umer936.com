@@ -28,53 +28,72 @@
         <!-- Intro Slide -->
         <section>
             <h2>Progressive CakePHP PowerUps</h2>
-            <p>Like a cupcake evolving into a giant cake, you can level up your app incrementally.</p>
+            <p>From a cupcake to a large cake, you can level up your app incrementally.</p>
         </section>
 
         <!-- Logging PowerUps -->
         <section>
-            <div class="powerup-card" style="animation-delay:0.2s;">
-                <h3>Logging PowerUps</h3>
-                <ul>
-                    <li><span class="stars"><span class="star"></span></span> CakePHP log files</li>
-                    <li><span class="stars"><span class="star"></span><span class="star"></span></span> database-log</li>
-                    <li><span class="stars"><span class="star"></span><span class="star"></span><span class="star"></span></span> logHappens</li>
-                    <li><span class="stars"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></span> GlitchTip</li>
-                    <li><span class="stars"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></span> Sentry</li>
-                </ul>
-            </div>
+            <section>
+                <div class="powerup-card" data-delay="0.2s">
+                    <h3>Logging PowerUps</h3>
+                    <ul>
+                        <li data-level="1">CakePHP log files</li>
+                        <li data-level="2">database-log</li>
+                        <li data-level="3">logHappens</li>
+                        <li data-level="4">GlitchTip</li>
+                        <li data-level="5">Sentry</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h4>CakePHP Database-Log</h4>
+                <a href="https://github.com/dereuromark/CakePHP-DatabaseLog">
+                    <figure>
+                        <img src="img/CakePHP-DatabaseLog.png" class="w-100" alt="database-log GitHub">
+                        <figcaption>https://github.com/dereuromark/CakePHP-DatabaseLog</figcaption>
+                    </figure>
+                </a>
+            </section>
+            <section>
+                <h4>Log Happens</h4>
+                <div class="r-stack">
+                    <!-- TODO -->
+                    <img src="img/CakePHP-DatabaseLog.png" alt="LogHappens">
+                    <img class="fragment fade-in-then-out" src="img/lucy_home.png" alt="LogHappens Single">
+                </div>
+            </section>
         </section>
 
         <!-- Data Query PowerUps -->
         <section>
-            <div class="powerup-card" style="animation-delay:0.4s;">
+            <div class="powerup-card" data-delay="0.4s">
                 <h3>Data Query PowerUps</h3>
                 <ul>
-                    <li><span class="stars"><span class="star"></span></span> Select + Unions</li>
-                    <li><span class="stars"><span class="star"></span><span class="star"></span></span> CTE</li>
-                    <li><span class="stars"><span class="star"></span><span class="star"></span><span class="star"></span></span> Postgres</li>
-                    <li><span class="stars"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></span> TimescaleDB</li>
+                <li data-level="1">Select + Unions</li>
+                <li data-level="2">CTE</li>
+                <li data-level="3">Postgres</li>
+                <li data-level="4">TimescaleDB</li>
                 </ul>
             </div>
         </section>
 
         <!-- WASM / PyScript -->
         <section>
-            <div class="powerup-card" style="animation-delay:0.6s;">
+            <div class="powerup-card" data-delay="0.6s">
                 <h3>WASM / PyScript</h3>
                 <ul>
-                    <li><span class="stars"><span class="star"></span></span> WASM</li>
-                    <li><span class="stars"><span class="star"></span><span class="star"></span></span> PyScript</li>
+                <li data-level="1">WASM</li>
+                <li data-level="2">PyScript</li>
                 </ul>
             </div>
         </section>
 
         <!-- DateTimePickerJS -->
         <section>
-            <div class="powerup-card" style="animation-delay:0.8s;">
+            <div class="powerup-card" data-delay="0.8s">
                 <h3>Build Your Own!</h3>
                 <ul>
-                    <li><span class="stars"><span class="star"></span></span> DateTimePickerJS</li>
+                <li data-level="1">DateTimePickerJS</li>
                 </ul>
             </div>
         </section>
@@ -92,6 +111,7 @@ Reveal.initialize({ hash:true, plugins: [RevealMarkdown, RevealHighlight, Reveal
 <script>
   Reveal.on('ready', function () {
     addBootstrapFooter();
+    addAnimationDelays();
   });
 
   function addBootstrapFooter() {
@@ -101,6 +121,13 @@ Reveal.initialize({ hash:true, plugins: [RevealMarkdown, RevealHighlight, Reveal
       footer.textContent = 'Umer Salman | 08/10/2025';
       document.querySelector('.reveal').appendChild(footer);
     }
+  }
+
+  function addAnimationDelays() {
+    document.querySelectorAll('.powerup-card').forEach(card => {
+        const delay = card.getAttribute('data-delay');
+        if (delay) card.style.animationDelay = delay;
+    });
   }
 </script>
 </body>
