@@ -86,6 +86,8 @@ Coming back to things for now, there's lots of ways you can improve your app. So
 I've mentioned this before, but I've been stuck on being able to have a datetimepicker that supports nanoseconds, but doesn't require jQuery.
 Appearently PhpMyAdmin also has this problem because everything else doesn't go that precise. So with AI tools, I basically had it generate the base for such a thing and then worked through the bugs or extra things I want different. But with CakePHP I'm able to tie it to the FormHelper and use it in my app.
 
+Wanted to just add a few more mentions of cool ones I'm interested in knowing if people have done. I had a bit of trouble getting FrankenPHP to work so we are somewhere between nginx and caddy right now. Similarly, for our production environment we deploy these using Docker but due to the security benefits of podman being like Docker but rootless. And that it's the default in RHEL, we gave it a go. It works with our CI/CD which is pretty cool because we use that to put in the .env keys so it shows up the errors on GlitchTip.
+
 So just build it and try it. And make the the descision of where along the scale you want to get to without making things too difficult.
 It may be tempting to go all the way to what Netflix, Google, etc are all doing but that could be overkill. Everyone can build a bridge with unlimited time and materials but the point is to build it in the shortest timeline and fewest resources.
 
@@ -99,8 +101,6 @@ Any Questions?
 
 <!-- Other -->
 
-apache -> nginx -> caddy -> franken
-LAMP -> devilbox -> docker -> podman(?) kube(?)
 File Watchers -> xdebug
 Queue, Prefect
 Auth: TinyAuth -> Authentik
