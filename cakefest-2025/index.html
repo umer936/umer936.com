@@ -51,24 +51,70 @@
 
             <!-- Logging PowerUps -->
             <section>
-                <div class="container">
-                    <div class="row g-4 justify-content-center">
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="card-wrapper" data-delay="0.2s">
-                                <div class="powerup-card h-100" data-tilt data-tilt-reverse="true"
-                                    data-tilt-scale="1.05" data-tilt-max="15" data-tilt-speed="400"
-                                    data-tilt-glare="true" data-tilt-max-glare="0.3">
-                                    <h3>Logging PowerUps</h3>
-                                    <ul>
-                                        <li data-level="1">CakePHP log files</li>
-                                        <li data-level="2">database-log</li>
-                                        <li data-level="3">logHappens</li>
-                                        <li data-level="4">GlitchTip</li>
-                                        <li data-level="5">Sentry</li>
-                                    </ul>
-                                </div>
+                <h2>Logging PowerUps</h2>
+                <div class="container-fluid">
+                    <div class="d-flex gap-4 py-3" style="margin-left: -180px">
+
+                        <div class="card-wrapper flex-shrink-0" style="width: 250px;" data-delay="0.2s">
+                            <div class="powerup-card h-100" data-bs-toggle="modal" data-bs-target="#cakephpModal"
+                                data-tilt data-tilt-reverse="true" data-tilt-scale="1.05" data-tilt-max="15"
+                                data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.3">
+                                <h3>CakePHP Log Files</h3>
+                                <img src="img/CakePHP_Logs.jpg" alt="CakePHP Log Files" class="card-img-top">
+                                <ul>
+                                    <li data-level="1"></li>
+                                </ul>
                             </div>
                         </div>
+
+                        <div class="card-wrapper flex-shrink-0" style="width: 250px;" data-delay="0.3s">
+                            <div class="powerup-card h-100" data-bs-toggle="modal" data-bs-target="#databaseLogModal"
+                                data-tilt data-tilt-reverse="true" data-tilt-scale="1.05" data-tilt-max="15"
+                                data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.3">
+                                <h3>database-log</h3>
+                                <img src="img/CakePHP-DatabaseLog.png" alt="database-log" class="card-img-top">
+                                <ul>
+                                    <li data-level="2"></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card-wrapper flex-shrink-0" style="width: 250px;" data-delay="0.4s">
+                            <div class="powerup-card h-100" data-bs-toggle="modal" data-bs-target="#logHappensModal"
+                                data-tilt data-tilt-reverse="true" data-tilt-scale="1.05" data-tilt-max="15"
+                                data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.3">
+                                <h3>log Happens</h3>
+                                <img src="img/logHappens_Home.png" alt="logHappens" class="card-img-top">
+                                <ul>
+                                    <li data-level="3"></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card-wrapper flex-shrink-0" style="width: 250px;" data-delay="0.5s">
+                            <div class="powerup-card h-100" data-bs-toggle="modal" data-bs-target="#glitchTipModal"
+                                data-tilt data-tilt-reverse="true" data-tilt-scale="1.05" data-tilt-max="15"
+                                data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.3">
+                                <h3>GlitchTip<br><br></h3>
+                                <img src="img/GlitchTip_Home.png" alt="GlitchTip" class="card-img-top">
+                                <ul>
+                                    <li data-level="4"></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card-wrapper flex-shrink-0" style="width: 250px;" data-delay="0.6s">
+                            <div class="powerup-card h-100" data-bs-toggle="modal" data-bs-target="#sentryModal"
+                                data-tilt data-tilt-reverse="true" data-tilt-scale="1.05" data-tilt-max="15"
+                                data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.3">
+                                <h3>Sentry<br><br></h3>
+                                <img src="img/sentry.webp" alt="Sentry" class="card-img-top">
+                                <ul>
+                                    <li data-level="5"></li>
+                                </ul>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -127,32 +173,42 @@
 
             <!-- WASM / PyScript -->
             <section>
+                <h2>Everything else!</h2>
                 <div class="container">
                     <div class="row g-4 justify-content-center">
 
+
                         <div class="col-12 col-md-6 col-lg-4">
-                            <div class="card-wrapper" data-delay="0.6s">
-                                <div class="powerup-card h-100" data-tilt data-tilt-reverse="true"
-                                    data-tilt-scale="1.05" data-tilt-max="15" data-tilt-speed="400"
-                                    data-tilt-glare="true" data-tilt-max-glare="0.3">
-                                    <h3>WASM / PyScript</h3>
-                                    <ul>
-                                        <li data-level="1">WASM</li>
-                                        <li data-level="2">PyScript</li>
-                                    </ul>
+                            <div class="card-wrapper" data-delay="0.7s">
+                                <div class="powerup-card h-100" data-bs-toggle="modal" data-bs-target="#pyscriptModal"
+                                    data-tilt data-tilt-reverse="true" data-tilt-scale="1.05" data-tilt-max="15"
+                                    data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.3">
+                                    <h3>PyScript<br><br></h3>
+                                    <img src="img/pyscript.webp" alt="PyScript" class="card-img-top">
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-12 col-md-6 col-lg-4">
-                            <div class="card-wrapper" data-delay="0.7s">
-                                <div class="powerup-card h-100" data-tilt data-tilt-reverse="true"
+                            <div class="card-wrapper" data-delay="0.6s">
+                                <div class="powerup-card h-100" data-bs-toggle="modal" data-bs-target="#wasmModal"
+                                    data-tilt data-tilt-reverse="true" data-tilt-scale="1.05" data-tilt-max="15"
+                                    data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.3">
+                                    <h3>WASM<br><br></h3>
+                                    <img src="img/wasm.webp" alt="WASM" class="card-img-top">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card-wrapper" data-delay="0.8s">
+                                <div class="powerup-card h-100" data-bs-toggle="modal"
+                                    data-bs-target="#datetimepickerModal" data-tilt data-tilt-reverse="true"
                                     data-tilt-scale="1.05" data-tilt-max="15" data-tilt-speed="400"
                                     data-tilt-glare="true" data-tilt-max-glare="0.3">
-                                    <h3>Build Your Own!</h3>
-                                    <ul>
-                                        <li data-level="1">DateTimePickerJS</li>
-                                    </ul>
+                                    <h3>Date
+                                        TimePickerJS</h3>
+                                    <img src="img/DateTimePickerJS.png" alt="DateTimePickerJS" class="card-img-top">
                                 </div>
                             </div>
                         </div>
@@ -160,10 +216,111 @@
                     </div>
                 </div>
             </section>
+
+
+            <section id="wrap-up-q-and-a">
+                These slides are available @ <br>
+                <a href="https://umer936.com/cakefest-2025/">https://umer936.com/cakefest-2025/</a>
+                <hr>
+                Feel free to contact:<br>
+                Slack: umer936<br>
+                <a href="mailto:umer936@gmail.com">umer936@gmail.com</a><br>
+                <a href="https://github.com/umer936">https://github.com/umer936</a>
+            </section>
         </div>
 
 
         <!-- Modals -->
+
+        <div class="modal fade" id="cakephpModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title">CakePHP Logs</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>cli-debug.log</strong></p>
+                        <pre><code id="cli-debug" class="fs-6 log">Loading...</code></pre>
+
+                        <p><strong>debug.log</strong></p>
+                        <pre><code id="debug" class="fs-6 log">Loading...</code></pre>
+
+                        <p><strong>error.log</strong></p>
+                        <pre><code id="error" class="fs-6 log">Loading...</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="databaseLogModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title">CakePHP-DatabaseLog</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/CakePHP-DatabaseLog.png" class="w-100 py-2">
+                        <a
+                            href="https://github.com/dereuromark/CakePHP-DatabaseLog/">https://github.com/dereuromark/CakePHP-DatabaseLog/</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="logHappensModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title">LogHappens</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/logHappens_Home.png" class="w-100 py-2">
+                        <img src="img/logHappens_Code.png" class="w-100 py-2">
+                        <a href="https://github.com/ToX82/logHappens">https://github.com/ToX82/logHappens</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="glitchTipModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title">GlitchTip</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/GlitchTip_Home.png" class="w-100 py-2">
+                        <img src="img/GlitchTip_Error.png" class="w-100 py-2">
+                        <img src="img/GlitchTip_Error_Code.png" class="w-100 py-2">
+                        <p>
+                            Uses the Sentry API.
+                            Can just use <a
+                                href="https://github.com/lordsimal/cakephp-sentry">https://github.com/lordsimal/cakephp-sentry</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="sentryModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Sentry</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/sentry.webp" class="w-100 py-2">
+                        <a href="https://sentry.io/">https://sentry.io/</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <div class="modal fade" id="selectModal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-xl modal-dialog-centered">
@@ -263,7 +420,6 @@ public function getTimeValues(int $fields_id, $start, $stop, int $spacecraft_id 
                 </div>
             </div>
         </div>
-
 
         <!-- Modals (CTE / Select / Postgres) -->
         <div class="modal fade" id="cteModal" tabindex="-1" aria-hidden="true">
@@ -449,6 +605,40 @@ public function samplePlotData(Query $plotData, string $start, string $stop, int
             </div>
         </div>
 
+
+
+        <div class="modal fade" id="wasmModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title">WASM + WASI</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/wasm.webp" class="w-100 py-2">
+                        <a href="https://webassembly.org/">https://webassembly.org/</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="modal fade" id="datetimepickerModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Sentry</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/DateTimePickerJS.png" class="w-100 py-2">
+                        <a href="https://github.com/umer936/datetimepicker.js">https://github.com/umer936/datetimepicker.js</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- ===== JavaScript to load code + iframe on demand ===== -->
         <script>
             document.addEventListener('DOMContentLoaded', () => {
@@ -505,6 +695,23 @@ public function samplePlotData(Query $plotData, string $start, string $stop, int
                 // Optional: clear iframe when modal closes (for fresh reload next time)
                 modal.addEventListener('hidden.bs.modal', () => {
                     iframeContainer.innerHTML = '<div id="iframe-placeholder" class="text-muted"><em>Preview will load when modal opens...</em></div>';
+                });
+
+                // Modal reference
+
+                const baseURL2 = 'https://umer936.com/cakefest-2025/logs/';
+                const files2 = {
+                    'cli-debug': baseURL2 + 'cli-debug.log',
+                    'debug': baseURL2 + 'debug.log',
+                    'error': baseURL2 + 'error.log',
+                };
+                const modal2 = document.getElementById('cakephpModal');
+
+                modal2.addEventListener('shown.bs.modal', () => {
+                    // Load files dynamically
+                    for (const [id, url] of Object.entries(files2)) {
+                        loadCode(id, url);
+                    }
                 });
             });
         </script>
