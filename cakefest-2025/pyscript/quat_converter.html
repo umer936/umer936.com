@@ -1,0 +1,64 @@
+<title>Quaternion to RA, Dec, and NCP Converter</title>
+<script type="module" src="https://pyscript.net/releases/2024.8.2/core.js"></script>
+<div class="container mt-5 was-validated">
+    <h1 class="mb-4">Quaternion to RA, Dec, and NCP Converter</h1>
+
+    <!-- Row to contain both forms side by side -->
+    <div class="row">
+        <!-- Quaternion Input Form -->
+        <div class="col-md-6">
+            <form id="quat-form" onsubmit="return false;">
+                <div class="mb-3">
+                    <label class="form-label">Enter Quaternion Values Between -1 to 1:</label>
+                    <div class="input-group mb-2">
+                        <span class="input-group-text" id="quat-1-label">q1</span>
+                        <input type="number" id="quat-1" class="form-control" value="0" py-input="compute_quat" step="any" max="1" min="-1" aria-label="q1" />
+                    </div>
+                    <div class="input-group mb-2">
+                        <span class="input-group-text" id="quat-2-label">q2</span>
+                        <input type="number" id="quat-2" class="form-control" value="0" py-input="compute_quat" step="any" max="1" min="-1" aria-label="q2" />
+                    </div>
+                    <div class="input-group mb-2">
+                        <span class="input-group-text" id="quat-3-label">q3</span>
+                        <input type="number" id="quat-3" class="form-control" value="0" py-input="compute_quat" step="any" max="1" min="-1" aria-label="q3" />
+                    </div>
+                    <div class="input-group mb-2">
+                        <span class="input-group-text" id="quat-4-label">q4</span>
+                        <input type="number" id="quat-4" class="form-control" value="0" py-input="compute_quat" step="any" max="1" min="-1" aria-label="q4" />
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Euler Angles Input Form -->
+        <div class="col-md-6">
+            <form id="eul-form" class="mt-4 mt-md-0" onsubmit="return false;">
+                <div class="mb-3">
+                    <label class="form-label">Enter RA/DEC:</label>
+                    <div class="input-group mb-2">
+                        <span class="input-group-text" id="eul-1-label">RA&nbsp;&nbsp;</span>
+                        <input type="number" id="eul-1" class="form-control" value="0" py-input="compute_euler" step="any" aria-label="Angle 1" />
+                    </div>
+                    <div class="input-group mb-2">
+                        <span class="input-group-text" id="eul-2-label">DEC</span>
+                        <input type="number" id="eul-2" class="form-control" value="0" py-input="compute_euler" step="any" aria-label="Angle 2" />
+                    </div>
+                    <div class="input-group mb-2">
+                        <span class="input-group-text" id="eul-3-label">NCP</span>
+                        <input type="number" id="eul-3" class="form-control" value="0" py-input="compute_euler" step="any" aria-label="Angle 3" />
+                    </div>
+                    <div style="opacity: 0">
+                        <span class="input-group-text" id="eul-4-label">NCP</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <p id="result" class="border rounded p-3 bg-light"></p>
+</div>
+<a href="https://quaternions.online/">Quaternion Visualizer</a>
+
+<py-script
+    src="./QuatConverterPyScript.py"
+    config="./QuatConverterConfig.toml">
+</py-script>

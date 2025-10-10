@@ -1,5 +1,17 @@
 Notes
 
+Hi everyone! 
+
+I'm Umer Salman. I've been working with CakePHP since I started at my current position at Southwest Research Institute in Texas in 2021. We're a small group of 3, but we work on 60ish CakePHP applications building data analysis and support software for NASA and ESA spacecraft. The group has been working with CakePHP since the early days. 
+
+Now, we're always looking to improve how we do things, but across lots of applications and a small team, it's easy to get lost. You obviously want to do the best practices for everything, but if you spend your time doing all that, you lose the time to develop. Which is actually what your customers want. 
+So I'd like to present progressively improving your CakePHP applications through powerups. Obviously, the list is endless, but I want to cover a few that we've gone through recently and how the same thing can apply to the things you do. The 3 I mainly want to cover are logging, data queries, and WebAssembly. 
+
+Now imagine these are like Pokemon cards, each with it's own evolution path. 
+
+
+
+
 DateTimePickerJS
 TimescaleDB
 HTMX
@@ -11,16 +23,19 @@ For example, the typical Laravel workflow requires downloading and installing pa
 wasmCloud --> Delphy 
 Fermyon Spin like Lambdas - Microseconds start up time, offline
 FrankenPHP?
+- Mark Story mentioned
 apache -> nginx -> caddy -> franken
 Docker
 LAMP -> devilbox -> docker -> podman(?) kube(?)
 CakePHP CTE
+- Mark mentioned the hints
 Select + Unions -> CTE -> Filter
 NativePHP
 File Watchers -> xdebug
 Queue, Prefect
 Auth: TinyAuth -> Authentik
 PhpMcp - GeoViz
+- Jorge already talked about PhpMcp
 
 
 

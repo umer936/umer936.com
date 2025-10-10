@@ -1,0 +1,22 @@
+2025-10-09 08:38:50 debug: Since 5.2.0: Returning a value from event listeners is deprecated. Use `$event->setResult()` instead in `Model.buildValidator` of `CakeDC\Users\Model\Behavior\RegisterBehavior::buildValidator()`
+/var/www/html/vendor/cakephp/cakephp/src/Event/EventManager.php, line: 316
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `vendor/cakephp/cakephp/src/Event/EventManager.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only. in /var/www/html/vendor/cakephp/cakephp/src/Core/functions.php on line 377
+Trace:
+Cake\Error\ErrorTrap->handleError() [internal], line ??
+/var/www/html/vendor/cakephp/cakephp/src/Core/functions.php /var/www/html/vendor/cakephp/cakephp/src/Core/functions.php, line 377
+/var/www/html/vendor/cakephp/cakephp/src/Event/EventManager.php /var/www/html/vendor/cakephp/cakephp/src/Event/EventManager.php, line 350
+Cake\Event\EventManager->_callListener() /var/www/html/vendor/cakephp/cakephp/src/Event/EventManager.php, line 316
+Cake\Event\EventManager->dispatch() /var/www/html/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php, line 88
+Cake\ORM\Table->dispatchEvent() /var/www/html/vendor/cakephp/cakephp/src/Validation/ValidatorAwareTrait.php, line 126
+Cake\ORM\Table->createValidator() /var/www/html/vendor/cakephp/cakephp/src/Validation/ValidatorAwareTrait.php, line 95
+Cake\ORM\Table->getValidator() /var/www/html/vendor/cakephp/cakephp/src/ORM/Marshaller.php, line 286
+Cake\ORM\Marshaller->_validate() /var/www/html/vendor/cakephp/cakephp/src/ORM/Marshaller.php, line 212
+Cake\ORM\Marshaller->one() /var/www/html/vendor/cakephp/cakephp/src/ORM/Table.php, line 2959
+Cake\ORM\Table->newEntity() /var/www/html/vendor/cakedc/users/src/Command/Logic/CreateUserTrait.php, line 81
+CakeDC\Users\Command\UsersAddSuperuserCommand->_createUser() /var/www/html/vendor/cakedc/users/src/Command/UsersAddSuperuserCommand.php, line 28
+CakeDC\Users\Command\UsersAddSuperuserCommand->execute() /var/www/html/vendor/cakephp/cakephp/src/Console/BaseCommand.php, line 201
+Cake\Console\BaseCommand->run() /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php, line 338
+Cake\Console\CommandRunner->runCommand() /var/www/html/vendor/cakephp/cakephp/src/Console/CommandRunner.php, line 168
+Cake\Console\CommandRunner->run() /var/www/html/bin/cake.php, line 10
+[main]
+

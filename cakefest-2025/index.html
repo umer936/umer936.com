@@ -1,134 +1,568 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UMER SALMAN | CakePHP PowerUps</title>
 
-<link rel="stylesheet" href="dist/reset.css">
-<link rel="stylesheet" href="dist/reveal.css">
-<link rel="stylesheet" href="dist/theme/powerup.css">
-<link rel="stylesheet" href="dist/theme/cards.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMER SALMAN | CakePHP PowerUps</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/powerup.css">
+    <link rel="stylesheet" href="dist/theme/cards.css">
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="reveal">
-    <div class="slides">
+    <div class="reveal">
+        <div class="slides">
 
-        <!-- Title Slide -->
-        <section>
-            <div class="title-container">
-                <h1>🍰 CakePHP PowerUps</h1>
-                <p>Umer Salman</p>
-                <h2>CakeFest 2025</h2>
-            </div>
-        </section>
-
-        <!-- Intro Slide -->
-        <section>
-            <h2>Progressive CakePHP PowerUps</h2>
-            <p>From a cupcake to a large cake, you can level up your app incrementally.</p>
-        </section>
-
-        <!-- Logging PowerUps -->
-        <section>
+            <!-- Title Slide -->
             <section>
-                <div class="powerup-card" data-delay="0.2s">
-                    <h3>Logging PowerUps</h3>
-                    <ul>
-                        <li data-level="1">CakePHP log files</li>
-                        <li data-level="2">database-log</li>
-                        <li data-level="3">logHappens</li>
-                        <li data-level="4">GlitchTip</li>
-                        <li data-level="5">Sentry</li>
-                    </ul>
+                <div class="title-container text-center">
+                    <h1>🍰 CakePHP PowerUps</h1>
+                    <p>Umer Salman</p>
+                    <h2>CakeFest 2025</h2>
                 </div>
             </section>
+
+            <!-- Intro Slide -->
             <section>
-                <h4>CakePHP Database-Log</h4>
-                <a href="https://github.com/dereuromark/CakePHP-DatabaseLog">
-                    <figure>
-                        <img src="img/CakePHP-DatabaseLog.png" class="w-100" alt="database-log GitHub">
-                        <figcaption>https://github.com/dereuromark/CakePHP-DatabaseLog</figcaption>
-                    </figure>
-                </a>
+                <h2>Progressive CakePHP PowerUps</h2>
+                <p>From a cupcake to a large cake, you can level up your app incrementally.</p>
+
+                <hr class="fragment fade-in">
+
+                <!--
+                Maybe a ul?
+                Step 1) Make a new feature
+                Step 2) Increment the feature
+                Step 3) Find your limits
+                Step 4) ???
+                Step 5) Profit                
+                -->
+
+                <p class="fragment fade-in">Logging</p>
+                <p class="fragment fade-in">Data Queries</p>
+                <p class="fragment fade-in">WebAssembly</p>
             </section>
+
+            <!-- Logging PowerUps -->
             <section>
-                <h4>Log Happens</h4>
-                <div class="r-stack">
-                    <!-- TODO -->
-                    <img src="img/CakePHP-DatabaseLog.png" alt="LogHappens">
-                    <img class="fragment fade-in-then-out" src="img/lucy_home.png" alt="LogHappens Single">
+                <div class="container">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card-wrapper" data-delay="0.2s">
+                                <div class="powerup-card h-100" data-tilt data-tilt-reverse="true"
+                                    data-tilt-scale="1.05" data-tilt-max="15" data-tilt-speed="400"
+                                    data-tilt-glare="true" data-tilt-max-glare="0.3">
+                                    <h3>Logging PowerUps</h3>
+                                    <ul>
+                                        <li data-level="1">CakePHP log files</li>
+                                        <li data-level="2">database-log</li>
+                                        <li data-level="3">logHappens</li>
+                                        <li data-level="4">GlitchTip</li>
+                                        <li data-level="5">Sentry</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
-        </section>
 
-        <!-- Data Query PowerUps -->
-        <section>
-            <div class="powerup-card" data-delay="0.4s">
-                <h3>Data Query PowerUps</h3>
-                <ul>
-                <li data-level="1">Select + Unions</li>
-                <li data-level="2">CTE</li>
-                <li data-level="3">Postgres</li>
-                <li data-level="4">TimescaleDB</li>
-                </ul>
-            </div>
-        </section>
+            <!-- Data Query PowerUps -->
+            <section>
+                <h2>Data Query PowerUps</h2>
+                <div class="container">
+                    <div class="row g-4 justify-content-center">
 
-        <!-- WASM / PyScript -->
-        <section>
-            <div class="powerup-card" data-delay="0.6s">
-                <h3>WASM / PyScript</h3>
-                <ul>
-                <li data-level="1">WASM</li>
-                <li data-level="2">PyScript</li>
-                </ul>
-            </div>
-        </section>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card-wrapper" data-delay="0.3s">
+                                <div class="powerup-card h-100" data-bs-toggle="modal" data-bs-target="#selectModal"
+                                    data-tilt data-tilt-reverse="true" data-tilt-scale="1.05" data-tilt-max="15"
+                                    data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.3">
+                                    <h3>Select + Unions</h3>
+                                    <img src="img/selectunion.png" alt="Select + Unions" class="card-img-top">
+                                    <ul>
+                                        <li data-level="1"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-        <!-- DateTimePickerJS -->
-        <section>
-            <div class="powerup-card" data-delay="0.8s">
-                <h3>Build Your Own!</h3>
-                <ul>
-                <li data-level="1">DateTimePickerJS</li>
-                </ul>
-            </div>
-        </section>
-    </div>
-</div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card-wrapper" data-delay="0.4s">
+                                <div class="powerup-card h-100" data-bs-toggle="modal" data-bs-target="#cteModal"
+                                    data-tilt data-tilt-reverse="true" data-tilt-scale="1.05" data-tilt-max="15"
+                                    data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.3">
+                                    <h3>CTE<br><br></h3>
+                                    <img src="img/cte.png" alt="CTE" class="card-img-top">
+                                    <ul>
+                                        <li data-level="2"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-<script src="dist/reveal.js"></script>
-<script src="plugin/notes/notes.js"></script>
-<script src="plugin/markdown/markdown.js"></script>
-<script src="plugin/highlight/highlight.js"></script>
-<script>
-Reveal.initialize({ hash:true, plugins: [RevealMarkdown, RevealHighlight, RevealNotes] });
-</script>
-<!-- Add this after initializing Reveal.js -->
-<script>
-  Reveal.on('ready', function () {
-    addBootstrapFooter();
-    addAnimationDelays();
-  });
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card-wrapper" data-delay="0.5s">
+                                <div class="powerup-card h-100" data-bs-toggle="modal" data-bs-target="#postgresModal"
+                                    data-tilt data-tilt-reverse="true" data-tilt-scale="1.05" data-tilt-max="15"
+                                    data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.3">
+                                    <h3>TimescaleDB<br><br></h3>
+                                    <img src="img/TimescaleDB.webp" alt="Postgres" class="card-img-top">
+                                    <ul>
+                                        <li data-level="3"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-  function addBootstrapFooter() {
-    if (!document.querySelector('.reveal footer')) {
-      const footer = document.createElement('footer');
-      footer.className = 'footer text-white-50 fs-5 py-2 ps-3 position-fixed bottom-0 start-0 w-100';
-      footer.textContent = 'Umer Salman | 08/10/2025';
-      document.querySelector('.reveal').appendChild(footer);
+                    </div>
+                </div>
+            </section>
+
+            <!-- WASM / PyScript -->
+            <section>
+                <div class="container">
+                    <div class="row g-4 justify-content-center">
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card-wrapper" data-delay="0.6s">
+                                <div class="powerup-card h-100" data-tilt data-tilt-reverse="true"
+                                    data-tilt-scale="1.05" data-tilt-max="15" data-tilt-speed="400"
+                                    data-tilt-glare="true" data-tilt-max-glare="0.3">
+                                    <h3>WASM / PyScript</h3>
+                                    <ul>
+                                        <li data-level="1">WASM</li>
+                                        <li data-level="2">PyScript</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card-wrapper" data-delay="0.7s">
+                                <div class="powerup-card h-100" data-tilt data-tilt-reverse="true"
+                                    data-tilt-scale="1.05" data-tilt-max="15" data-tilt-speed="400"
+                                    data-tilt-glare="true" data-tilt-max-glare="0.3">
+                                    <h3>Build Your Own!</h3>
+                                    <ul>
+                                        <li data-level="1">DateTimePickerJS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- Modals -->
+
+        <div class="modal fade" id="selectModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Select + Unions Example</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <pre>
+                            <code class="fs-6 php">
+/**
+  * @param int $fields_id
+  * @param $start
+  * @param $stop
+  * @param int|null $spacecraft_id
+  * @param array|null $filters
+  * @return array[]
+  *
+  * TODO: Make faster. Might be able to use this? https://book.cakephp.org/5/en/orm/query-builder.html#case-statements
+  * Can't I do the filter subqueries outside and just pass in the epochs?
+  * We should also display the number of points (count) and how many in the result
+  * TODO: save in the Grid save
+  */
+public function getTimeValues(int $fields_id, $start, $stop, int $spacecraft_id = null, array $filters = null)
+{
+    $plotData = $this
+        ->find()
+        ->select(['epoch', 'value'])
+        ->where(['fields_id' => $fields_id])
+        ->where(function (QueryExpression $exp) use ($start, $stop) {
+            return $exp->between('epoch', $start, $stop);
+        }); // can not add order here!
+
+    if ($spacecraft_id !== null) {
+        $plotData->where(['HAndSValues.spacecraft_id' => $spacecraft_id]);
     }
-  }
 
-  function addAnimationDelays() {
-    document.querySelectorAll('.powerup-card').forEach(card => {
-        const delay = card.getAttribute('data-delay');
-        if (delay) card.style.animationDelay = delay;
-    });
-  }
-</script>
+    if (!empty($filters)) {
+        foreach ($filters as $filter) {
+            $subQuery = $this->find('filter',
+                fields_id: (int)$filter['select_id'],
+                start: $start,
+                stop: $stop,
+                spacecraft_id: (int)$filter['spacecraft_id'],
+                filter_type: $filter['filter_type'],
+                filter: $filter,
+            );
+            $plotData->where(function (QueryExpression $exp) use ($subQuery) {
+                return $exp->in('epoch', $subQuery);
+            });
+        }
+    }
+
+    $totalRows = $plotData->count();
+    $points = 1000;
+    $scaleFactor = max(1, floor($totalRows / $points));
+
+    if ($scaleFactor > 1) {
+        // MOD on ID actually isn't correct as we don't know that the IDs are sequential
+        $middleData = $plotData->cleanCopy()->where(function () use ($scaleFactor) {
+            return "MOD(id, $scaleFactor) = 0";
+        })->orderByAsc('epoch');
+        $first = $plotData->cleanCopy()->orderByAsc('epoch')->limit(1);
+        $last = $plotData->cleanCopy()->orderByDesc('epoch')->limit(1);
+
+// We can't use the union since the data does not necessarily merge in the right order.
+// We noticed this on CoDICE - using a collection doesn't seem to be bad though.
+//            $query = $first->unionAll($middleData)->union($last);
+
+        $query = new Collection ($middleData->all ());
+        $query->prepend ($first->all ());
+        $query->append ($last->all ());
+    } else {
+        $query = $plotData->cleanCopy()->orderByAsc('epoch');
+    }
+
+    $epochs = [];
+    $values = [];
+
+    foreach ($query as $result) {
+        $epochs[] = $result->epoch->format('Y-m-d\TH:i:s.u');
+        $values[] = $result->value;
+    }
+
+    return [$epochs, $values];
+}          
+</code>
+</pre>
+                        <small>Note: We used to <code class="fs-4">groupBy('fields_id')</code> to force it to use the
+                            index, but that's no longer needed due to
+                            <code class="fs-4">optimizerHint()</code>!
+                            <br>
+                            Merged PR: <a
+                                href="https://github.com/cakephp/cakephp/pull/18688">https://github.com/cakephp/cakephp/pull/18688</a></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modals (CTE / Select / Postgres) -->
+        <div class="modal fade" id="cteModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title">CTE Example Code</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <pre>
+                            <code class="fs-6 php">
+/**
+  * Samples data points from a plot query to reduce the number of points.
+  * The sampling algorithm:
+  *  - Calculates row numbers for the data points
+  *  - If total rows <= requested points, returns all data
+  *  - Otherwise, samples every nth row where n = ceil(totalRows/points)
+  *  - Ensures first and last points are included regardless of sampling
+  *
+  * @param \Cake\ORM\Query\SelectQuery $plotData The base query containing plot data with epoch and value columns
+  * @param string $start The start timestamp for the data range
+  * @param string $stop The stop timestamp for the data range
+  * @param int $points The desired number of data points (default: 1000)
+  * @return iterable Returns a collection of sampled data points ordered by epoch
+  */
+public function samplePlotData(SelectQuery $plotData, string $start, string $stop, int $points = 1000): iterable
+{
+    // Create a base query from $plotData with row number, include fields_id for index
+    $baseQuery = $plotData
+        ->cleanCopy()
+        ->select([
+            'fields_id' => 'fields_id',
+            'rn' => $plotData->func()->rowNumber()->over('(ORDER BY epoch ASC)')
+        ])
+        ->disableAutoAliasing()
+        ->where(fn(QueryExpression $exp) => $exp->between('epoch', $start, $stop));
+
+    $totalRows = $baseQuery->cleanCopy()->count();
+
+    // If $totalRows < $points, no need to sample
+    if ($totalRows <= $points) {
+        return $baseQuery->all();
+    }
+
+    // I changed it from floor() to ceil() to keep it under the requested number of points
+    $scaleFactor = (int)max(1, ceil($totalRows / $points));
+
+    $cte = new CommonTableExpression('base_data', $baseQuery);
+
+    // First point
+    $firstQuery = $plotData
+        ->cleanCopy()
+        ->from('base_data')
+        ->orderByAsc('epoch')
+        ->limit(1)
+        ->disableAutoAliasing();
+
+    // Last point
+    $lastQuery = $plotData
+        ->cleanCopy()
+        ->from('base_data')
+        ->orderByDesc('epoch')
+        ->limit(1)
+        ->disableAutoAliasing();
+
+    // Sampled data (every nth row, excluding first and last)
+    $sampledQuery = $plotData
+        ->cleanCopy()
+        ->from('base_data')
+        ->where(fn(QueryExpression $exp) => $exp->eq("MOD(rn, {$scaleFactor})", 0, 'integer'))
+        ->disableAutoAliasing();
+
+    // Combine all
+    $finalQuery =
+        $firstQuery
+        ->union($sampledQuery)
+        ->union($lastQuery)
+        ->with($cte)
+        ->orderByAsc('epoch');
+
+    return $finalQuery->all();
+}
+</code>
+</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="postgresModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Postgres Example</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <pre>
+                            <code class="fs-6 php">
+public function samplePlotData(Query $plotData, string $start, string $stop, int $points = 1000): iterable
+{
+    // Base query with row numbering and total rows in one pass
+    $baseQuery = $plotData
+        ->cleanCopy()
+        ->select([
+            'fields_id' => 'fields_id',
+            'epoch' => 'epoch',
+            'value' => 'value',
+            'rn' => $plotData->func()->rowNumber()->over('(ORDER BY epoch ASC)'),
+            'total_rows' => $plotData->func()->count('*')->over()
+        ])
+        ->where(fn(QueryExpression $exp) => $exp->between('epoch', $start, $stop))
+        ->disableAutoAliasing();
+
+    // Sample first, last, and every nth row in a single filter
+    $sampleQuery = $plotData
+        ->newExpr()
+        ->from(['base' => $baseQuery])
+        ->select(['fields_id', 'epoch', 'value'])
+        ->where(function (QueryExpression $exp, Query $q) use ($points) {
+            $modExpr = $q->func()->mod([
+                'rn' => 'identifier',
+                $q->newExpr()->ceil(['total_rows / ' . $points => 'literal'])
+            ]);
+
+            return $exp->or([
+                'rn = 1',                    // first row
+                'rn = total_rows',            // last row
+                $exp->eq($modExpr, 0)        // every nth row
+            ]);
+        })
+        ->orderByAsc('epoch');
+
+    return $sampleQuery->all();
+}
+</code>
+</pre>
+                        Note: haven't gotten here yet. <a
+                            href="https://github.com/timescale/timescaledb">TimescaleDB</a> is a PostgreSQL extension
+                        optimized for time series data.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="pyscriptModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header border-secondary">
+                        <h5 class="modal-title">PyScript Example (Dynamic)</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body d-flex flex-nowrap gap-3">
+                        <!-- Left column: dynamically loaded code -->
+                        <div class="w-50 pe-3 overflow-y-auto mh-100 scroll-smooth">
+                            <p><strong>quat_converter.html</strong></p>
+                            <pre><code id="code-index" class="fs-6 html">Loading...</code></pre>
+
+                            <p><strong>QuatConverterConfig.toml</strong></p>
+                            <pre><code id="code-config" class="fs-6 toml">Loading...</code></pre>
+
+                            <p><strong>QuatConverterPyScript.py</strong></p>
+                            <pre><code id="code-python" class="fs-6 python">Loading...</code></pre>
+
+                            <p><strong>CakePHP Example (Using Files from Webroot)</strong></p>
+                            <pre><code id="code-cakephp" class="fs-6 python">Loading...</code></pre>
+
+                        </div>
+
+                        <!-- Right column: iframe (loads on demand) -->
+                        <div class="w-50 rounded">
+                            <div class="iframe-container h-50">
+                                <div id="iframe-placeholder" class="text-muted">
+                                    <em>Preview will load when modal opens...</em>
+                                </div>
+                            </div>
+                            <img src="img/LAMP_Quat.png" class="mt-3 rounded h-50 w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== JavaScript to load code + iframe on demand ===== -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const baseURL = 'https://umer936.com/cakefest-2025/pyscript/';
+                const files = {
+                    'code-index': baseURL + 'quat_converter.html',
+                    'code-config': baseURL + 'QuatConverterConfig.toml',
+                    'code-python': baseURL + 'QuatConverterPyScript.py',
+                    'code-cakephp': baseURL + 'cakephp.html',
+                };
+
+                async function loadCode(id, url) {
+                    try {
+                        const res = await fetch(url);
+                        if (!res.ok) throw new Error(res.statusText);
+                        const text = await res.text();
+                        document.getElementById(id).textContent = text;
+                    } catch (err) {
+                        document.getElementById(id).textContent = `⚠️ Failed to load: ${err}`;
+                    }
+                }
+
+                // Modal reference
+                const modal = document.getElementById('pyscriptModal');
+                const iframeContainer = modal.querySelector('.iframe-container');
+
+                modal.addEventListener('shown.bs.modal', () => {
+                    // Load files dynamically
+                    for (const [id, url] of Object.entries(files)) {
+                        loadCode(id, url);
+                    }
+
+                    // Load iframe on demand (if not already loaded)
+                    if (!iframeContainer.querySelector('iframe')) {
+                        const iframe = document.createElement('iframe');
+                        iframe.src = baseURL; // loads /pyscript/ index
+                        iframe.loading = 'lazy';
+                        iframe.classList = 'bg-white h-100 rounded w-100';
+                        iframeContainer.innerHTML = ''; // clear placeholder
+                        iframeContainer.appendChild(iframe);
+                    }
+
+                    // Re-run highlight.js after code loads
+                    setTimeout(() => {
+                        if (RevealHighlight().hljs) {
+                            document.querySelectorAll('#pyscriptModal pre code').forEach(block => {
+                                delete block.dataset.highlighted;
+                                RevealHighlight().hljs.highlightElement(block);
+                            });
+                        }
+                    }, 800);
+                });
+
+                // Optional: clear iframe when modal closes (for fresh reload next time)
+                modal.addEventListener('hidden.bs.modal', () => {
+                    iframeContainer.innerHTML = '<div id="iframe-placeholder" class="text-muted"><em>Preview will load when modal opens...</em></div>';
+                });
+            });
+        </script>
+
+
+
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+    <script>
+        Reveal.initialize({ hash: true, plugins: [RevealMarkdown, RevealHighlight, RevealNotes] });
+
+        Reveal.on('ready', function () {
+            addBootstrapFooter();
+            addAnimationDelays();
+            initModalFlip();
+        });
+
+        // Footer
+        function addBootstrapFooter() {
+            if (!document.querySelector('.reveal footer')) {
+                const footer = document.createElement('footer');
+                footer.className = 'footer text-white-50 fs-5 py-2 ps-3 position-fixed bottom-0 start-0 w-100';
+                footer.textContent = 'Umer Salman | 08/10/2025';
+                document.querySelector('.reveal').appendChild(footer);
+            }
+        }
+
+        // Animation delays (on wrapper)
+        function addAnimationDelays() {
+            document.querySelectorAll('.card-wrapper').forEach(wrapper => {
+                const delay = wrapper.getAttribute('data-delay');
+                if (delay) wrapper.style.animationDelay = delay;
+            });
+        }
+
+        // Flip on modal open
+        function initModalFlip() {
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.addEventListener('show.bs.modal', function (e) {
+                    const card = e.relatedTarget;
+                    if (card) {
+                        card.classList.add('flip');
+                        setTimeout(() => card.classList.remove('flip'), 600);
+                    }
+                });
+            });
+        }
+    </script>
+
 </body>
+
 </html>
