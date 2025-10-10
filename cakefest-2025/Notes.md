@@ -12,20 +12,20 @@ The 3 I mainly want to cover are logging, data queries, and WebAssembly.
 
 <!-- Change slide -->
 
-Now imagine these are like Pokemon cards, each with it's own evolution path. 
+Now imagine these are like Pokemon cards, each with it's own evolution path and you can choose what works for you and always change later.
 
 In terms of logging, like everything, there's a spectrum.
 Obviously, increasing the capabilities increases what you're able to do, but its important to think back on what you actually need. 
 If you have 10 users, you don't need the same things as what an app with 1M users needs.
 
-You're probably familiar to these but it's just the logs. This is just the logs from the tutorial yesterday. But man, that's not fun. We have no context of who did what and we also have a hard time finding where to actually change my code to make that not happen!
+You're probably familiar to these but it's just the logs that go in the logs folder, aptly named. This is just the logs from the tutorial yesterday. But man, that's not fun. We have no context of who did what and we also have a hard time finding where to actually change my code to make that not happen!
 
 <!-- Search for BookingsController -->
 
 Yeah that's no fun.
 Fortunately Mark Scherer has a plugin that compiles these to a database called DatabaseLog. What's good about this is that it compiles the logs to a database, combining errors of the same type together. Much much better.
 
-But maybe we don't want a plugin and would rather just do something simple on the server to compile all the logs together, which introduces centralizing it. LogHappens does that. It already had a CakePHP 4 log parser so I just added the CakePHP 5 version and it mostly worked. It highlights where your error is and can delete all of a type, stuff like that. 
+But maybe we don't want a plugin and would rather just do something simple on the server to compile all the logs together, which introduces centralizing it. LogHappens does that. It already had a CakePHP 4 log parser so I just added the CakePHP 5 version and it worked. It highlights where your error is and can delete all of a type, stuff like that. 
 
 Many teams may find these sufficient at this point. You have logs and you see how to fix them to make them not happen anymore. 
 
@@ -34,8 +34,8 @@ I'm going to go to the end and come back.
 
 Sentry is an app used by many here and it has everything. You can see who did what. What broke, why, and more. People can submit feedback/bug reports. And you can see if queries are performing well, use it across like any kind of software, not just CakePHP or PHP. There are others like this but this is the idea - not just compiling the errors together, but total app improvement. Kevin has a plugin for connecting CakePHP to Sentry.
 
-So I tried it, and it was... overwhelming. If our team were bigger and had thousands of concurrent users or something, definitely a good path to go. But for a dozen users per site across a bunch of sites? Overkill.
-So I looked for something more streamlined. GlitchTip was one and actually just uses the same Sentry API so you can use the same plugin from Kevin and be done. You put your sites in and it compiles them together and adds some context. But more importantly, shows you where the error is... Nice!
+So I tried it, and it was... overwhelming. If our team were bigger and we had thousands of concurrent users or something, definitely a good path to go. But for a dozen users per site across a bunch of sites? Overkill.
+So I looked for something more streamlined. GlitchTip was one and actually just uses the same Sentry API so you can use the same plugin from Kevin and be done. You put your sites in and it puts them together and adds some context. But more importantly, shows you where the error is... Nice!
 
 Other options may fit your workflow better, but the point is that it's not all or nothing; do to where you're comfortable setting up and maintaining.
 
@@ -45,9 +45,9 @@ We took care of logging but there's other ways to power up your CakePHP applicat
 
 Take this code we have here. Doesn't really matter how it does, but it essentially decimates the data for plotting. We have tables of 100s of millions of rows for each of the sensors and the value at some epoch datetime(6). Our naive approach was to just make a Query with the ORM, grab the first, skip to get 998 points from the middle, and the last point. But we had some issues here. It's obviously slow going through that much table. And it used to not be able to use the database index for faster lookups. We added a groupBy() to force it to use the index on the field but that wasn't needed. Since this actually, as Mark Story mentioned yesterday, there's now an optimizerHint() in the ORM to tell it to use the index, which is pretty handy.
 
-Even still, surely we can do better. The docs are a little lacking here but I also had no idea these were a thing. I stumbled upon a GitHub Issue which let me to Mark's blog about Windowing Functions and Common Table Expressions. Looks like what I need for sure. Now it makes a like fake temp table to do your later operations on. We set up a "base_data" table from the jumbo table and now our operations are much easier (and more importantly, faster) - grabbing the first, middle, and last from the much smaller table. This is super useful since we do this function over and over for many sensors. And we can't cache it because we the user is able to filter the data, so the Query coming in here already has a good few things going on. 
+Even still, surely we can do better. The docs are a little lacking here but I also had no idea these were a thing. I stumbled upon a GitHub Issue which led me to Mark's blog about Windowing Functions and Common Table Expressions. Looks like what I need for sure. Now it makes a like fake temp table to do your later operations on. We set up a "base_data" table from the jumbo table and now our operations are much easier (and more importantly, faster) - grabbing the first, middle, and last from the much smaller table. This is super useful since we do this function over and over for many sensors. And we can't cache it because we the user is able to filter the data, so the Query coming in here already has a good few things going on. 
 
-But wait, it can probably be even better. Googling led me to believe that Postgres is better for large data. Maybe, but my immediate attempt of just putting in the data to a Postgres database ended up pretty close to the same, like maybe some milliseconds faster but not enough to change to it. However, then I stumbled upon FILTER that's in Postgres. It certainly looks simplier. There's actually databases specifically for time-series data, which is what we have here. TimescaleDB is an example of one and is built upon Postgres, which is great because it would just work with Cake. It adds in stuff like bucketting and auto clearing after some time. Not useful for us, but if someone had just like a temperature sensor, they don't need every value from a year ago, just averages and it handles stuff like that.
+But, it can probably be even better. Googling led me to believe that Postgres is better for large data. Maybe, but my immediate attempt of just putting in the data to a Postgres database ended up pretty close to the same, like maybe some milliseconds faster but not enough to change to it. However, then I stumbled upon FILTER that's in Postgres. It certainly looks simplier. There's actually databases specifically for time-series data, which is what we have here. TimescaleDB is an example of one and is built upon Postgres, which is great because it would just work with Cake. It adds in stuff like bucketting and auto clearing after some time. Not useful for us, but if someone had just like a temperature sensor, they don't need every value from a year ago, just averages and it handles stuff like that.
 
 <!-- Change slide -->
 
@@ -84,16 +84,20 @@ Between FrankenPHP, NativePHP, and WebAssembly, it's the year of Linux, sorry I 
 
 Coming back to things for now, there's lots of ways you can improve your app. Some of them are built, some of them aren't.
 I've mentioned this before, but I've been stuck on being able to have a datetimepicker that supports nanoseconds, but doesn't require jQuery.
-Appearently PhpMyAdmin are the people who have this problem because everything else doesn't go that precise. So with AI tools, I just had it generate the base for such a thing and then worked through the bugs or extra things I want different. But with CakePHP I'm able to tie it to the FormHelper and use it in my app.
+Appearently PhpMyAdmin also has this problem because everything else doesn't go that precise. So with AI tools, I basically had it generate the base for such a thing and then worked through the bugs or extra things I want different. But with CakePHP I'm able to tie it to the FormHelper and use it in my app.
 
-So just build it and try it. And make the the descision of where along the scale you want to get to without making it super difficult.
+So just build it and try it. And make the the descision of where along the scale you want to get to without making things too difficult.
+It may be tempting to go all the way to what Netflix, Google, etc are all doing but that could be overkill. Everyone can build a bridge with unlimited time and materials but the point is to build it in the shortest timeline and fewest resources.
 
-Hopefully that gives some insight on cool ways to make it happen and some more tools to do things like webify other software to better the value you provide with your CakePHP application!
+Hopefully that gives some insight on cool ways to make whatever you wish to do happen and some more tools to do things like webify other software to better the value you provide with your CakePHP application!
+
+<!-- Change Slide -->
 
 Everything I mentioned is available on the Slides and/or on my GitHub, and of course let me know if y'all are using any of these things. 
 
 Any Questions?
 
+<!-- Other -->
 
 apache -> nginx -> caddy -> franken
 LAMP -> devilbox -> docker -> podman(?) kube(?)
@@ -102,23 +106,3 @@ Queue, Prefect
 Auth: TinyAuth -> Authentik
 PhpMcp - GeoViz
 - Jorge already talked about PhpMcp
-
-
-
-
-
-Basically CakePHP allows for progressive enhancement. If you need a cupcake to a giant cake, CakePHP can work for that. 
-
-In these different contexts, you can choose the thing that works for you and add in once you hit the point. Like adding power ups or leveling up Pokemon. 
-
-
-For example, the log files for CakePHP go into the log folder. However, that is difficult to get to (deployed server is elsewhere and permissions etc), so dereuromark has a solution for that called database-log. We tried that out and seemed good. I also found a project called logHappens which lets us aggregate all the log files on a system into a dashboard and have it parse the stacktrace, highlighting where in our code the issue is. The next option is GlitchTip, which is ultimately what we settled on. It's fairly simple and uses the Sentry API so lordsimal's sentry api plugin works for it. It implements the stuff and lets us see it in a dashboard with uptime as well. Then the ultimate would be Sentry, but when I tried that out it was very overkill for my small team. I'm sure it would be a better fit for other groups, but there's a lot of ways to incrementally power up your application and stack. 
-
-
-Similarly, we have what is essentially a custom Grafana since it hooks into features that scientists specifically need. Our datasets are huge, with hundreds of millions of rows, so we needed a way to decimate the data efficiently. Initially, we did this with select plus union queries, like selecting the first point, skipping 998 points, then selecting the last point and unioning them. That worked, but it was slow.Then I discovered common table expressions, or CTEs, which helped structure these queries better. We also experimented with switching from MariaDB to Postgres, but that alone did not improve performance. The next powerup I am considering is TimescaleDB, a PostgreSQL extension optimized for time series data. With Postgres, we gain access to filters that can replace some of the CTE logic. With TimescaleDB, we can use hypertables to bucket data that naturally belongs together, like sensor readings over the same time periods, so queries over millions of rows can be much faster.
-
-Another important powerup is WebAssembly, or WASM. Let me show you an example. (this will be an iframe). Our normal process is to use Celery or RabbitMQ to dispatch a job to another container that is running code often written by a scientist. And the scientists like to work in what they are comfortable with, which can be IDL, C++, Python, or Fortran. That replies with the data or plot which Cake then uses. But what if there was a better way? Introducing the next powerup: pyscript. Web Assembly essentially compiles your code in any language to a super small module that can run anywhere. And not like Docker "anywhere", but anywhere anywhere. So see the calculator here. It can probably be done in JavaScript, but the Python libraries for this are more commonly updated and robust. We take the python, wrap it in PyScript, and now it's a module that gets sent over the wire to the user's browser. It's available everywhere, desktop and mobile browsers. And because it's loaded locally the responses are instant and secure as before we had concern over running these scripts on our server. The world of WASM is going to get very big very fast in my opinion. WasmCloud allows a way to network these modules together. As I mentioned, we build spacecraft instruments, but we also test them on site. Putting a CakePHP application in Docker to connect to the testing data would be good but there's too many steps and things we don't really want running on these big vacuum chambers, and PHP is not good for interacting with serial commands. So the other option is to have a Python API that connects to the CakePHP. But the actual powerup? That would be a super lightweight wasm module running outside a browser and communicating back to the app. 
-
-Another small plug is DateTimePickerJS. I mostly vibe coded (AI generated) most of this, but basically every timepicker except for a addon to jQuery UI by someone named Trent Richardson only goes to minutes or seconds. But that plugin is 10 years unmaintaned. I was unable to find any timepickers that support milliseconds, nanoseconds, etc and found issues from PhpMyAdmin needing the same thing. So it became time to write my own powerup. There's some edge cases to figure out but it's close. https://github.com/umer936/datetimepicker.js
-
-The point of this though is that there's stuff to fill any path. It may be tempting to go all the way to what the Netflix, Google, etc are all doing but that could be overkill. Everyone can build a bridge with unlimited time and money but it takes an engineer to build it in the shortest timeline and cost. 
