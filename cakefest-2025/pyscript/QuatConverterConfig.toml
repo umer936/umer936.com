@@ -1,0 +1,3 @@
+name = "Quaternion"
+description = "PyScript to convert Quaternion"
+packages = ["numpy"]
