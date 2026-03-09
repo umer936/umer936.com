@@ -1,5 +1,6 @@
 <?php
 include_once 'header.php';
+require_once 'ProjectCategory.php';
 ?>
     <div class="hero_image">
         <div class="col-12" id="hero_image_inset">
@@ -44,16 +45,7 @@ include_once 'header.php';
         <button id="shuffleButton" class="<?= $btnClasses ?>">🔀 Shuffle</button>
         <button id="filterClearButton" class="<?= $btnClasses ?>">Clear filters</button>
         <?php
-        $allCategories = [
-                3 => ['text' => 'Work'],
-                4 => ['text' => 'Software'],
-                5 => ['text' => 'College'],
-                6 => ['text' => 'Robotics'],
-                7 => ['text' => 'In-prog'],
-                8 => ['text' => 'Completed'],
-        ];
-
-        foreach ($allCategories as $categoryId => $category) {
+        foreach (ProjectCategory::$ALL as $categoryId => $category) {
             $colorClasses = $category['colorClasses'];
             $text = $category['text'];
             echo "<input type=\"checkbox\" class=\"btn-check\" data-category-id='$categoryId' id=\"btn-check-$categoryId\" autocomplete=\"off\">";

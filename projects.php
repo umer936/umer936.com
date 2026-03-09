@@ -46,13 +46,14 @@
 
 <div class="row row-cols-2 row-cols-md-3 g-4 mt-2" id="projDiv">
     <?php
+    require_once 'ProjectCategory.php';
 
     $projects = [
             [
                     'title' => 'Aceso',
                     'text' => 'Harnessing Technology to Support Children’s Mental Health. Senior design project combining engineering and mental health awareness.',
                     'years' => '2019-2020',
-                    'categories' => [4, 5, 8],
+                    'categories' => [ProjectCategory::COLLEGE, ProjectCategory::SOFTWARE, ProjectCategory::HARDWARE, ProjectCategory::COMPLETED],
                     'link' => ['title' => 'Full Blog Post', 'link' => '/blog/#Aceso'],
             ],
             [

@@ -2,11 +2,11 @@
     <div class="card">
         <div class="position-absolute top-0 end-0">
             <?php
-            foreach ($project['categories'] as $category) {
+            foreach ($project['categories'] as $categoryKey) {
                 ?>
                 <span class="badge btn-site"
-                      data-category-id="<?= $category ?>">
-                    <?= $allCategories[$category]['text'] ?>
+                      data-category-id="<?= $categoryKey ?>">
+                    <?= ProjectCategory::$ALL[$categoryKey]['text'] ?>
                 </span>
                 <?php
             }
