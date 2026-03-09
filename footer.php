@@ -5,11 +5,11 @@
         </div>
         <div class="col-4 text-center">
             <div class="row">
-                <span class="col-12">©2014-2024 Umer Salman</span>
+                <span class="col-12">©2014-2026 Umer Salman</span>
                 <span class="col-12">Design by
                     <a href="https://www.behance.net/ficklative" target="_blank">Rosalynn Alejandro (@ficklative)</a>
                 </span>
-                <span class="col-12">Last updated: 07/11/2024</span>
+                <span class="col-12">Last updated: 03/11/2026</span>
                 <div class="col-12">
                     <a href="javascript:alert('Privacy is dead');">Privacy Policy</a>
                     <!--look ma, no cookies-->

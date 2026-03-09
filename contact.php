@@ -131,7 +131,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
                             <div class="col-xxs-2 col-3 col-sm-2 col-md-4 col-lg-3 col-xl-2">
                                 <a href="https://github.com/umer936">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/240px-GitHub_Invertocat_Logo.svg.png"
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"
                                          loading="lazy"
                                          alt="GitHub" class="img-fluid"></a>
                             </div>
