@@ -49,10 +49,11 @@
 
     $projects = [
             [
-                    'title' => 'a',
-                    'text' => 'a text',
+                    'title' => 'Aceso',
+                    'text' => 'Harnessing Technology to Support Children’s Mental Health. Senior design project combining engineering and mental health awareness.',
                     'years' => '2019-2020',
-                    'categories' => [3, 4],
+                    'categories' => [4, 5, 8],
+                    'link' => ['title' => 'Full Blog Post', 'link' => '/blog/#Aceso'],
             ],
             [
                     'title' => 'b',

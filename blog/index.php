@@ -10,6 +10,12 @@ $blogPosts = [
                 'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
                 'smallText' => 'Convert SVN repo to Git',
         ],
+        'Steam on Linux' => [
+                'url' => 'steam-on-linux.md',
+                'date' => '03/09/2026',
+                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
+                'smallText' => 'Fix White Screen of Death launching Steam games on Fedora 43. Also fixes laggy Big Picture Mode.',
+        ],
         'CentOS_PHP_7-8' => [
                 'url' => 'PHP_Upgrade_7-8.md',
                 'date' => '12/27/2023',
@@ -46,6 +52,12 @@ $blogPosts = [
                 'date' => '10/15/2023',
                 'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
                 'smallText' => $smallTextLorem,
+        ],
+        'Aceso' => [
+                'url' => 'aceso.md',
+                'date' => '03/09/2026',
+                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
+                'smallText' => 'Aceso: Harnessing Technology to Support Children’s Mental Health. Senior design project combining engineering, mental health awareness, and innovation.',
         ],
 ]
 ?>
