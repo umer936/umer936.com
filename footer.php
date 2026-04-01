@@ -9,7 +9,7 @@
                 <span class="col-12">Design by
                     <a href="https://www.behance.net/ficklative" target="_blank">Rosalynn Alejandro (@ficklative)</a>
                 </span>
-                <span class="col-12">Last updated: 03/11/2026</span>
+                <span class="col-12">Last updated: 03/31/2026</span>
                 <div class="col-12">
                     <a href="javascript:alert('Privacy is dead');">Privacy Policy</a>
                     <!--look ma, no cookies-->

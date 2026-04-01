@@ -1,72 +1,76 @@
 <?php
 include_once '../header.php';
 
-$smallTextLorem = 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.';
-
 $blogPosts = [
         'SVN2GIT' => [
                 'url' => 'svn2git.md',
                 'date' => '11/21/2023',
-                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
+                'img' => "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg", // MIT License, devicons
                 'smallText' => 'Convert SVN repo to Git',
+        ],
+        'Windows tmp on startup' => [
+                'url' => 'windows-tmp-on-startup.md',
+                'date' => '04/01/2026',
+                'img' => "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/powershell/powershell-original.svg", // MIT License, devicons
+                'smallText' => 'A tiny PowerShell startup script that clears C:\\tmp so Windows behaves more like Linux /tmp.',
         ],
         'Steam on Linux' => [
                 'url' => 'steam-on-linux.md',
                 'date' => '03/09/2026',
-                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
+                'img' => "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg", // MIT License, devicons
                 'smallText' => 'Fix White Screen of Death launching Steam games on Fedora 43. Also fixes laggy Big Picture Mode.',
         ],
         'CentOS_PHP_7-8' => [
                 'url' => 'PHP_Upgrade_7-8.md',
                 'date' => '12/27/2023',
-                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
+                'img' => "https://www.php.net/images/logos/new-php-logo.svg", // Official PHP logo
                 'smallText' => 'RHEL (e.g. CentOS) guide to upgrading PHP from 7 to 8',
         ],
         'FIRST Robotics' => [
                 'url' => 'FIRST.md',
                 'date' => '08/15/2023',
-                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
-                'smallText' => 'FIRST Robotics has a lot in store for different ages. Here\'s some quick notes',
+                'img' => "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg", // MIT License, devicons (robotics/electronics)
+                'smallText' => 'Former FTC and FRC Student; now mentor BroncBotz 3481, FTC 4008/6976/4602, and TMI FTC 6221.',
         ],
     // later will move these to projects, but this is good for now
         'Car Diagnostics Logger' => [
                 'url' => 'car-diagnostics-logger.md',
                 'date' => '12/15/2015',
-                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
-                'smallText' => $smallTextLorem,
+                'img' => "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/raspberrypi/raspberrypi-original.svg", // MIT License, devicons
+                'smallText' => 'A Raspberry Pi-based OBD-II car diagnostics monitor and logger, built for privacy-oriented collection of vehicle metrics like RPM, temperatures, tire pressures, and engine codes.',
         ],
         'DIY Circuits' => [
                 'url' => 'diy-circuits.md',
                 'date' => '08/15/2023',
-                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
-                'smallText' => $smallTextLorem,
+                'img' => "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original-wordmark.svg", // MIT License, devicons
+                'smallText' => 'A personal project to create printed circuit boards (PCBs) at home, born out of necessity during COVID-19 when access to the UT Austin Makerspace was restricted.',
         ],
         'Intelligent Quads' => [
                 'url' => 'intelligent-quads.md',
                 'date' => '08/15/2023',
-                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
-                'smallText' => $smallTextLorem,
+                'img' => "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg", // MIT License, devicons (IQ used Python heavily)
+                'smallText' => 'Co-founded Intelligent Quads (IQ), a modular and customizable drone platform startup spun off from Texas Aerial Robotics, enabling companies and researchers to build innovative drone applications.',
         ],
         'Hybrid-Hybrid Kubernetes Cluster' => [
                 'url' => 'hybrid-kubernetes-spacecraft-web-applications.md',
                 'date' => '10/15/2023',
-                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
-                'smallText' => $smallTextLorem,
+                'img' => "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg", // MIT License, devicons
+                'smallText' => 'Deploying spacecraft web applications in a hybrid Kubernetes cluster spanning on-premises servers, a high-performance computing cluster, and AWS — developed at Southwest Research Institute.',
         ],
         'Aceso' => [
                 'url' => 'aceso.md',
                 'date' => '03/09/2026',
-                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
-                'smallText' => 'Aceso: Harnessing Technology to Support Children’s Mental Health. Senior design project combining engineering, mental health awareness, and innovation.',
+                'img' => "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg", // MIT License, devicons (Aceso used C++)
+                'smallText' => 'Aceso: Harnessing Technology to Support Children\'s Mental Health. Senior design project combining engineering, mental health awareness, and innovation.',
         ],
-]
+];
 ?>
     <div class="<?= $sectionHeaderClasses ?>">
         Blog Posts
     </div>
 
     <div class="container my-4">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
             <?php
 
             foreach ($blogPosts as $title => $blogPost) {
@@ -115,38 +119,6 @@ $mediaPosts = [
                 Covers Queueing methods for long-running processes and working with parts in different programming
                 languages. YouTube video available.',
         ],
-        'FIRST1' => [
-                'url' => 'FIRST.md',
-                'date' => '08/15/2023',
-                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
-                'smallText' => $smallTextLorem,
-        ],
-        'FIRST2' => [
-                'url' => 'FIRST.md',
-                'date' => '08/15/2023',
-                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
-                'smallText' => $smallTextLorem,
-        ],
-        'FIRST3' => [
-                'url' => 'FIRST.md',
-                'date' => '08/15/2023',
-                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
-                'smallText' => $smallTextLorem,
-        ],
-        'FIRST4' => [
-                'url' => 'FIRST.md',
-                'date' => '08/15/2023',
-                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
-                'smallText' => $smallTextLorem,
-        ],
-        'FIRST5' => [
-                'url' => 'FIRST.md',
-                'date' => '08/15/2023',
-
-
-                'img' => "https://cpmr-islands.org/wp-content/uploads/sites/4/2019/07/test-600x600.png",
-                'smallText' => $smallTextLorem,
-        ],
 ];
 ?>
 
@@ -157,7 +129,7 @@ $mediaPosts = [
 
 
     <div class="container my-4">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
             <?php
 
             foreach ($mediaPosts as $title => $mediaPost) {
@@ -202,11 +174,12 @@ $mediaPosts = [
                     <h5 class="modal-title" id="exampleModalLabel"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body"><!-- px-5 -->
                     <!-- Modal content goes here -->
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <div class="modal-footer d-inline">
+<!--                    <span class="float-start">© umer936</span>-->
+<!--                    <button type="button" class="btn btn-secondary btn-sm float-end" data-bs-dismiss="modal">Close</button>-->
                 </div>
             </div>
         </div>
@@ -214,7 +187,7 @@ $mediaPosts = [
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var postModal = new bootstrap.Modal(document.getElementById('postModal'), {
+            new bootstrap.Modal(document.getElementById('postModal'), {
                 backdrop: 'static',
                 keyboard: false
             });
