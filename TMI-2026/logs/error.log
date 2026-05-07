@@ -1,0 +1,1100 @@
+2025-10-09 08:19:46 error: [Cake\Http\Exception\MissingControllerException] Controller class `Admin` could not be found. in /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 335
+Exception Attributes: array (
+  'controller' => 'Admin',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- CORE/src/Controller/ControllerFactory.php:77
+- CORE/src/Http/BaseApplication.php:360
+- CORE/src/Http/Runner.php:86
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /Admin
+Client IP: 192.168.97.5
+2025-10-09 08:19:52 error: [Cake\Http\Exception\MissingControllerException] Controller class `Admin` could not be found. in /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 335
+Exception Attributes: array (
+  'controller' => 'Admin',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- CORE/src/Controller/ControllerFactory.php:77
+- CORE/src/Http/BaseApplication.php:360
+- CORE/src/Http/Runner.php:86
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /Admin/bookings
+Client IP: 192.168.97.5
+2025-10-09 08:19:54 error: [Cake\Http\Exception\MissingControllerException] Controller class `Bookings` could not be found. in /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 335
+Exception Attributes: array (
+  'controller' => 'Bookings',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- CORE/src/Controller/ControllerFactory.php:77
+- CORE/src/Http/BaseApplication.php:360
+- CORE/src/Http/Runner.php:86
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /bookings
+Client IP: 192.168.97.5
+2025-10-09 08:20:22 error: [Cake\Http\Exception\MissingControllerException] Controller class `Admin` could not be found. in /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 335
+Exception Attributes: array (
+  'controller' => 'Admin',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- CORE/src/Controller/ControllerFactory.php:77
+- CORE/src/Http/BaseApplication.php:360
+- CORE/src/Http/Runner.php:86
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /Admin/Bookings
+Client IP: 192.168.97.5
+2025-10-09 08:42:01 warning: Missing configuration file: "config/permissions.php". Using default permissions
+2025-10-09 08:42:01 warning: Missing configuration file: "config/permissions.php". Using default permissions
+2025-10-09 08:42:01 warning: Missing configuration file: "config/permissions.php". Using default permissions
+2025-10-09 08:42:17 warning: Undefined variable $field in /var/www/html/src/Model/Table/BookingsTable.php on line 105
+Trace:
+Cake\Error\ErrorTrap->handleError() /var/www/html/src/Model/Table/BookingsTable.php, line 105
+App\Model\Table\BookingsTable->validationDefault() /var/www/html/vendor/cakephp/cakephp/src/Validation/ValidatorAwareTrait.php, line 121
+Cake\ORM\Table->createValidator() /var/www/html/vendor/cakephp/cakephp/src/Validation/ValidatorAwareTrait.php, line 95
+Cake\ORM\Table->getValidator() /var/www/html/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 605
+Cake\View\Form\EntityContext->_getValidator() /var/www/html/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 490
+Cake\View\Form\EntityContext->isRequired() /var/www/html/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 1463
+Cake\View\Helper\FormHelper->setRequiredAndCustomValidity() /var/www/html/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 1433
+Cake\View\Helper\FormHelper->_magicOptions() /var/www/html/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 1291
+Cake\View\Helper\FormHelper->_parseOptions() /var/www/html/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 1089
+Cake\View\Helper\FormHelper->control() /var/www/html/templates/Admin/Bookings/add.php, line 22
+/var/www/html/vendor/cakephp/cakephp/src/View/View.php /var/www/html/vendor/cakephp/cakephp/src/View/View.php, line 1187
+Cake\View\View->_evaluate() /var/www/html/vendor/cakephp/cakephp/src/View/View.php, line 1144
+Cake\View\View->_render() /var/www/html/vendor/cakephp/cakephp/src/View/View.php, line 785
+Cake\View\View->render() /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php, line 712
+Cake\Controller\Controller->render() /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php, line 516
+Cake\Controller\Controller->invokeAction() /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 166
+Cake\Controller\ControllerFactory->handle() /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 141
+Cake\Controller\ControllerFactory->invoke() /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 362
+Cake\Http\BaseApplication->handle() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /var/www/html/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php, line 110
+Authorization\Middleware\RequestAuthorizationMiddleware->process() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /var/www/html/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php, line 136
+Authorization\Middleware\AuthorizationMiddleware->process() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /var/www/html/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 106
+Authentication\Middleware\AuthenticationMiddleware->process() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 169
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 117
+Cake\Routing\Middleware\RoutingMiddleware->process() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 70
+Cake\Routing\Middleware\AssetMiddleware->process() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 115
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 60
+Cake\Http\Runner->run() /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php, line 104
+Cake\Http\Server->run() /var/www/html/webroot/index.php, line 37
+[main]
+
+Request URL: /admin/bookings/add
+Referer URL: https://cakefest2025.ddev.site/login?redirect=%2Fadmin%2Fbookings%2Fadd
+Client IP: 192.168.97.5
+2025-10-09 08:42:17 warning: Undefined variable $enumClassName in /var/www/html/src/Model/Table/BookingsTable.php on line 105
+Trace:
+Cake\Error\ErrorTrap->handleError() /var/www/html/src/Model/Table/BookingsTable.php, line 105
+App\Model\Table\BookingsTable->validationDefault() /var/www/html/vendor/cakephp/cakephp/src/Validation/ValidatorAwareTrait.php, line 121
+Cake\ORM\Table->createValidator() /var/www/html/vendor/cakephp/cakephp/src/Validation/ValidatorAwareTrait.php, line 95
+Cake\ORM\Table->getValidator() /var/www/html/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 605
+Cake\View\Form\EntityContext->_getValidator() /var/www/html/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 490
+Cake\View\Form\EntityContext->isRequired() /var/www/html/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 1463
+Cake\View\Helper\FormHelper->setRequiredAndCustomValidity() /var/www/html/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 1433
+Cake\View\Helper\FormHelper->_magicOptions() /var/www/html/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 1291
+Cake\View\Helper\FormHelper->_parseOptions() /var/www/html/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 1089
+Cake\View\Helper\FormHelper->control() /var/www/html/templates/Admin/Bookings/add.php, line 22
+/var/www/html/vendor/cakephp/cakephp/src/View/View.php /var/www/html/vendor/cakephp/cakephp/src/View/View.php, line 1187
+Cake\View\View->_evaluate() /var/www/html/vendor/cakephp/cakephp/src/View/View.php, line 1144
+Cake\View\View->_render() /var/www/html/vendor/cakephp/cakephp/src/View/View.php, line 785
+Cake\View\View->render() /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php, line 712
+Cake\Controller\Controller->render() /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php, line 516
+Cake\Controller\Controller->invokeAction() /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 166
+Cake\Controller\ControllerFactory->handle() /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 141
+Cake\Controller\ControllerFactory->invoke() /var/www/html/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 362
+Cake\Http\BaseApplication->handle() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /var/www/html/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php, line 110
+Authorization\Middleware\RequestAuthorizationMiddleware->process() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /var/www/html/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php, line 136
+Authorization\Middleware\AuthorizationMiddleware->process() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /var/www/html/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 106
+Authentication\Middleware\AuthenticationMiddleware->process() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 169
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /var/www/html/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 117
+Cake\Routing\Middleware\RoutingMiddleware->process() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /var/www/html/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 70
+Cake\Routing\Middleware\AssetMiddleware->process() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /var/www/html/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 115
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /var/www/html/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /var/www/html/vendor/cakephp/cakephp/src/Http/Runner.php, line 60
+Cake\Http\Runner->run() /var/www/html/vendor/cakephp/cakephp/src/Http/Server.php, line 104
+Cake\Http\Server->run() /var/www/html/webroot/index.php, line 37
+[main]
+
+Request URL: /admin/bookings/add
+Referer URL: https://cakefest2025.ddev.site/login?redirect=%2Fadmin%2Fbookings%2Fadd
+Client IP: 192.168.97.5
+2025-10-09 08:42:17 error: [TypeError] Cake\Validation\Validator::enum(): Argument #1 ($field) must be of type string, null given, called in /var/www/html/src/Model/Table/BookingsTable.php on line 105 in /var/www/html/vendor/cakephp/cakephp/src/Validation/Validator.php on line 2072
+Stack Trace:
+- APP/Model/Table/BookingsTable.php:105
+- CORE/src/Validation/ValidatorAwareTrait.php:121
+- CORE/src/Validation/ValidatorAwareTrait.php:95
+- CORE/src/View/Form/EntityContext.php:605
+- CORE/src/View/Form/EntityContext.php:490
+- CORE/src/View/Helper/FormHelper.php:1463
+- CORE/src/View/Helper/FormHelper.php:1433
+- CORE/src/View/Helper/FormHelper.php:1291
+- CORE/src/View/Helper/FormHelper.php:1089
+- ROOT/templates/Admin/Bookings/add.php:22
+- CORE/src/View/View.php:1187
+- CORE/src/View/View.php:1144
+- CORE/src/View/View.php:785
+- CORE/src/Controller/Controller.php:712
+- CORE/src/Controller/Controller.php:516
+- CORE/src/Controller/ControllerFactory.php:166
+- CORE/src/Controller/ControllerFactory.php:141
+- CORE/src/Http/BaseApplication.php:362
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /admin/bookings/add
+Referer URL: https://cakefest2025.ddev.site/login?redirect=%2Fadmin%2Fbookings%2Fadd
+Client IP: 192.168.97.5
+2025-10-09 08:42:44 error: [Cake\Http\Exception\MissingControllerException] Controller class `Users` could not be found. in /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 335
+Exception Attributes: array (
+  'controller' => 'Users',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- CORE/src/Controller/ControllerFactory.php:77
+- CORE/src/Http/BaseApplication.php:360
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /users
+Client IP: 192.168.97.5
+2025-10-09 08:42:48 error: [Cake\Http\Exception\MissingControllerException] Controller class `User` could not be found. in /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 335
+Exception Attributes: array (
+  'controller' => 'User',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- CORE/src/Controller/ControllerFactory.php:77
+- CORE/src/Http/BaseApplication.php:360
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /user/users
+Client IP: 192.168.97.5
+2025-10-09 08:44:13 error: [Cake\Http\Exception\MissingControllerException] Controller class `Cakedc` could not be found. in /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 335
+Exception Attributes: array (
+  'controller' => 'Cakedc',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- CORE/src/Controller/ControllerFactory.php:77
+- CORE/src/Http/BaseApplication.php:360
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /cakedc/users
+Client IP: 192.168.97.5
+2025-10-09 08:44:14 error: [Cake\Http\Exception\MissingControllerException] Controller class `Cakedc` could not be found. in /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 335
+Exception Attributes: array (
+  'controller' => 'Cakedc',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- CORE/src/Controller/ControllerFactory.php:77
+- CORE/src/Http/BaseApplication.php:360
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /cakedc/
+Client IP: 192.168.97.5
+2025-10-09 08:44:28 error: [Cake\Http\Exception\MissingControllerException] Controller class `Accounts` could not be found. in /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 335
+Exception Attributes: array (
+  'controller' => 'Accounts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- CORE/src/Controller/ControllerFactory.php:77
+- CORE/src/Http/BaseApplication.php:360
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /accounts/
+Client IP: 192.168.97.5
+2025-10-09 08:49:53 error: [Cake\Http\Exception\MissingControllerException] Controller class `Bookings` could not be found. in /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 335
+Exception Attributes: array (
+  'controller' => 'Bookings',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- CORE/src/Controller/ControllerFactory.php:77
+- CORE/src/Http/BaseApplication.php:360
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /bookings/search
+Client IP: 192.168.97.5
+2025-10-09 09:02:58 error: [TypeError] App\Model\Table\HotelsTable::{closure:App\Model\Table\HotelsTable::findWithAvailableRooms():112}(): Argument #1 ($exp) must be of type App\Model\Table\QueryExpression, Cake\Database\Expression\QueryExpression given, called in /var/www/html/vendor/cakephp/cakephp/src/Database/Query.php on line 1755 in /var/www/html/src/Model/Table/HotelsTable.php on line 112
+Stack Trace:
+- CORE/src/Database/Query.php:1755
+- CORE/src/Database/Query.php:903
+- APP/Model/Table/HotelsTable.php:112
+- CORE/src/ORM/Table.php:2745
+- CORE/src/ORM/Table.php:2645
+- CORE/src/ORM/Query/SelectQuery.php:1680
+- APP/Controller/Admin/BookingsController.php:130
+- CORE/src/Controller/Controller.php:505
+- CORE/src/Controller/ControllerFactory.php:166
+- CORE/src/Controller/ControllerFactory.php:141
+- CORE/src/Http/BaseApplication.php:362
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /admin/bookings/search?city=miami&check_in=2025-10-20&check_out=2025-10-23
+Referer URL: https://cakefest2025.ddev.site/admin/bookings/search?city=miami&check_in=2025-10-20&check_out=2025-10-23
+Client IP: 192.168.97.5
+2025-10-09 09:03:21 error: [TypeError] App\Model\Table\HotelsTable::{closure:App\Model\Table\HotelsTable::findWithAvailableRooms():112}(): Argument #1 ($exp) must be of type App\Model\Table\QueryExpression, Cake\Database\Expression\QueryExpression given, called in /var/www/html/vendor/cakephp/cakephp/src/Database/Query.php on line 1755 in /var/www/html/src/Model/Table/HotelsTable.php on line 112
+Stack Trace:
+- CORE/src/Database/Query.php:1755
+- CORE/src/Database/Query.php:903
+- APP/Model/Table/HotelsTable.php:112
+- CORE/src/ORM/Table.php:2745
+- CORE/src/ORM/Table.php:2645
+- CORE/src/ORM/Query/SelectQuery.php:1680
+- APP/Controller/Admin/BookingsController.php:130
+- CORE/src/Controller/Controller.php:505
+- CORE/src/Controller/ControllerFactory.php:166
+- CORE/src/Controller/ControllerFactory.php:141
+- CORE/src/Http/BaseApplication.php:362
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /admin/bookings/search?city=miami&check_in=2025-10-20&check_out=2025-10-23
+Referer URL: https://cakefest2025.ddev.site/admin/bookings/search?city=miami&check_in=2025-10-20&check_out=2025-10-23
+Client IP: 192.168.97.5
+2025-10-09 09:03:42 error: [TypeError] App\Model\Table\HotelsTable::{closure:App\Model\Table\HotelsTable::findWithAvailableRooms():112}(): Argument #1 ($exp) must be of type App\Model\Table\QueryExpression, Cake\Database\Expression\QueryExpression given, called in /var/www/html/vendor/cakephp/cakephp/src/Database/Query.php on line 1755 in /var/www/html/src/Model/Table/HotelsTable.php on line 112
+Stack Trace:
+- CORE/src/Database/Query.php:1755
+- CORE/src/Database/Query.php:903
+- APP/Model/Table/HotelsTable.php:112
+- CORE/src/ORM/Table.php:2745
+- CORE/src/ORM/Table.php:2645
+- CORE/src/ORM/Query/SelectQuery.php:1680
+- APP/Controller/Admin/BookingsController.php:130
+- CORE/src/Controller/Controller.php:505
+- CORE/src/Controller/ControllerFactory.php:166
+- CORE/src/Controller/ControllerFactory.php:141
+- CORE/src/Http/BaseApplication.php:362
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /admin/bookings/search?city=miami&check_in=2025-10-20&check_out=2025-10-23
+Referer URL: https://cakefest2025.ddev.site/admin/bookings/search?city=miami&check_in=2025-10-20&check_out=2025-10-23
+Client IP: 192.168.97.5
+2025-10-09 09:04:56 error: [TypeError] App\Model\Table\HotelsTable::{closure:App\Model\Table\HotelsTable::findWithAvailableRooms():112}(): Argument #1 ($exp) must be of type App\Model\Table\QueryExpression, Cake\Database\Expression\QueryExpression given, called in /var/www/html/vendor/cakephp/cakephp/src/Database/Query.php on line 1755 in /var/www/html/src/Model/Table/HotelsTable.php on line 112
+Stack Trace:
+- CORE/src/Database/Query.php:1755
+- CORE/src/Database/Query.php:903
+- APP/Model/Table/HotelsTable.php:112
+- CORE/src/ORM/Table.php:2745
+- CORE/src/ORM/Table.php:2645
+- CORE/src/ORM/Table.php:1279
+- CORE/src/ORM/Association.php:847
+- APP/Controller/Admin/BookingsController.php:129
+- CORE/src/Controller/Controller.php:505
+- CORE/src/Controller/ControllerFactory.php:166
+- CORE/src/Controller/ControllerFactory.php:141
+- CORE/src/Http/BaseApplication.php:362
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /admin/bookings/search?city=miami&check_in=2025-10-20&check_out=2025-10-23
+Referer URL: https://cakefest2025.ddev.site/admin/bookings/search?city=miami&check_in=2025-10-20&check_out=2025-10-23
+Client IP: 192.168.97.5
+2025-10-09 09:05:30 error: [TypeError] App\Model\Table\HotelsTable::{closure:App\Model\Table\HotelsTable::findWithAvailableRooms():112}(): Argument #1 ($exp) must be of type App\Model\Table\QueryExpression, Cake\Database\Expression\QueryExpression given, called in /var/www/html/vendor/cakephp/cakephp/src/Database/Query.php on line 1755 in /var/www/html/src/Model/Table/HotelsTable.php on line 112
+Stack Trace:
+- CORE/src/Database/Query.php:1755
+- CORE/src/Database/Query.php:903
+- APP/Model/Table/HotelsTable.php:112
+- CORE/src/ORM/Table.php:2745
+- CORE/src/ORM/Table.php:2645
+- CORE/src/ORM/Table.php:1279
+- CORE/src/ORM/Association.php:847
+- APP/Controller/Admin/BookingsController.php:129
+- CORE/src/Controller/Controller.php:505
+- CORE/src/Controller/ControllerFactory.php:166
+- CORE/src/Controller/ControllerFactory.php:141
+- CORE/src/Http/BaseApplication.php:362
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /admin/bookings/search?city=miami&check_in=2025-10-20&check_out=2025-10-23
+Referer URL: https://cakefest2025.ddev.site/admin/bookings/search?city=miami&check_in=2025-10-20&check_out=2025-10-23
+Client IP: 192.168.97.5
+2025-10-09 09:05:31 error: [TypeError] App\Model\Table\HotelsTable::{closure:App\Model\Table\HotelsTable::findWithAvailableRooms():112}(): Argument #1 ($exp) must be of type App\Model\Table\QueryExpression, Cake\Database\Expression\QueryExpression given, called in /var/www/html/vendor/cakephp/cakephp/src/Database/Query.php on line 1755 in /var/www/html/src/Model/Table/HotelsTable.php on line 112
+Stack Trace:
+- CORE/src/Database/Query.php:1755
+- CORE/src/Database/Query.php:903
+- APP/Model/Table/HotelsTable.php:112
+- CORE/src/ORM/Table.php:2745
+- CORE/src/ORM/Table.php:2645
+- CORE/src/ORM/Table.php:1279
+- CORE/src/ORM/Association.php:847
+- APP/Controller/Admin/BookingsController.php:129
+- CORE/src/Controller/Controller.php:505
+- CORE/src/Controller/ControllerFactory.php:166
+- CORE/src/Controller/ControllerFactory.php:141
+- CORE/src/Http/BaseApplication.php:362
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /admin/bookings/search?city=miami&check_in=2025-10-20&check_out=2025-10-23
+Referer URL: https://cakefest2025.ddev.site/admin/bookings/search?city=miami&check_in=2025-10-20&check_out=2025-10-23
+Client IP: 192.168.97.5
+2025-10-09 09:06:15 error: [Cake\Controller\Exception\MissingActionException] Action `Admin/BookingsController::availableRooms()` could not be found, or is not accessible. in /var/www/html/vendor/cakephp/cakephp/src/Controller/Controller.php on line 487
+Exception Attributes: array (
+  'controller' => 'Admin/BookingsController',
+  'action' => 'availableRooms',
+)
+Stack Trace:
+- CORE/src/Controller/ControllerFactory.php:161
+- CORE/src/Controller/ControllerFactory.php:141
+- CORE/src/Http/BaseApplication.php:362
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /admin/bookings/available-rooms/2?check_in=2025-10-20&check_out=2025-10-23
+Referer URL: https://cakefest2025.ddev.site/admin/bookings/search?city=miami&check_in=2025-10-20&check_out=2025-10-23
+Client IP: 192.168.97.5
+2025-10-09 09:09:39 error: [TypeError] App\Model\Table\RoomsTable::findAvailableForHotel(): Argument #3 ($checkIn) must be of type App\Model\Table\Date, Cake\I18n\Date given, called in /var/www/html/vendor/cakephp/cakephp/src/ORM/Table.php on line 2745 in /var/www/html/src/Model/Table/RoomsTable.php on line 110
+Stack Trace:
+- CORE/src/ORM/Table.php:2745
+- CORE/src/ORM/Table.php:2645
+- CORE/src/ORM/Table.php:1279
+- CORE/src/ORM/Association.php:847
+- APP/Controller/Admin/BookingsController.php:158
+- CORE/src/Controller/Controller.php:505
+- CORE/src/Controller/ControllerFactory.php:166
+- CORE/src/Controller/ControllerFactory.php:141
+- CORE/src/Http/BaseApplication.php:362
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /admin/bookings/available-rooms/2?check_in=2025-10-20&check_out=2025-10-23
+Referer URL: https://cakefest2025.ddev.site/admin/bookings/search?city=miami&check_in=2025-10-20&check_out=2025-10-23
+Client IP: 192.168.97.5
+2025-10-09 09:31:08 error: [Cake\Http\Exception\MissingControllerException] Controller class `Otels` could not be found. in /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 335
+Exception Attributes: array (
+  'controller' => 'Otels',
+  'plugin' => NULL,
+  'prefix' => 'Admin',
+  '_ext' => NULL,
+)
+Stack Trace:
+- CORE/src/Controller/ControllerFactory.php:77
+- CORE/src/Http/BaseApplication.php:360
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /admin/otels/
+Client IP: 192.168.97.5
+2025-10-09 09:31:23 error: [Cake\Database\Exception\QueryException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`db`.`bookings`, CONSTRAINT `bookings_ibfk_2` FOREIGN KEY (`room_id`) REFERENCES `rooms` (`id`))
+Query: DELETE FROM hotels WHERE id = 2 in /var/www/html/vendor/cakephp/cakephp/src/Database/Driver.php on line 384
+Stack Trace:
+- CORE/src/Database/Driver.php:360
+- CORE/src/Database/Driver/Mysql.php:183
+- CORE/src/Database/Connection.php:280
+- CORE/src/Core/Retry/CommandRetry.php:71
+- CORE/src/Database/Connection.php:280
+- CORE/src/Database/Query.php:224
+- CORE/src/ORM/Table.php:2600
+- CORE/src/ORM/Table.php:2436
+- CORE/src/ORM/Table.php:1587
+- CORE/src/Database/Connection.php:649
+- CORE/src/ORM/Table.php:1587
+- CORE/src/ORM/Table.php:2435
+- APP/Controller/Admin/HotelsController.php:94
+- CORE/src/Controller/Controller.php:505
+- CORE/src/Controller/ControllerFactory.php:166
+- CORE/src/Controller/ControllerFactory.php:141
+- CORE/src/Http/BaseApplication.php:362
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:162
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Caused by: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`db`.`bookings`, CONSTRAINT `bookings_ibfk_2` FOREIGN KEY (`room_id`) REFERENCES `rooms` (`id`)) in /var/www/html/vendor/cakephp/cakephp/src/Database/Statement/Statement.php on line 144
+Stack Trace:
+- CORE/src/Database/Statement/Statement.php:144
+- CORE/src/Database/Driver.php:342
+- CORE/src/Database/Driver/Mysql.php:183
+- CORE/src/Database/Connection.php:280
+- CORE/src/Core/Retry/CommandRetry.php:71
+- CORE/src/Database/Connection.php:280
+- CORE/src/Database/Query.php:224
+- CORE/src/ORM/Table.php:2600
+- CORE/src/ORM/Table.php:2436
+- CORE/src/ORM/Table.php:1587
+- CORE/src/Database/Connection.php:649
+- CORE/src/ORM/Table.php:1587
+- CORE/src/ORM/Table.php:2435
+- APP/Controller/Admin/HotelsController.php:94
+- CORE/src/Controller/Controller.php:505
+- CORE/src/Controller/ControllerFactory.php:166
+- CORE/src/Controller/ControllerFactory.php:141
+- CORE/src/Http/BaseApplication.php:362
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:162
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /admin/hotels/delete/2
+Referer URL: https://cakefest2025.ddev.site/admin/hotels/
+Client IP: 192.168.97.5
+2025-10-09 09:36:52 error: [Cake\Http\Exception\MissingControllerException] Controller class `Bookings` could not be found. in /var/www/html/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 335
+Exception Attributes: array (
+  'controller' => 'Bookings',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- CORE/src/Controller/ControllerFactory.php:77
+- CORE/src/Http/BaseApplication.php:360
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /bookings
+Client IP: 192.168.97.5
+2025-10-09 09:37:02 error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table `bookings`. in /var/www/html/vendor/cakephp/cakephp/src/ORM/Query/SelectQuery.php on line 600
+Stack Trace:
+- CORE/src/ORM/Table.php:1574
+- APP/Controller/Admin/BookingsController.php:40
+- CORE/src/Controller/Controller.php:505
+- CORE/src/Controller/ControllerFactory.php:166
+- CORE/src/Controller/ControllerFactory.php:141
+- CORE/src/Http/BaseApplication.php:362
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /admin/bookings/view/21
+Referer URL: https://cakefest2025.ddev.site/admin/bookings?page=2
+Client IP: 192.168.97.5
+2025-10-09 09:37:07 error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table `bookings`. in /var/www/html/vendor/cakephp/cakephp/src/ORM/Query/SelectQuery.php on line 600
+Stack Trace:
+- CORE/src/ORM/Table.php:1574
+- APP/Controller/Admin/BookingsController.php:40
+- CORE/src/Controller/Controller.php:505
+- CORE/src/Controller/ControllerFactory.php:166
+- CORE/src/Controller/ControllerFactory.php:141
+- CORE/src/Http/BaseApplication.php:362
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /admin/bookings/view/21
+Referer URL: https://cakefest2025.ddev.site/admin/bookings?page=2
+Client IP: 192.168.97.5
+2025-10-09 09:37:17 error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table `bookings`. in /var/www/html/vendor/cakephp/cakephp/src/ORM/Query/SelectQuery.php on line 600
+Stack Trace:
+- CORE/src/ORM/Table.php:1574
+- APP/Controller/Admin/BookingsController.php:40
+- CORE/src/Controller/Controller.php:505
+- CORE/src/Controller/ControllerFactory.php:166
+- CORE/src/Controller/ControllerFactory.php:141
+- CORE/src/Http/BaseApplication.php:362
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /admin/bookings/view/21
+Referer URL: https://cakefest2025.ddev.site/admin/bookings?page=2
+Client IP: 192.168.97.5
+2025-10-09 09:37:30 error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table `bookings`. in /var/www/html/vendor/cakephp/cakephp/src/ORM/Query/SelectQuery.php on line 600
+Stack Trace:
+- CORE/src/ORM/Table.php:1574
+- APP/Controller/Admin/BookingsController.php:40
+- CORE/src/Controller/Controller.php:505
+- CORE/src/Controller/ControllerFactory.php:166
+- CORE/src/Controller/ControllerFactory.php:141
+- CORE/src/Http/BaseApplication.php:362
+- CORE/src/Http/Runner.php:86
+- ROOT/vendor/cakephp/authorization/src/Middleware/RequestAuthorizationMiddleware.php:110
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authorization/src/Middleware/AuthorizationMiddleware.php:136
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:106
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Middleware/BodyParserMiddleware.php:157
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/RoutingMiddleware.php:117
+- CORE/src/Http/Runner.php:82
+- CORE/src/Routing/Middleware/AssetMiddleware.php:70
+- CORE/src/Http/Runner.php:82
+- CORE/src/Error/Middleware/ErrorHandlerMiddleware.php:115
+- CORE/src/Http/Runner.php:82
+- ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- CORE/src/Http/Runner.php:82
+- CORE/src/Http/Runner.php:60
+- CORE/src/Http/Server.php:104
+- ROOT/webroot/index.php:37
+- [main]:
+
+Request URL: /admin/bookings/view/21
+Referer URL: https://cakefest2025.ddev.site/admin/bookings?page=2
+Client IP: 192.168.97.5

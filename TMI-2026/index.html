@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMER SALMAN | How Software Runs</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/powerup.css">
+    <link rel="stylesheet" href="dist/theme/cards.css">
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Title Slide -->
+            <section>
+                <div class="title-container text-center">
+                    <h1>Code is the easy part</h1>
+                    <p>Umer Salman</p>
+                    <h2>TMI 2026</h2>
+                </div>
+            </section>
+
+            <section>
+                <h2>Agenda</h2>
+                <p class="fragment fade-in">Who I am and what we build</p>
+                <p class="fragment fade-in">From running programs to systems that move</p>
+                <p class="fragment fade-in">Modularity</p>
+                <p class="fragment fade-in">Q&amp;A</p>
+            </section>
+
+            <section>
+                <h1>Who am I?</h1>
+                <div class="row">
+                    <div class="col-7">
+                        <strong>Umer Salman</strong>, <em><a href="https://umer936.com">@umer936</a></em>
+                        <ul class="mt-2 text-start">
+                            <li>
+                                <a href="https://www.swri.org/">
+                                    <img src="img/SwRI%20Logo%20White.webp" alt="SwRI" class="w-25 m-auto">
+                                </a>, San Antonio, TX
+                            </li>
+                            <li>
+                                BS ECE from <img src="img/utexas-primary-horizontal-logo.svg" alt="UT Austin" class="m-auto w-50">
+                            </li>
+                            <li>3-person team supporting ~60 mission apps</li>
+                            <li>Robotics, cybersecurity, and data systems</li>
+                            <li>PHP since the Nintendo DSi <img src="img/NintendoDSi.webp" alt="Nintendo DSi" class="m-auto w-25 row"></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <img src="img/UMER.jpg" alt="Umer" class="w-75 mx-auto d-block">
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>What We Build</h2>
+                <p class="fragment fade-in">Data analysis and operations tools for NASA and ESA missions</p>
+                <p class="fragment fade-in">Many apps, small team, high reliability requirements</p>
+                <p class="fragment fade-in">So there's a lot of architecture choices (DevOps)</p>
+            </section>
+
+            <section>
+                <h2>What This Looks Like in Production</h2>
+                <p class="fragment fade-in">At the end, I will show real mission applications</p>
+                <p class="fragment fade-in">Same core platform patterns, different mission outcomes</p>
+                <p class="fragment fade-in">That reuse is how a 3-person team supports many systems</p>
+            </section>
+
+            <section>
+                <h2>Programs Run</h2>
+                <p class="fragment fade-in">Write code</p>
+                <p class="fragment fade-in">Run it</p>
+                <p class="fragment fade-in">Get output</p>
+                <p class="fragment fade-in">Debug locally</p>
+            </section>
+
+            <section>
+                <h2>Programs Move</h2>
+                <p class="fragment fade-in">Code moves (dev → CI → production)</p>
+                <p class="fragment fade-in">Data moves (raw → processed → insight)</p>
+                <p class="fragment fade-in">Events move (messages between systems)</p>
+                <p class="fragment fade-in">Modern software is movement, not just execution.</p>
+            </section>
+
+            <section>
+                <h2>Your Code Travels Before It Runs</h2>
+                <p class="fragment fade-in">Local machine != production</p>
+                <p class="fragment fade-in">CI/CD pipelines</p>
+                <p class="fragment fade-in">Rollbacks and reversibility</p>
+                <p class="fragment fade-in">Security constraints (you cannot run anything anywhere)</p>
+                <blockquote class="fragment fade-in">What could go wrong between your laptop and production?</blockquote>
+            </section>
+
+            <section>
+                <h2>Move Software to the Data</h2>
+                <p class="fragment fade-in">Some data is ITAR/CUI, or simply too large (500+ PB)</p>
+                <p class="fragment fade-in">Moving data can be slow, expensive, or disallowed</p>
+                <p class="fragment fade-in">So we move software to where data already lives</p>
+                <p class="fragment fade-in">Containers and cloud patterns make that possible</p>
+            </section>
+
+            <section>
+                <h2>Nothing Runs in Order Anymore</h2>
+                <p class="fragment fade-in">Systems react to events (messages, queues)</p>
+                <p class="fragment fade-in">No single main program</p>
+                <p class="fragment fade-in">Things happen asynchronously</p>
+                <p class="fragment fade-in">Events can be delayed, duplicated, or out of order</p>
+                <blockquote class="fragment fade-in">What happens when your system cannot assume timing?</blockquote>
+            </section>
+
+            <section>
+                <h2>Tools Should Fit Inherited Infrastructure</h2>
+                <p class="fragment fade-in">Docker (Podman for us)</p>
+                <p class="fragment fade-in">Git (Gitea for us)</p>
+                <p class="fragment fade-in">Sentry (GlitchTip for us)</p>
+                <p class="fragment fade-in">Web server (FrankenPHP for us)</p>
+                <p class="fragment fade-in">Goal: support what exists without overcomplicating</p>
+            </section>
+
+            <section>
+                <h2>Modularize or Struggle</h2>
+                <p class="fragment fade-in">We cannot rebuild every feature per mission</p>
+                <p class="fragment fade-in">Generic Conference and Generic SOC are shared modules</p>
+                <p class="fragment fade-in">One code path, many mission deployments</p>
+            </section>
+
+            <section>
+                <h2>Computer Scientist vs Computer Engineer</h2>
+                <p class="fragment fade-in">Our ingest software keeps huge datasets in RAM</p>
+                <p class="fragment fade-in">Need more capacity: improve software or double RAM?</p>
+                <p class="fragment fade-in">Best answer balances correctness, time, cost, and risk</p>
+            </section>
+
+            <section>
+                <h2>Outsourcing Reasoning</h2>
+                <p class="fragment fade-in">AI now assists with code, pipelines, and design</p>
+                <p class="fragment fade-in">PyScript/WASM also expands where code can run (including clients)</p>
+                <p class="fragment fade-in">We increasingly run code we did not fully write</p>
+            </section>
+
+            <section>
+                <h2>Trust Is Part of the Architecture</h2>
+                <p class="fragment fade-in">XZ Utils backdoor</p>
+                <p class="fragment fade-in">Hidden inside a trusted dependency</p>
+                <p class="fragment fade-in">Took years to insert</p>
+                <p class="fragment fade-in">Almost shipped into critical systems</p>
+                <p class="fragment fade-in">More automation and abstraction increase both reach and risk</p>
+                <p class="fragment fade-in"><a href="https://xkcd.com/2347/">xkcd.com/2347</a></p>
+            </section>
+
+            <section>
+                <h2>The Shift</h2>
+                <p class="fragment fade-in">You are not just writing programs</p>
+                <p class="fragment fade-in">You are designing flows of code, data, and events</p>
+                <p class="fragment fade-in">Hard part: keeping systems reliable as they move</p>
+            </section>
+
+            <!-- WASM / PyScript -->
+            <section>
+                <h2>How Far Software Movement Goes</h2>
+                <p class="fragment fade-in">Example: move execution to the browser with PyScript/WASM</p>
+                <div class="container">
+                    <div class="row g-4 justify-content-center">
+
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card-wrapper" data-delay="0.6s">
+                                <div class="powerup-card h-100" data-bs-toggle="modal" data-bs-target="#pyscriptModal"
+                                    data-tilt data-tilt-reverse="true" data-tilt-scale="1.05" data-tilt-max="15"
+                                    data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.3">
+                                    <h3>PyScript<br><br></h3>
+                                    <img src="img/pyscript.webp" alt="PyScript" class="card-img-top">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card-wrapper" data-delay="0.7s">
+                                <div class="powerup-card h-100" data-bs-toggle="modal" data-bs-target="#wasmModal"
+                                    data-tilt data-tilt-reverse="true" data-tilt-scale="1.05" data-tilt-max="15"
+                                    data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.3">
+                                    <h3>WASM<br><br></h3>
+                                    <img src="img/wasm.webp" alt="WASM" class="card-img-top">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <section>
+                    <h4>GeoViz v2.0</h4>
+                    <a href="https://geoviz.space.swri.edu">
+                        <figure>
+                            <div class="r-stack">
+                                <img class="fragment fade-out w-75 mx-auto d-block" src="img/gv_intro.png" alt="GeoViz v2.0">
+                                <img class="fragment fade-in-then-out w-75 mx-auto d-block" src="img/gv_prog.png" alt="GeoViz v2.0">
+                                <img class="fragment fade-in-then-out w-75 mx-auto d-block" src="img/gv_output.png" alt="GeoViz v2.0">
+                                <img class="fragment w-75 mx-auto d-block" src="img/gv_queue.png" alt="GeoViz v2.0">
+                            </div>
+                            <figcaption>https://geoviz.space.swri.edu</figcaption>
+                        </figure>
+                    </a>
+                </section>
+                <section>
+                    <h4>Hot Plasma Composition Analyzer (HPCA)</h4>
+                    <a href="https://hpca.space.swri.edu">
+                        <figure>
+                            <img src="img/HPCA.png" alt="HPCA" class="w-50">
+                            <figcaption>https://hpca.space.swri.edu</figcaption>
+                        </figure>
+                    </a>
+                </section>
+                <section>
+                    <h4>Generic Conference</h4>
+                    <a href="https://junoworkshop.space.swri.edu">
+                        <figure>
+                            <img src="img/JunoWorkshops.png" alt="Juno Workshops">
+                            <figcaption>https://junoworkshop.space.swri.edu</figcaption>
+                        </figure>
+                    </a>
+                </section>
+                <section>
+                    <h4>Generic Conference</h4>
+                    <a href="https://junoworkshop.space.swri.edu/saoct2023">
+                        <figure>
+                            <img src="img/JunoWorkshop.png" class="w-50" alt="Juno Workshop">
+                            <figcaption>https://junoworkshop.space.swri.edu/saoct2023</figcaption>
+                        </figure>
+                    </a>
+                </section>
+                <section>
+                    <h4>Generic SOC (Write Once, Reuse Across Missions)</h4>
+                    <p>Shared SOC core with mission-specific configuration and adapters.</p>
+                    <div class="r-stack">
+                        <img class="w-75 mx-auto d-block" src="img/cusp_home.png" alt="cusp_home">
+                        <img class="fragment fade-in-then-out w-75 mx-auto d-block" src="img/lucy_home.png" alt="lucy_home">
+                        <img class="fragment fade-in-then-out w-75 mx-auto d-block" src="img/merit_home.png" alt="merit_home">
+                        <img class="fragment fade-in-then-out w-75 mx-auto d-block" src="img/vseo_home.png" alt="vseo_home">
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <h2>What All This Gets Us</h2>
+                <p class="fragment fade-in">Faster delivery without cloning entire stacks</p>
+                <p class="fragment fade-in">Consistent operations across missions</p>
+                <p class="fragment fade-in">Room to adopt new ideas like PyScript and WASM safely</p>
+            </section>
+
+            <section id="wrap-up-q-and-a">
+                These slides are available @ <br>
+                <a href="https://umer936.com/TMI-2026/">https://umer936.com/TMI-2026/</a>
+                <hr>
+                <a href="https://github.com/umer936">https://github.com/umer936</a>
+            </section>
+        </div>
+
+
+        <!-- Modals -->
+
+        <div class="modal fade" id="cakephpModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title">CakePHP Logs</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>cli-debug.log</strong></p>
+                        <pre><code id="cli-debug" class="fs-6 log">Loading...</code></pre>
+
+                        <p><strong>debug.log</strong></p>
+                        <pre><code id="debug" class="fs-6 log">Loading...</code></pre>
+
+                        <p><strong>error.log</strong></p>
+                        <pre><code id="error" class="fs-6 log">Loading...</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="databaseLogModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title">CakePHP-DatabaseLog</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/CakePHP-DatabaseLog.png" class="w-100 py-2">
+                        <a
+                            href="https://github.com/dereuromark/CakePHP-DatabaseLog/">https://github.com/dereuromark/CakePHP-DatabaseLog/</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="logHappensModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title">LogHappens</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/logHappens_Home.png" class="w-100 py-2">
+                        <img src="img/logHappens_Code.png" class="w-100 py-2">
+                        <a href="https://github.com/ToX82/logHappens">https://github.com/ToX82/logHappens</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="glitchTipModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title">GlitchTip</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/GlitchTip_Home.png" class="w-100 py-2">
+                        <img src="img/GlitchTip_Error.png" class="w-100 py-2">
+                        <img src="img/GlitchTip_Error_Code.png" class="w-100 py-2">
+                        <p>
+                            Uses the Sentry API.
+                            Can just use <a
+                                href="https://github.com/lordsimal/cakephp-sentry">https://github.com/lordsimal/cakephp-sentry</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="pyscriptModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header border-secondary">
+                        <h5 class="modal-title">PyScript Example (Dynamic)</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body d-flex flex-nowrap gap-3">
+                        <!-- Left column: dynamically loaded code -->
+                        <div class="w-50 pe-3 overflow-y-auto mh-100 scroll-smooth">
+                            <p><strong>quat_converter.html</strong></p>
+                            <pre><code id="code-index" class="fs-6 html">Loading...</code></pre>
+
+                            <p><strong>QuatConverterConfig.toml</strong></p>
+                            <pre><code id="code-config" class="fs-6 toml">Loading...</code></pre>
+
+                            <p><strong>QuatConverterPyScript.py</strong></p>
+                            <pre><code id="code-python" class="fs-6 python">Loading...</code></pre>
+
+                            <p><strong>CakePHP Example (Using Files from Webroot)</strong></p>
+                            <pre><code id="code-cakephp" class="fs-6 python">Loading...</code></pre>
+
+                        </div>
+
+                        <!-- Right column: iframe (loads on demand) -->
+                        <div class="w-50 rounded">
+                            <div class="iframe-container h-50">
+                                <div id="iframe-placeholder" class="text-muted">
+                                    <em>Preview will load when modal opens...</em>
+                                </div>
+                            </div>
+                            <img src="img/LAMP_Quat.png" class="mt-3 rounded h-50 w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="modal fade" id="wasmModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title">WASM + WASI</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/wasm.webp" class="w-100 py-2"><br>
+                        <p>IR is Intermediate Representation</p><br>
+                        <a href="https://endor.dev/s/lamp">https://endor.dev/s/lamp</a><br>
+                        <a href="https://www.fermyon.com/spin">https://www.fermyon.com/spin</a><br>
+                        <a href="https://wasmcloud.com/">https://wasmcloud.com/</a><br>
+                        <a href="https://webassembly.org/">https://webassembly.org/</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ===== JavaScript to load code + iframe on demand ===== -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const baseURL = 'https://umer936.com/TMI-2026/pyscript/';
+                const files = {
+                    'code-index': baseURL + 'quat_converter.html',
+                    'code-config': baseURL + 'QuatConverterConfig.toml',
+                    'code-python': baseURL + 'QuatConverterPyScript.py',
+                    'code-cakephp': baseURL + 'cakephp.html',
+                };
+
+                async function loadCode(id, url) {
+                    try {
+                        const res = await fetch(url);
+                        if (!res.ok) throw new Error(res.statusText);
+                        const text = await res.text();
+                        document.getElementById(id).textContent = text;
+                    } catch (err) {
+                        document.getElementById(id).textContent = `⚠️ Failed to load: ${err}`;
+                    }
+                }
+
+                // Modal reference
+                const modal = document.getElementById('pyscriptModal');
+                const iframeContainer = modal.querySelector('.iframe-container');
+
+                modal.addEventListener('shown.bs.modal', () => {
+                    // Load files dynamically
+                    for (const [id, url] of Object.entries(files)) {
+                        loadCode(id, url);
+                    }
+
+                    // Load iframe on demand (if not already loaded)
+                    if (!iframeContainer.querySelector('iframe')) {
+                        const iframe = document.createElement('iframe');
+                        iframe.src = baseURL; // loads /pyscript/ index
+                        iframe.loading = 'lazy';
+                        iframe.classList = 'bg-white h-100 rounded w-100';
+                        iframeContainer.innerHTML = ''; // clear placeholder
+                        iframeContainer.appendChild(iframe);
+                    }
+
+                    // Re-run highlight.js after code loads
+                    setTimeout(() => {
+                        if (RevealHighlight().hljs) {
+                            document.querySelectorAll('#pyscriptModal pre code').forEach(block => {
+                                delete block.dataset.highlighted;
+                                RevealHighlight().hljs.highlightElement(block);
+                            });
+                        }
+                    }, 800);
+                });
+
+                // Optional: clear iframe when modal closes (for fresh reload next time)
+                modal.addEventListener('hidden.bs.modal', () => {
+                    iframeContainer.innerHTML = '<div id="iframe-placeholder" class="text-muted"><em>Preview will load when modal opens...</em></div>';
+                });
+
+                // Modal reference
+
+                const baseURL2 = 'https://umer936.com/TMI-2026/logs/';
+                const files2 = {
+                    'cli-debug': baseURL2 + 'cli-debug.log',
+                    'debug': baseURL2 + 'debug.log',
+                    'error': baseURL2 + 'error.log',
+                };
+                const modal2 = document.getElementById('cakephpModal');
+
+                modal2.addEventListener('shown.bs.modal', () => {
+                    // Load files dynamically
+                    for (const [id, url] of Object.entries(files2)) {
+                        loadCode(id, url);
+                    }
+                });
+            });
+        </script>
+
+
+
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+    <script>
+        Reveal.initialize({ hash: true, plugins: [RevealMarkdown, RevealHighlight, RevealNotes] });
+
+        Reveal.on('ready', function () {
+            addBootstrapFooter();
+            addAnimationDelays();
+            initModalFlip();
+        });
+
+        // Footer
+        function addBootstrapFooter() {
+            if (!document.querySelector('.reveal footer')) {
+                const footer = document.createElement('footer');
+                footer.className = 'footer text-white-50 fs-5 py-2 ps-3 position-fixed bottom-0 start-0 w-100';
+                footer.textContent = 'Umer Salman | 04/28/2026';
+                document.querySelector('.reveal').appendChild(footer);
+            }
+        }
+
+        // Animation delays (on wrapper)
+        function addAnimationDelays() {
+            document.querySelectorAll('.card-wrapper').forEach(wrapper => {
+                const delay = wrapper.getAttribute('data-delay');
+                if (delay) wrapper.style.animationDelay = delay;
+            });
+        }
+
+        // Flip on modal open
+        function initModalFlip() {
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.addEventListener('show.bs.modal', function (e) {
+                    const card = e.relatedTarget;
+                    if (card) {
+                        card.classList.add('flip');
+                        setTimeout(() => card.classList.remove('flip'), 600);
+                    }
+                });
+            });
+        }
+    </script>
+
+</body>
+
+</html>

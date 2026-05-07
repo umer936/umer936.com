@@ -1,0 +1,99 @@
+/**
+ * PowerUp Theme for reveal.js (CakeFest 2025)
+ * Neon-futuristic twist with moving angled grid
+ */
+
+/* Fonts */
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 300 800;
+  src: url('fonts/Exo_2/Exo2-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Exo 2';
+  font-style: italic;
+  font-weight: 300 800;
+  src: url('fonts/Exo_2/Exo2-Italic-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 400 900;
+  src: url('fonts/Orbitron/Orbitron-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Root Variables */
+:root {
+  --r-background-color: #0f0f1b;
+  --r-main-font: 'Exo 2', system-ui, sans-serif;
+  --r-heading-font: 'Orbitron', sans-serif;
+  --r-main-color: #E6E6FA;
+  --r-heading-color: #39B7CD;
+  --primary-color: #39B7CD;
+  --accent-color: #FFDD00; /* Yellow accent */
+  --bs-heading-color: #ffdd008f !important;
+}
+
+/* Background Neon Grid */
+.reveal-viewport {
+  position: relative;
+  background: radial-gradient(circle at center, #1a1a2e 0%, #0f0f1b 70%, #000 100%);
+  overflow: hidden;
+}
+.reveal-viewport::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(255, 221, 0, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 221, 0, 0.15) 1px, transparent 1px);
+  background-size: 80px 80px;
+  transform: perspective(600px) rotateX(65deg) rotateZ(10deg) scale(2);
+  transform-origin: bottom;
+  animation: gridMove 15s linear infinite;
+  z-index: 0;
+}
+.reveal-viewport::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center bottom, rgba(255, 221, 0, 0.2), transparent 70%);
+  z-index: 1;
+  opacity: 0.7;
+}
+@keyframes gridMove {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 80px 80px, 80px 80px; }
+}
+
+/* Text & Headers */
+.reveal { font-family: var(--r-main-font); font-size: 37px; color: var(--r-main-color); text-shadow: 0 0 10px rgba(255, 221, 0, 0.2); }
+.reveal h1,h2,h3,h4,h5 { font-family: var(--r-heading-font); color: var(--r-heading-color); text-transform: uppercase; text-shadow: 0 0 20px rgba(255, 221, 0, 0.6),0 0 40px rgba(255,221,0,0.2); }
+.reveal h1{ font-size:3em; } .reveal h2{ font-size:2em; }
+
+/* Links */
+.reveal a{ color:#00fff2; text-decoration:none; transition: all 0.2s ease; }
+.reveal a:hover{ color: #fffa00; text-shadow: 0 0 10px #fffa00; }
+
+/* Code blocks */
+.reveal code{ font-family:'Fira Code', monospace; color:#50FA7B; }
+.reveal pre code{ background: rgba(255,255,255,0.05); border:1px solid rgba(255,221,0,0.3); border-radius:8px; box-shadow:0 0 15px rgba(255,221,0,0.15); padding:10px 20px; }
+
+/* Slide Transitions */
+.reveal .slides section{ transition: transform 0.6s ease, opacity 0.6s ease; }
+.reveal .slides section.future{ opacity:0; transform: translateY(30px); }
+.reveal .slides section.past{ opacity:0; transform: translateY(-30px); }
+
+/* Progress bar */
+.reveal .progress{ height:6px; background:rgba(255,255,255,0.1); box-shadow: inset 0 0 10px rgba(255,221,0,0.3);}
+.reveal .progress span{ background: linear-gradient(90deg,var(--primary-color),var(--accent-color)); box-shadow:0 0 20px var(--primary-color); animation: progressPulse 2s ease-in-out infinite; }
+@keyframes progressPulse{0%,100%{box-shadow:0 0 20px var(--primary-color);}50%{box-shadow:0 0 40px var(--accent-color);}}
+
+.reveal .controls {
+  color: var(--accent-color);
+  text-shadow: 0 0 10px var(--accent-color);
+}
