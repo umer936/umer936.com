@@ -14,6 +14,12 @@ $blogPosts = [
                 'img' => "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/powershell/powershell-original.svg", // MIT License, devicons
                 'smallText' => 'A tiny PowerShell startup script that clears C:\\tmp so Windows behaves more like Linux /tmp.',
         ],
+        'Git + LFS Stuck File Quick Fix' => [
+                'url' => 'lfs-fix.md',
+                'date' => '05/07/2026',
+                'img' => "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg", // MIT License, devicons
+                'smallText' => 'A quick runbook for fixing Git LFS pull failures caused by remote and endpoint mismatches.',
+        ],
         'Steam on Linux' => [
                 'url' => 'steam-on-linux.md',
                 'date' => '03/09/2026',
@@ -112,12 +118,38 @@ $blogPosts = [
 $mediaPosts = [
         'CakeFest-2023' => [
                 'url' => 'cakefest2023.md',
-                'date' => '09/30/23',
+                'date' => '09/30/2023',
                 'img' => "https://cakefest.org/cakefest/img/cakefest-logo.svg",
                 'imgClasses' => 'bg-info-subtle',
                 'smallText' => 'Conference talk on containerization.
                 Covers Queueing methods for long-running processes and working with parts in different programming
                 languages. YouTube video available.',
+        ],
+        'CakeFest-2024' => [
+                'url' => 'cakefest-2024.md',
+                'date' => '07/25/2024',
+                'img' => "https://cakefest.org/cakefest/img/cakefest-logo.svg",
+                'imgClasses' => 'bg-info-subtle',
+                'smallText' => 'Production-minded CakePHP talk focused on scalable delivery, operations, and progressive modernization.',
+        ],
+        'CakeFest-2025' => [
+                'url' => 'cakefest-2025.md',
+                'date' => '08/10/2025',
+                'img' => "https://cakefest.org/cakefest/img/cakefest-logo.svg",
+                'imgClasses' => 'bg-info-subtle',
+                'smallText' => 'Talk on practical CakePHP power-ups: logging, query performance, and WebAssembly-based workflows.',
+        ],
+        'TMI-2026' => [
+                'url' => 'tmi-2026.md',
+                'date' => '04/28/2026',
+                'img' => '/images/tmi-episcopal-logo.png',
+                'smallText' => 'Guest talk at Texas Military Institute: "Code is the easy part." Building an engineering path after graduation.',
+        ],
+        'Daily Texan (UT Robotics)' => [
+                'url' => 'daily-texan-2019.md',
+                'date' => '02/12/2019',
+                'img' => '/images/daily-texan-card.svg', // Local media icon asset
+                'smallText' => 'Daily Texan coverage of the Anna Hiss Gym renovation for robotics programs, including an interview with me.',
         ],
 ];
 ?>
@@ -210,13 +242,21 @@ $mediaPosts = [
                 var title = button.getAttribute('data-modal-title'); // Extract info from data-* attributes
                 var type = button.getAttribute('data-modal-type'); // Extract info from data-* attributes
                 var url = '/blog/' + type + '/?postName=' + button.getAttribute('data-modal-url');
+                var modalBody = this.querySelector('.modal-body');
 
                 this.querySelector('.modal-title').textContent = title;
+
 
                 fetch(url)
                     .then(response => response.text())
                     .then(data => {
-                        this.querySelector('.modal-body').innerHTML = data;
+                        modalBody.innerHTML = data;
+
+                        // Keep users on the blog page when opening external references.
+                        modalBody.querySelectorAll('a[href]').forEach(link => {
+                            link.setAttribute('target', '_blank');
+                            link.setAttribute('rel', 'noopener noreferrer');
+                        });
                     })
                     .catch(error => console.error('Error fetching modal content:', error));
 
