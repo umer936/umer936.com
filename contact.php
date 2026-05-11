@@ -36,6 +36,39 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
     }
 }
+
+$socialLinks = [
+    [
+        "name" => "Instagram",
+        "url" => "https://instagram.com/umer936?ref=badge",
+        "icon" => "https://cdn.simpleicons.org/instagram/E4405F",
+    ],
+    [
+        "name" => "Stack Overflow",
+        "url" => "https://stackoverflow.com/users/2646359/umer936",
+        "icon" => "https://www.vectorlogo.zone/logos/stackoverflow/stackoverflow-icon.svg",
+    ],
+    [
+        "name" => "7 Cups of Tea",
+        "url" => "https://7cupsoftea.com/@umer936/",
+        "icon" => "https://www.7cups.com/favicon.ico",
+    ],
+    [
+        "name" => "Reddit",
+        "url" => "https://www.reddit.com/user/Umer936/",
+        "icon" => "https://upload.wikimedia.org/wikipedia/en/b/bd/Reddit_Logo_Icon.svg",
+    ],
+    [
+        "name" => "GitHub",
+        "url" => "https://github.com/umer936",
+        "icon" => "https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg",
+    ],
+    [
+        "name" => "SocialCube",
+        "url" => "https://socialcu.be/@umer936",
+        "icon" => "https://socialcu.be/Images/cube_icon_web_min.svg",
+    ],
+];
 ?>
 
 <div class="container rounded w-75 m-auto text-break" id="contact">
@@ -99,50 +132,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                             🖥️ Find Me
                         </span>
                         <br>
-                        <div class="row">
-
-                            <div class="col-xxs-2 col-3 col-sm-2 col-md-4 col-lg-3 col-xl-2">
-                                <a href="https://instagram.com/umer936?ref=badge">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/132px-Instagram_logo_2016.svg.png"
-                                         loading="lazy"
-                                         alt="Instagram" class="img-fluid"></a>
-                            </div>
-
-                            <div class="col-xxs-2 col-3 col-sm-2 col-md-4 col-lg-3 col-xl-2">
-                                <a href="https://stackoverflow.com/users/2646359/umer936">
-                                    <img src="https://www.vectorlogo.zone/logos/stackoverflow/stackoverflow-icon.svg"
-                                         loading="lazy"
-                                         alt="Stack Overflow" class="img-fluid"></a>
-                            </div>
-
-                            <div class="col-xxs-2 col-3 col-sm-2 col-md-4 col-lg-3 col-xl-2">
-                                <a href="https://7cupsoftea.com/@umer936/">
-                                    <img src="https://d37v7cqg82mgxu.cloudfront.net/img/link-to-us/square/7cups-logo-text-tile.png"
-                                         loading="lazy"
-                                         alt="7 Cups of Tea" class="img-fluid"></a>
-                            </div>
-
-                            <div class="col-xxs-2 col-3 col-sm-2 col-md-4 col-lg-3 col-xl-2">
-                                <a href="https://www.reddit.com/user/Umer936/">
-                                    <img src="https://upload.wikimedia.org/wikipedia/en/b/bd/Reddit_Logo_Icon.svg" alt="Reddit"
-                                         loading="lazy"
-                                         class="img-fluid"></a>
-                            </div>
-
-                            <div class="col-xxs-2 col-3 col-sm-2 col-md-4 col-lg-3 col-xl-2">
-                                <a href="https://github.com/umer936">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"
-                                         loading="lazy"
-                                         alt="GitHub" class="img-fluid"></a>
-                            </div>
-
-                            <div class="col-xxs-2 col-3 col-sm-2 col-md-4 col-lg-3 col-xl-2">
-                                <a href="https://socialcu.be/@umer936">
-                                    <img src="https://socialcu.be/Images/cube_icon_web_min.svg" alt="SocialCube"
-                                         loading="lazy"
-                                         class="img-fluid"></a>
-                            </div>
-
+                        <div class="row row-cols-auto g-2 mt-1">
+                            <?php foreach ($socialLinks as $socialLink) { ?>
+                                <div class="col">
+                                    <a class="d-inline-flex align-items-center justify-content-center border rounded p-1 text-decoration-none"
+                                       href="<?= htmlspecialchars($socialLink["url"]) ?>"
+                                       aria-label="<?= htmlspecialchars($socialLink["name"]) ?>">
+                                        <img src="<?= htmlspecialchars($socialLink["icon"]) ?>"
+                                             loading="lazy"
+                                             alt="<?= htmlspecialchars($socialLink["name"]) ?>"
+                                             class="img-fluid"
+                                             width="24"
+                                             height="24">
+                                    </a>
+                                </div>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
