@@ -10,7 +10,10 @@
     <meta name="author" content="Umer Salman">
     <meta property="og:title" content="Umer Salman (umer936)">
     <meta property="og:description" content="CODER | PROGRAMMER | DESIGNER">
-<!--    <meta property="og:image" content="https://example.com/your-image.jpg">-->
+    <meta property="og:image" content="https://umer936.com/images/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://umer936.com">
     <title>Umer Salman</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
