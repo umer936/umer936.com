@@ -46,42 +46,8 @@
 
 <div class="row row-cols-2 row-cols-md-3 g-4 mt-2" id="projDiv">
     <?php
-    require_once 'ProjectCategory.php';
-
-    $projects = [
-            [
-                    'title' => 'Aceso',
-                    'text' => 'Harnessing Technology to Support Children’s Mental Health. Senior design project combining engineering and mental health awareness.',
-                    'years' => '2019-2020',
-                    'categories' => [ProjectCategory::COLLEGE, ProjectCategory::SOFTWARE, ProjectCategory::HARDWARE, ProjectCategory::COMPLETED],
-                    'link' => ['title' => 'Full Blog Post', 'link' => '/blog/#Aceso'],
-            ],
-            [
-                    'title' => 'b',
-                    'text' => 'b text',
-                    'years' => '2015-2020',
-                    'categories' => [4],
-            ],
-            [
-                    'title' => 'c',
-                    'text' => 'c text',
-                    'years' => '2013-2018',
-                    'categories' => [3, 4],
-                    'link' => ['title' => 'YouTube', 'link' => 'https://youtube.com'],
-            ],
-            [
-                    'title' => 'd',
-                    'text' => 'd text',
-                    'years' => '2013-2020',
-                    'categories' => [3, 4],
-            ],
-            [
-                    'title' => 'e',
-                    'text' => 'e text',
-                    'years' => '2013-2020',
-                    'categories' => [3, 4],
-            ],
-    ];
+    $contentCatalog = require_once __DIR__ . '/content/content_catalog.php';
+    $projects = $contentCatalog['projects'];
 
 
     foreach ($projects as $project) {
