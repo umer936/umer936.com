@@ -27,10 +27,10 @@ uasort($mediaPosts, static function ($a, $b) {
                     <div class="card">
                         <div class="card-body row">
                             <img src="<?= $blogPost['img'] ?>"
-                                 class="col-md-4"
+                                 class="col-4 col-md-4"
                                  loading="lazy"
                                  alt="...">
-                            <div class="col-md-8">
+                            <div class="col-8 col-md-8">
                                 <h5 class="card-title"
                                     data-bs-toggle="modal"
                                     data-bs-target="#postModal"
@@ -69,10 +69,10 @@ uasort($mediaPosts, static function ($a, $b) {
                     <div class="card">
                         <div class="card-body row">
                             <img src="<?= $mediaPost['img'] ?>"
-                                 class="col-md-4 <?= $mediaPost['imgClasses'] ?? '' ?>"
+                                 class="col-4 col-md-4 <?= $mediaPost['imgClasses'] ?? '' ?>"
                                  loading="lazy"
                                  alt="...">
-                            <div class="col-md-8">
+                            <div class="col-8 col-md-8">
                                 <h5 class="card-title"
                                     data-bs-toggle="modal"
                                     data-bs-target="#postModal"
