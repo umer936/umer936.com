@@ -2,12 +2,20 @@
 
 require_once __DIR__ . '/../ProjectCategory.php';
 
+// Content entry conventions: see content/CONTENT_STYLE_GUIDE.md
+
 return [
     'posts' => [
+        'The Growing Problem With Li-ion Batteries in Hot Climates' => [
+            'url' => 'lion-battery-heat-problem.md',
+            'date' => '06/25/2026',
+            'img' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f50b.svg',
+            'smallText' => 'Modern power tool batteries like Ryobi switched from NiMH to Li-ion, but there\'s a problem: they can\'t handle Texas heat. What you need to know about thermal limits, fire bags, and safe storage.',
+        ],
         'Over-the-air Motorized TV Antenna unnecessary' => [
             'url' => 'motorized-tv-antenna-spurs-games.md',
             'date' => '05/24/2026',
-            'img' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/espressif/espressif-original.svg',
+            'img' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4e1.svg',
             'smallText' => 'I almost built an ESP32 antenna rotator for Spurs OTA games, then realized all major local stations come from about the same direction.',
         ],
         'Modernizing My ASUS U46E i7' => [
@@ -43,13 +51,13 @@ return [
         'CentOS_PHP_7-8' => [
             'url' => 'PHP_Upgrade_7-8.md',
             'date' => '12/27/2023',
-            'img' => 'https://www.php.net/images/logos/new-php-logo.svg',
+            'img' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg',
             'smallText' => 'RHEL (e.g. CentOS) guide to upgrading PHP from 7 to 8',
         ],
         'FIRST Robotics' => [
             'url' => 'FIRST.md',
             'date' => '08/15/2023',
-            'img' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg',
+            'img' => '/frclocks_archive/FIRST_Horz_RGB.png',
             'smallText' => 'Former FTC and FRC Student; now mentor BroncBotz 3481, FTC 4008/6976/4602, and TMI FTC 6221.',
         ],
         'Car Diagnostics Logger' => [
@@ -61,7 +69,7 @@ return [
         'DIY Circuits' => [
             'url' => 'diy-circuits.md',
             'date' => '08/15/2023',
-            'img' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original-wordmark.svg',
+            'img' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/26a1.svg',
             'smallText' => 'A personal project to create printed circuit boards (PCBs) at home, born out of necessity during COVID-19 when access to the UT Austin Makerspace was restricted.',
         ],
         'Intelligent Quads' => [
@@ -82,10 +90,16 @@ return [
             'img' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg',
             'smallText' => 'Aceso: Harnessing Technology to Support Children\'s Mental Health. Senior design project combining engineering, mental health awareness, and innovation.',
         ],
+        '10-Keyless RGB Keyboard' => [
+            'url' => 'ee445l-10-keyless-rgb-keyboard.md',
+            'date' => '07/17/2026',
+            'img' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2328.svg',
+            'smallText' => 'UT Austin ECE EE445L final project: custom 10-keyless keyboard with individually addressable RGB backlighting, USB interface, and onboard macro recording.',
+        ],
         '7 Habits for Mental Discipline & Self-Control' => [
             'url' => 'mental-discipline-self-control.md',
             'date' => '05/24/2026',
-            'img' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/notion/notion-original.svg',
+            'img' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4cb.svg',
             'smallText' => 'A practical checklist for self-control: sugar reset, hydration, social feed curation, daily meditation, cold-finish showers, a weekly 3-hour disappear block, and nightly reflection.',
         ],
     ],
@@ -133,29 +147,23 @@ return [
             'link' => ['title' => 'Full Blog Post', 'link' => '/blog/#Aceso'],
         ],
         [
-            'title' => 'b',
-            'text' => 'b text',
-            'years' => '2015-2020',
-            'categories' => [4],
+            'title' => '10-Keyless RGB Keyboard (EE445L Final Project)',
+            'text' => 'UT Austin ECE EE445L Spring 2020 final project. Designed and built a custom keyboard with Gateron Brown switches, individually addressable RGB backlighting, USB interface, and onboard macro recording so key combos can type stored phrases on any computer. Created with Jason Stephen, Tianshu Huang, Umer Salman, and Victor Guo.',
+            'years' => '2020-2020',
+            'categories' => [ProjectCategory::COLLEGE, ProjectCategory::SOFTWARE, ProjectCategory::HARDWARE, ProjectCategory::COMPLETED],
+            'link' => ['title' => 'Full Blog Post', 'link' => '/blog/#10-Keyless%20RGB%20Keyboard'],
         ],
         [
-            'title' => 'c',
-            'text' => 'c text',
-            'years' => '2013-2018',
-            'categories' => [3, 4],
-            'link' => ['title' => 'YouTube', 'link' => 'https://youtube.com'],
+            'title' => 'JART',
+            'text' => 'Co-created a meme organizer app with a collaborator after having the idea and checking whether anyone was already building something similar. The project was eventually discontinued.',
+            'years' => '2025-2025',
+            'categories' => [ProjectCategory::SOFTWARE],
         ],
         [
-            'title' => 'd',
-            'text' => 'd text',
-            'years' => '2013-2020',
-            'categories' => [3, 4],
-        ],
-        [
-            'title' => 'e',
-            'text' => 'e text',
-            'years' => '2013-2020',
-            'categories' => [3, 4],
+            'title' => 'Extemp Engine',
+            'text' => 'Helped Hayk Saakian test and provide feedback for an offline RSS/article downloader for high school extemporaneous speaking prep. Had independently come up with the same idea before finding his work. The goal was to replace tubs of printouts with a searchable offline computer workflow during no-internet prep time. The project was eventually discontinued.',
+            'years' => '2013-2014',
+            'categories' => [ProjectCategory::SOFTWARE],
         ],
     ],
 ];

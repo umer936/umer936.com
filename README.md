@@ -18,3 +18,7 @@ Sights to see:
 | [TMI](TMI)                                               | Quick tool to see if people share the same classes in their highschool schedule                                                                                                                                                                                                                                             | before 12/31/2015 |
 | [TMIPathsOfLife](TMIPathsOfLife)                         | A report for AP Language and Composition for choosing a career. See the report [here](https://raw.githubusercontent.com/umer936/APLCWhitepaper/master/report.pdf) and the associated website [here](https://umer936.com/TMIPathsOfLife/)                                                                                    | 05/18/2016        |
 | [Battleship](battleship.html)                            | A Battleship game light enough to be served from the TM4C. Can be played [here](https://umer936.com/battleship.html)                                                                                                                                                                                                        | 12/07/2020        |
+
+## Maintainer docs
+
+- Content standards for projects/blog/media live in [`content/CONTENT_STYLE_GUIDE.md`](content/CONTENT_STYLE_GUIDE.md).
