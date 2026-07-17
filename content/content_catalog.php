@@ -12,6 +12,12 @@ return [
             'img' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f50b.svg',
             'smallText' => 'Modern power tool batteries like Ryobi switched from NiMH to Li-ion, but there\'s a problem: they can\'t handle Texas heat. What you need to know about thermal limits, fire bags, and safe storage.',
         ],
+        'Mentees' => [
+            'url' => 'mentees.md',
+            'date' => '07/17/2026',
+            'img' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f393.svg',
+            'smallText' => 'A running mentorship log across Bronc Botz, SwRI YES, and independent-study students working on projects from Fortran-to-Julia benchmarks to spaceflight hardware testing.',
+        ],
         'Over-the-air Motorized TV Antenna unnecessary' => [
             'url' => 'motorized-tv-antenna-spurs-games.md',
             'date' => '05/24/2026',
@@ -137,6 +143,36 @@ return [
             'img' => '/images/daily-texan-card.svg',
             'smallText' => 'Daily Texan coverage of the Anna Hiss Gym renovation for robotics programs, including an interview with me.',
         ],
+        'SwRI: Flight Analog Testing of Alternatives to Ebonol-C' => [
+            'url' => 'swri-flight-analog-testing-ebonol-c.md',
+            'date' => '07/17/2026',
+            'img' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f52c.svg',
+            'smallText' => 'SwRI Earth and Space internal R&D feature on flight-analog testing for ultraviolet suppression alternatives used in electrostatic analyzers.',
+        ],
+        'SwRI: Solar Eclipse Initiative (2024, 15-R6395)' => [
+            'url' => 'swri-solar-eclipse-initiative-2024.md',
+            'date' => '04/08/2024',
+            'img' => './medias/swri-solar-eclipse-initiative-2024_1.jpg',
+            'smallText' => 'SwRI Earth and Space internal R&D feature for the 2024 Solar Eclipse Initiative, including outreach activities and project outcomes.',
+        ],
+        'SwRI: Solar Eclipse Initiative (2025, 15-R6395)' => [
+            'url' => 'swri-solar-eclipse-initiative-2025.md',
+            'date' => '08/16/2025',
+            'img' => './medias/swri-solar-eclipse-initiative-2025_1.jpg',
+            'smallText' => 'Continuation of the SwRI Solar Eclipse Initiative in 2025, documenting updated outreach execution and team contributions.',
+        ],
+        'SwRI: Prototype Cloud-Based Space Science Operations Center (15-R6277)' => [
+            'url' => 'swri-prototype-cloud-space-science-ops-center.md',
+            'date' => '01/01/2024',
+            'img' => './medias/swri-prototype-cloud-space-science-ops-center_1.jpg',
+            'smallText' => 'SwRI Earth and Space internal R&D feature on prototyping cloud infrastructure and services for space science operations.',
+        ],
+        'SwRI: New Horizons Termination Shock Preparatory Science (19-R6587)' => [
+            'url' => 'swri-new-horizons-termination-shock.md',
+            'date' => '08/12/2025',
+            'img' => './medias/swri-new-horizons-termination-shock_1.jpg',
+            'smallText' => 'SwRI internal R&D feature on support for New Horizons heliophysics termination shock preparatory science and related tooling updates.',
+        ],
     ],
     'projects' => [
         [
@@ -152,6 +188,41 @@ return [
             'years' => '2020-2020',
             'categories' => [ProjectCategory::COLLEGE, ProjectCategory::SOFTWARE, ProjectCategory::HARDWARE, ProjectCategory::COMPLETED],
             'link' => ['title' => 'Full Blog Post', 'link' => '/blog/#10-Keyless%20RGB%20Keyboard'],
+        ],
+        [
+            'title' => 'Flight-Analog UV Suppression Testing (SwRI IR&D)',
+            'text' => 'Contributed to research and test execution for ultraviolet suppression alternatives for spaceflight hardware and electrostatic analyzers, then used results to start vendor outreach for a potential client-facing service.',
+            'years' => '2025-2025',
+            'categories' => [ProjectCategory::WORK, ProjectCategory::HARDWARE, ProjectCategory::COMPLETED],
+            'link' => ['title' => 'In the Media', 'link' => '/blog/#SwRI:%20Flight%20Analog%20Testing%20of%20Alternatives%20to%20Ebonol-C'],
+        ],
+        [
+            'title' => 'Solar Eclipse Initiative (15-R6395, 2024)',
+            'text' => 'Supported the 2024 Solar Eclipse Initiative through science outreach and event engagement activities, with project outcomes documented by SwRI.',
+            'years' => '2024-2024',
+            'categories' => [ProjectCategory::WORK, ProjectCategory::HARDWARE, ProjectCategory::COMPLETED],
+            'link' => ['title' => 'In the Media', 'link' => '/blog/#SwRI:%20Solar%20Eclipse%20Initiative%20(2024,%2015-R6395)'],
+        ],
+        [
+            'title' => 'Solar Eclipse Initiative (15-R6395, 2025)',
+            'text' => 'Continued Solar Eclipse Initiative work in 2025 with updated outreach execution and project visibility through SwRI IR&D coverage.',
+            'years' => '2025-2025',
+            'categories' => [ProjectCategory::WORK, ProjectCategory::HARDWARE, ProjectCategory::COMPLETED],
+            'link' => ['title' => 'In the Media', 'link' => '/blog/#SwRI:%20Solar%20Eclipse%20Initiative%20(2025,%2015-R6395)'],
+        ],
+        [
+            'title' => 'Prototype Cloud-Based Space Science Ops Center (15-R6277)',
+            'text' => 'Helped prototype cloud-native architecture for a space science operations center, focusing on scalable services and operational flexibility.',
+            'years' => '2024-2024',
+            'categories' => [ProjectCategory::WORK, ProjectCategory::SOFTWARE, ProjectCategory::COMPLETED],
+            'link' => ['title' => 'In the Media', 'link' => '/blog/#SwRI:%20Prototype%20Cloud-Based%20Space%20Science%20Operations%20Center%20(15-R6277)'],
+        ],
+        [
+            'title' => 'New Horizons Termination Shock Preparatory Science (19-R6587)',
+            'text' => 'Contributed to preparatory science and tooling updates supporting New Horizons heliophysics termination shock objectives.',
+            'years' => '2025-2025',
+            'categories' => [ProjectCategory::WORK, ProjectCategory::SOFTWARE, ProjectCategory::COMPLETED],
+            'link' => ['title' => 'In the Media', 'link' => '/blog/#SwRI:%20New%20Horizons%20Termination%20Shock%20Preparatory%20Science%20(19-R6587)'],
         ],
         [
             'title' => 'JART',
