@@ -1,2 +1,2 @@
 <?php
-include_once '../parsedownInclude.php';
+include_once __DIR__ . '/../markdownInclude.php';
