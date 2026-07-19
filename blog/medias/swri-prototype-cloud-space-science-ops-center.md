@@ -12,7 +12,7 @@ The effort explored how cloud-native services and infrastructure can support mis
 - Evaluated architecture patterns for operational reliability and growth.
 - Demonstrated a practical foundation for future operations-center capabilities.
 
-![Prototype cloud-based space science operations center architecture](./medias/swri-prototype-cloud-space-science-ops-center_1.jpg)
+![Prototype cloud-based space science operations center architecture](./medias/images/swri-prototype-cloud-space-science-ops-center_1.jpg)
 
 ## Source
 

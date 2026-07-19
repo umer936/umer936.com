@@ -12,7 +12,7 @@ The effort focused on mission-support science and tooling updates to improve ana
 - Contributed updates to supporting tools and data workflows.
 - Strengthened readiness for mission-adjacent science analysis.
 
-![Example updates to solar wind around Pluto and SWAP instrument tools](./medias/swri-new-horizons-termination-shock_1.jpg)
+![Example updates to solar wind around Pluto and SWAP instrument tools](./medias/images/swri-new-horizons-termination-shock_1.jpg)
 
 ## Source
 

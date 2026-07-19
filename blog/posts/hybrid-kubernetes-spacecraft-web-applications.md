@@ -1,6 +1,6 @@
 ## Spacecraft Web Applications in a Hybrid Kubernetes Cluster
 
-![Spacecraft Web Applications in a Hybrid Kubernetes Cluster](./posts/hybrid-kubernetes-spacecraft-web-applications_1.png)
+![Spacecraft Web Applications in a Hybrid Kubernetes Cluster](./posts/images/hybrid-kubernetes-spacecraft-web-applications_1.png)
 
 **Type**: Professional
 
@@ -24,7 +24,7 @@ the data, leveraging cloud capabilities.
 
 ### Project Implementation
 
-![Spacecraft Web Applications in a Hybrid Kubernetes Cluster](./posts/hybrid-kubernetes-spacecraft-web-applications_2.png)
+![Spacecraft Web Applications in a Hybrid Kubernetes Cluster](./posts/images/hybrid-kubernetes-spacecraft-web-applications_2.png)
 
 Our project involved the creation of a robust Kubernetes cluster that integrated on-premises servers, a high-performance
 computing cluster for resource-intensive tasks, and Amazon Web Services (AWS). This hybrid setup allowed us to

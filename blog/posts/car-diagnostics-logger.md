@@ -4,7 +4,7 @@
 
 **Role**: Independent Creator
 
-![Car Diagnostics Monitor and Logger](./posts/car-diagnostics-monitor_1.png)
+![Car Diagnostics Monitor and Logger](./posts/images/car-diagnostics-monitor_1.png)
 
 ### Project Overview
 

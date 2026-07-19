@@ -12,9 +12,9 @@ Spaceflight hardware often relies on surface treatments and coatings to manage o
 - It moved from study/design into a completed test effort.
 - It opened vendor discussions around offering this test approach as a client-facing service.
 
-![Flight-analog UV testing setup from SwRI IR&D](./medias/swri-flight-analog-testing-ebonol-c_1.jpg)
+![Flight-analog UV testing setup from SwRI IR&D](./medias/images/swri-flight-analog-testing-ebonol-c_1.jpg)
 
-![ESA UV count-rate results figure from SwRI IR&D](./medias/swri-flight-analog-testing-ebonol-c_2.jpg)
+![ESA UV count-rate results figure from SwRI IR&D](./medias/images/swri-flight-analog-testing-ebonol-c_2.jpg)
 
 ## Mentorship tie-in
 

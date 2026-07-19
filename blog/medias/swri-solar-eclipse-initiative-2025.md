@@ -12,13 +12,13 @@ The project continued eclipse-related outreach and education efforts, building o
 - Supported outreach delivery, demonstrations, and booth/event engagement.
 - Documented updated project outcomes and team contributions.
 
-![Solar Eclipse Initiative 2025 photo 1](./medias/swri-solar-eclipse-initiative-2025_1.jpg)
+![Solar Eclipse Initiative 2025 photo 1](./medias/images/swri-solar-eclipse-initiative-2025_1.jpg)
 
-![Solar Eclipse Initiative 2025 photo 2](./medias/swri-solar-eclipse-initiative-2025_2.jpg)
+![Solar Eclipse Initiative 2025 photo 2](./medias/images/swri-solar-eclipse-initiative-2025_2.jpg)
 
-![Solar Eclipse Initiative 2025 photo 3](./medias/swri-solar-eclipse-initiative-2025_3.jpeg)
+![Solar Eclipse Initiative 2025 photo 3](./medias/images/swri-solar-eclipse-initiative-2025_3.jpeg)
 
-![Solar Eclipse Initiative 2025 photo 4](./medias/swri-solar-eclipse-initiative-2025_4.jpg)
+![Solar Eclipse Initiative 2025 photo 4](./medias/images/swri-solar-eclipse-initiative-2025_4.jpg)
 
 ## Source
 

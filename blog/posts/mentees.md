@@ -28,9 +28,9 @@ I mentored one high school student who designed his own project to test differen
 
 I mentored two high school students in an independent study focused on researching and designing a test for ultraviolet suppression on spaceflight hardware. We later completed that test and reached out to vendors about turning it into a service we can provide to clients.
 
-![Flight-analog UV testing setup from SwRI IR&D](./medias/swri-flight-analog-testing-ebonol-c_1.jpg)
+![Flight-analog UV testing setup from SwRI IR&D](./medias/images/swri-flight-analog-testing-ebonol-c_1.jpg)
 
-![ESA UV count-rate results figure from SwRI IR&D](./medias/swri-flight-analog-testing-ebonol-c_2.jpg)
+![ESA UV count-rate results figure from SwRI IR&D](./medias/images/swri-flight-analog-testing-ebonol-c_2.jpg)
 
 ## Related In the Media
 

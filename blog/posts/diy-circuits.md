@@ -28,7 +28,7 @@ various approaches, including using petroleum jelly, vinegar, and specialized fl
 
 ### **Innovative Solution**
 
-![At Home Circuits](./posts/at-home-circuits_1.png)
+![At Home Circuits](./posts/images/at-home-circuits_1.png)
 
 Leveraging my interest in arts and crafts, I utilized a vinyl cutter (Cricut Maker) to explore new possibilities.
 Initial attempts to cut aluminum foil were unsuccessful due to its fragility. However, I discovered copper sticker

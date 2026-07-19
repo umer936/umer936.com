@@ -12,13 +12,13 @@ The initiative supported science outreach and public engagement around the April
 - Supported hands-on outreach tools and demonstrations.
 - Captured project outcomes across team members and event participation.
 
-![Solar Eclipse Initiative photo 1](./medias/swri-solar-eclipse-initiative-2024_1.jpg)
+![Solar Eclipse Initiative photo 1](./medias/images/swri-solar-eclipse-initiative-2024_1.jpg)
 
-![Solar Eclipse Initiative photo 2](./medias/swri-solar-eclipse-initiative-2024_2.jpg)
+![Solar Eclipse Initiative photo 2](./medias/images/swri-solar-eclipse-initiative-2024_2.jpg)
 
-![Solar Eclipse Initiative photo 3](./medias/swri-solar-eclipse-initiative-2024_3.jpeg)
+![Solar Eclipse Initiative photo 3](./medias/images/swri-solar-eclipse-initiative-2024_3.jpeg)
 
-![Solar Eclipse Initiative photo 4](./medias/swri-solar-eclipse-initiative-2024_4.jpg)
+![Solar Eclipse Initiative photo 4](./medias/images/swri-solar-eclipse-initiative-2024_4.jpg)
 
 ## Source
 

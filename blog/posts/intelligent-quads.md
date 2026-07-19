@@ -19,7 +19,7 @@ extensible base that could bridge this gap in the market.
 
 ### Project Implementation
 
-![Intelligent Quads Drone](./posts/intelligent-quads_1.png)
+![Intelligent Quads Drone](./posts/images/intelligent-quads_1.png)
 
 To address this challenge, we developed a small drone called the 200 IQ, which featured a compact 12x12 inch form
 factor. The drone was equipped with two stereo cameras, one main camera, and a 300-gram payload capacity. It also
