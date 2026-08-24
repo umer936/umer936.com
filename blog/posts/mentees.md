@@ -36,6 +36,7 @@ I mentored two high school students in an independent study focused on researchi
 
 - [SwRI: Flight Analog Testing of Alternatives to Ebonol-C](/blog/#SwRI:%20Flight%20Analog%20Testing%20of%20Alternatives%20to%20Ebonol-C)
 - [Original SwRI source page](https://www.swri.org/what-we-do/internal-research-development/2025/earth-space/flight-analog-testing-of-alternatives-ebonol-c-blackening-electrostatic-analyzers-15-r6606)
+- [Code Equity: About](https://code-equity.org/about.html) — Code Equity’s team page for its free computer science education work.
 
 ## Why this matters to me
 

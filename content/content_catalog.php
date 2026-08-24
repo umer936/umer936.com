@@ -6,6 +6,12 @@ require_once __DIR__ . '/../ProjectCategory.php';
 
 return [
     'posts' => [
+        'Chlorine in Your Tap Water Isn\'t the Problem' => [
+            'url' => 'chlorine-drinking-water.md',
+            'date' => '07/29/2026',
+            'img' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f6b0.svg',
+            'smallText' => 'Countries like Switzerland often skip chlorine residuals not because chlorine is bad, but because their infrastructure is good enough not to need it. The US is different. Until we invest in better systems, chlorine is doing its job.',
+        ],
         'The Growing Problem With Li-ion Batteries in Hot Climates' => [
             'url' => 'lion-battery-heat-problem.md',
             'date' => '06/25/2026',
@@ -148,6 +154,12 @@ return [
             'date' => '07/17/2026',
             'img' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f52c.svg',
             'smallText' => 'SwRI Earth and Space internal R&D feature on flight-analog testing for ultraviolet suppression alternatives used in electrostatic analyzers.',
+        ],
+        'Code Equity: About' => [
+            'url' => 'code-equity-about.md',
+            'date' => '08/24/2026',
+            'img' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f393.svg',
+            'smallText' => 'Code Equity is a nonprofit focused on making free computer science education possible through founders, board members, advisors, instructors, and partners.',
         ],
         'SwRI: Solar Eclipse Initiative (2024, 15-R6395)' => [
             'url' => 'swri-solar-eclipse-initiative-2024.md',
