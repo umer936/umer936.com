@@ -26,13 +26,14 @@ behavior: url(PIE.htc);
 
 <?php
 
+require_once __DIR__ . '/mysql_credentials.php';
+
 $error = "<hr style='border: 20px solid red'><b style='color:red'>
 DX OH NOES! You broke something! Look at what you did! ->";
-$mysql_host = "localhost";
-// $mysql_database = "";
-$mysql_database = "";
-$mysql_user = "";
-$mysql_password = "";
+$mysql_host = $compass_mysql_host;
+$mysql_database = $compass_mysql_database;
+$mysql_user = $compass_mysql_user;
+$mysql_password = $compass_mysql_password;
 
 $conn = mysql_connect($mysql_host, $mysql_user, $mysql_password);
 mysql_select_db($mysql_database);
@@ -44,4 +45,3 @@ if (!$conn)
   }
 
 ?>
-
