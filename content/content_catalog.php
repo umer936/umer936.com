@@ -66,6 +66,12 @@ return [
             'img' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg',
             'smallText' => 'RHEL (e.g. CentOS) guide to upgrading PHP from 7 to 8',
         ],
+        'CakePHP Framework Upgrades: 2.x → 3.x → 4.x' => [
+            'url' => 'cakephp-upgrading.md',
+            'date' => '08/24/2026',
+            'img' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cakephp/cakephp-original.svg',
+            'smallText' => 'Strategies and gotchas for upgrading CakePHP across major versions, including the critical JsHelper migration.',
+        ],
         'FIRST Robotics' => [
             'url' => 'FIRST.md',
             'date' => '08/15/2023',
