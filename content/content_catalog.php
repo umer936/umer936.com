@@ -161,6 +161,12 @@ return [
             'img' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f393.svg',
             'smallText' => 'Code Equity is a nonprofit focused on making free computer science education possible through founders, board members, advisors, instructors, and partners.',
         ],
+        'SwRI SODAS: Where We Use AI' => [
+            'url' => 'swri-sodas-where-we-use-ai.md',
+            'date' => '08/18/2026',
+            'img' => '/SwRI_AI_Talk/img/PHPStorm.png',
+            'smallText' => 'A short SwRI SODAS talk on practical AI usage: start from a demo, use the IDE to accelerate the first pass, and keep humans focused on security, integration, and deployment.',
+        ],
         'SwRI: Solar Eclipse Initiative (2024, 15-R6395)' => [
             'url' => 'swri-solar-eclipse-initiative-2024.md',
             'date' => '04/08/2024',

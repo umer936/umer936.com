@@ -182,6 +182,22 @@ body {
     background: url("/images/newer/umers_assets-2_g218.svg") center/cover;
 }
 
+#postModal .modal-body img {
+    display: block;
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    max-height: 70vh;
+    margin: 1rem auto;
+    object-fit: contain;
+}
+
+#postModal .modal-body p > img:only-child,
+#postModal .modal-body a > img:only-child {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media (min-height: 800px) {
     #hero_image_inset {
         padding-top: 4rem;
