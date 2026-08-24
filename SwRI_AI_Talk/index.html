@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMER SALMAN | Where We Use AI</title>
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/powerup.css">
+    <link rel="stylesheet" href="dist/theme/cards.css">
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <style>
+        .reveal .slides section {
+            text-align: left;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .lead {
+            font-size: 1.2em;
+        }
+
+        .fs-3 {
+            font-size: 1.45em;
+        }
+
+        .fs-4 {
+            font-size: 1.12em;
+        }
+
+        .mb-0 {
+            margin-bottom: 0;
+        }
+
+        .mb-2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .reveal .slides section h1,
+        .reveal .slides section h2 {
+            text-align: center;
+        }
+        .reveal .slides section .compact-list li {
+            margin-bottom: 0.5em;
+        }
+        .reveal .slides section .compact-list li ul {
+            list-style: none;
+            margin: 0.5em 0 0.2em 0;
+            padding-left: 0;
+        }
+        .reveal .slides section .compact-list li ul li {
+            position: relative;
+            font-size: 0.8em;
+            padding-left: 1.5em;
+            margin-bottom: 0.35em;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .reveal .slides section .compact-list li ul li::before {
+            content: "↳";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #39B7CD;
+            text-shadow: 0 0 6px rgba(57, 183, 205, 0.6);
+        }
+        .reveal .slides section .callout {
+            border-left: 4px solid rgba(255, 255, 255, 0.35);
+            padding-left: 1rem;
+        }
+        .reveal .slides section .link-line {
+            word-break: break-word;
+        }
+
+        .example-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+            align-items: start;
+        }
+
+        .examples-slide {
+            font-size: 0.62em;
+        }
+
+        .examples-slide .example-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        .example-card {
+            display: block;
+            border: 1px solid rgba(0, 255, 242, 0.35);
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            background: rgba(255, 255, 255, 0.04);
+            box-shadow: 0 0 12px rgba(0, 255, 242, 0.08);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+        }
+
+        .example-card:hover {
+            border-color: #fffa00;
+            box-shadow: 0 0 20px rgba(255, 250, 0, 0.25);
+            transform: translateY(-3px);
+        }
+
+        .example-title {
+            display: block;
+            font-family: 'Orbitron', sans-serif;
+            color: #39B7CD;
+            text-transform: uppercase;
+            font-size: 1.15em;
+            margin-bottom: 0.4em;
+            text-shadow: 0 0 8px rgba(57, 183, 205, 0.4);
+        }
+
+        .example-card p {
+            margin: 0;
+            color: var(--r-main-color, #E6E6FA);
+            font-size: 0.95em;
+            line-height: 1.4;
+        }
+
+        .shot-card {
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            display: block;
+        }
+
+        .shot-card img {
+            width: 100%;
+            display: block;
+            border-radius: 0.35rem;
+            cursor: pointer;
+        }
+
+        .shot-caption {
+            margin-top: 0.6rem;
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .takeaway-block {
+            max-width: 44rem;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        .talk-footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <div class="title-container text-center">
+                    <h1>Where We Use AI</h1>
+                    <p class="lead fs-3 mb-2">10 to 15 minutes on the part that saves the most time.</p>
+                    <p class="fs-4 mb-0">Umer Salman · Joey Mukherjee · Steven Ybarra</p>
+                </div>
+            </section>
+            <section>
+                <h2>Start with a demo, not a blank page</h2>
+                <ul class="compact-list fs-4">
+                    <li class="link-line"><a href="https://lamp.space.swri.edu/cumulative-maps-all" target="_blank" rel="noreferrer">lamp.space.swri.edu/cumulative-maps-all</a></li>
+                    <li>The tedious stuff is the hard part: the gaps, the handholding, the map projection details.</li>
+                    <li>It is easier to see a demo and decide that A is better than B than to start from zero.</li>
+                    <li>AI helps us leapfrog the setup so we get to discovery faster.</li>
+                    <li class="callout">Instead of saying, &ldquo;let us get started,&rdquo; we are already on &ldquo;what is next?&rdquo;</li>
+                </ul>
+            </section>
+            <section class="examples-slide">
+                <h2>Some other examples</h2>
+                <div class="example-grid">
+                    <a class="example-card" href="https://geoviz.space.swri.edu" target="_blank" rel="noreferrer">
+                        <span class="example-title">GeoViz MetaKernel Coverage</span>
+                        <p>Start from the existing plotting code and is able to just run BRIEF and CKBRIEF.</p>
+                    </a>
+                    <a class="example-card" href="https://clipperuvs.space.swri.edu/directory-browsers/gallery-native?dirKey=1" target="_blank" rel="noreferrer">
+                        <span class="example-title">Share Drive gallery</span>
+                        <p>A tool that may not be as scientifically interesting but can be useful for everyday tasks of a project.</p>
+                    </a>
+                    <a class="example-card" href="https://umer936.github.io/datetimepicker.js/" target="_blank" rel="noreferrer">
+                        <span class="example-title">datetimepicker.js</span>
+                        <p>A replacement for an old timepicker, allowing me to remove dependencies and make it more useful.</p>
+                    </a>
+                    <a class="example-card" href="https://936balloons.org/" target="_blank" rel="noreferrer">
+                        <span class="example-title">936balloons.org</span>
+                        <p>A fun one: sometimes the best demo is just something playful enough to make the point stick.</p>
+                    </a>
+                </div>
+            </section>
+
+            <section>
+                <h2>How I actually use it</h2>
+                <div class="example-grid fs-4">
+                    <a class="shot-card" href="img/PHPStorm.png" target="_blank" rel="noreferrer">
+                        <img src="img/PHPStorm.png" alt="Using AI in PHPStorm">
+                        <div class="shot-caption">Using AI right in the IDE so the tool stays close to the code.</div>
+                    </a>
+                    <a class="shot-card" href="img/Inline_editing.png" target="_blank" rel="noreferrer">
+                        <img src="img/Inline_editing.png" alt="Selecting code changes inline">
+                        <div class="shot-caption">Then I select the code changes inline. I don't trust it always.</div>
+                    </a>
+                </div>
+            </section>
+            <section>
+                <h2>What it costs</h2>
+                <ul class="compact-list fs-4">
+                    <li>SwRI has a GitHub Copilot subscription (ask ITC) you can use in your IDE.</li>
+                    <li>That is about $20 per seat each month, plus usage.</li>
+                    <li>I use about 22k credits per month, which works out to roughly $110.
+                        <ul>
+                            <li>This talk was 122 credits, which is about $0.61.</li>
+                        </ul>
+                    </li>
+                    <li>That is tiny compared with how far it gets us, compared to the time otherwise.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>What happens after the AI</h2>
+                <ul class="compact-list fs-4">
+                    <li>Then the work shifts to connecting it with the actual data sources.</li>
+                    <li>You have to think about security, especially when a file upload could wipe a database.</li>
+                    <li>That is where containers help: package the tool, ship it to better computers, and make it more usable and accessible.</li>
+                    <li>We also pull in ideas from tools and workflows that already work elsewhere.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>The gotchas</h2>
+                <ul class="compact-list fs-4">
+                    <li>There is certainly over-optimization and hype in the market.</li>
+                    <li>OpenAI, Anthropic, and others will all tell you the next model is wildly better.</li>
+                    <li>In practice, I have found Claude is often better for GUI work, so I will switch to that, but then I usually switch back to Auto.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Takeaway</h2>
+                <p class="takeaway-block fs-3">
+                    AI helps us skip the tedious first pass so we can spend more time on discovery, architecture, and the parts that actually move the work forward.
+                </p>
+            </section>
+        </div>
+        <footer class="talk-footer">SwRI SODAS (Umer Salman) | 08/18/2026</footer>
+    </div>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script>
+        Reveal.initialize({ hash: true, plugins: [RevealNotes] });
+    </script>
+</body>
+</html>
