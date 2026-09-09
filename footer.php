@@ -1,3 +1,9 @@
+<?php
+$siteStartYear = 2014;
+$siteCurrentYear = (int) date('Y');
+$siteLastUpdated = '09/09/2026';
+?>
+
 <footer class="container-fluid pt-2 pb-3 mt-4">
     <div class="row border-top pt-4 border-3">
         <div class="col-4 align-self-end">
@@ -5,11 +11,11 @@
         </div>
         <div class="col-4 text-center">
             <div class="row">
-                <span class="col-12">©2014-2026 Umer Salman</span>
+                <span class="col-12">©<?= $siteStartYear ?>-<?= $siteCurrentYear ?> Umer Salman</span>
                 <span class="col-12">Design by
                     <a href="https://www.behance.net/ficklative" target="_blank">Rosalynn Alejandro (@ficklative)</a>
                 </span>
-                <span class="col-12">Last updated: 03/31/2026</span>
+                <span class="col-12">Last updated: <?= $siteLastUpdated ?></span>
                 <div class="col-12">
                     <a href="javascript:alert('Privacy is dead');">Privacy Policy</a>
                     <!--look ma, no cookies-->

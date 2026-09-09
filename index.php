@@ -63,7 +63,7 @@ require_once 'ProjectCategory.php';
 
     <div id="yearSlider" class="container svg-section-background col-9 mx-auto my-4 px-4 py-3">
         <label for="yearRange" class="form-label">Filter by year: <span id="yearSelected"></span></label>
-        <input type="range" class="form-range emoji-slider" min="2014" max="2023" id="yearRange">
+        <input type="range" class="form-range emoji-slider" min="2014" max="<?= date('Y') ?>" id="yearRange">
     </div>
 
     <div class="container my-2">
