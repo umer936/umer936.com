@@ -116,6 +116,17 @@ uasort($mediaPosts, static function ($a, $b) {
         </div>
     </div>
 
+    <style>
+        #postModal .modal-body img {
+            display: block;
+            max-width: 100%;
+            max-height: 70vh;
+            width: auto;
+            height: auto;
+            margin: 1rem auto;
+        }
+    </style>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             new bootstrap.Modal(document.getElementById('postModal'), {
@@ -150,6 +161,7 @@ uasort($mediaPosts, static function ($a, $b) {
                     .then(response => response.text())
                     .then(data => {
                         modalBody.innerHTML = data;
+
 
                         // Keep users on the blog page when opening external references.
                         modalBody.querySelectorAll('a[href]').forEach(link => {

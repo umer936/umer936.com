@@ -9,7 +9,7 @@ return [
         'Read Later Apps' => [
             'url' => 'read-later-apps.md',
             'date' => '09/20/2026',
-            'img' => '/blog/posts/images/read-later-apps/Linkwarden.png',
+            'img' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f516.svg',
             'smallText' => 'Pocket is dead, so I compared a few self-hosted read-later options: ReadDeck, Karakeep, Linkwarden, Wallabag, and Shiori. Linkwarden and Wallabag came out on top.',
         ],
         'Chlorine in Your Tap Water Isn\'t the Problem' => [

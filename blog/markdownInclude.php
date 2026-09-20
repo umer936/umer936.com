@@ -17,4 +17,13 @@ $markdownContent = file_get_contents($postPath);
 $parser = new Parsedown();
 $htmlContent = $parser->text($markdownContent);
 
+$requestBasePath = rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? '')), '/');
+if ($requestBasePath !== '') {
+	$htmlContent = preg_replace(
+		'/(<img\b[^>]*\bsrc=")\.\//i',
+		'$1' . $requestBasePath . '/',
+		$htmlContent
+	);
+}
+
 echo $htmlContent;
