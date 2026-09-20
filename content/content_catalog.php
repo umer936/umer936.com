@@ -6,6 +6,12 @@ require_once __DIR__ . '/../ProjectCategory.php';
 
 return [
     'posts' => [
+        'Read Later Apps' => [
+            'url' => 'read-later-apps.md',
+            'date' => '09/20/2026',
+            'img' => '/blog/posts/images/read-later-apps/Linkwarden.png',
+            'smallText' => 'Pocket is dead, so I compared a few self-hosted read-later options: ReadDeck, Karakeep, Linkwarden, Wallabag, and Shiori. Linkwarden and Wallabag came out on top.',
+        ],
         'Chlorine in Your Tap Water Isn\'t the Problem' => [
             'url' => 'chlorine-drinking-water.md',
             'date' => '07/29/2026',
