@@ -1,4 +1,4 @@
-<?
+<?php
 include '/analytics.php'; 
 ?>
 <script src="html2canvas.js"></script>
