@@ -21,4 +21,5 @@ Sights to see:
 
 ## Maintainer docs
 
+- Run [`setup.ps1`](setup.ps1) from PowerShell after cloning to initialize all submodules and keep `resume-cv` sparse to the current resume PDF.
 - Content standards for projects/blog/media live in [`content/CONTENT_STYLE_GUIDE.md`](content/CONTENT_STYLE_GUIDE.md).
