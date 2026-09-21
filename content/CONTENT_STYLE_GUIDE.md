@@ -26,6 +26,7 @@ Each entry should have:
 - `date`: `MM/DD/YYYY`
 - `img`: icon or image URL/path
 - `smallText`: 1-2 sentence preview (target 120-220 chars)
+- `categories`: one or more `ContentCategory::...` values for filtering
 
 Optional:
 
@@ -54,6 +55,7 @@ Each project should have:
 Optional:
 
 - `link`: one primary CTA, e.g. blog post, demo, repo, or talk
+- `img`: optional project image path/URL shown on the card
 
 Example:
 

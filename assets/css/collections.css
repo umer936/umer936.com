@@ -1,0 +1,65 @@
+#yearSlider {
+    font-family: Quicksand, sans-serif;
+    background-image: url('/images/newer/section_bg_g194.svg');
+}
+
+.emoji-slider::-webkit-slider-thumb,
+.emoji-slider::-moz-range-thumb,
+.emoji-slider::-ms-thumb {
+    width: 30px;
+    height: 30px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">📅</text></svg>') center/contain no-repeat;
+    border: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.emoji-slider::-webkit-slider-runnable-track,
+.emoji-slider::-moz-range-track,
+.emoji-slider::-ms-track {
+    background: var(--purple);
+}
+
+.collection-grid .projCard,
+.collection-grid .collection-card {
+    margin-bottom: 1rem;
+}
+
+.collection-card-image {
+    object-fit: cover;
+}
+
+.project-card-image {
+    width: 100%;
+    max-height: 220px;
+}
+
+.content-card-image {
+    max-height: 160px;
+    width: 100%;
+}
+
+.collection-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    justify-content: center;
+}
+
+.collection-controls .btn-site.active,
+.collection-controls .btn-site[aria-pressed="true"] {
+    background: url('/images/newer/btn-site-active.svg') center no-repeat !important;
+}
+
+.collection-section-title {
+    margin-top: 2rem;
+}
+
+#postModal .modal-body img {
+    display: block;
+    max-width: 100%;
+    max-height: 70vh;
+    width: auto;
+    height: auto;
+    margin: 1rem auto;
+}

@@ -1,6 +1,7 @@
 <?php
 include_once 'header.php';
 require_once 'ProjectCategory.php';
+$sectionHeaderClasses = $sectionHeaderClasses ?? 'container fs-1 text-center mt-5 section-header fw-bold';
 ?>
     <div class="hero_image">
         <div class="col-12" id="hero_image_inset">
@@ -38,40 +39,7 @@ require_once 'ProjectCategory.php';
         My works
     </h2>
 
-    <div class="container py-1 text-center">
-        <?php
-        $btnClasses = "btn btn-site fs-4 py-0 m-2";
-        ?>
-        <button id="shuffleButton" class="<?= $btnClasses ?>">🔀 Shuffle</button>
-        <button id="filterClearButton" class="<?= $btnClasses ?>">Clear filters</button>
-        <?php
-        foreach (ProjectCategory::$ALL as $categoryId => $category) {
-            $colorClasses = $category['colorClasses'];
-            $text = $category['text'];
-            echo "<input type=\"checkbox\" class=\"btn-check\" data-category-id='$categoryId' id=\"btn-check-$categoryId\" autocomplete=\"off\">";
-            echo "<label class=\"$btnClasses btn-checkboxes\" for=\"btn-check-$categoryId\">$text</label>";
-        }
-        ?>
-
-        <script>
-            document.querySelectorAll('.btn-checkboxes')
-                .forEach(btnCheckbox => btnCheckbox.addEventListener('click', function () {
-                    btnCheckbox.classList.toggle('active');
-                }));
-        </script>
-    </div>
-
-    <div id="yearSlider" class="container svg-section-background col-9 mx-auto my-4 px-4 py-3">
-        <label for="yearRange" class="form-label">Filter by year: <span id="yearSelected"></span></label>
-        <input type="range" class="form-range emoji-slider" min="2014" max="<?= date('Y') ?>" id="yearRange">
-    </div>
-
-    <div class="container my-2">
-        <div id="noItemsMessage" class="d-none bg-success-subtle text-center">No projects after filter :(</div>
-        <?php
-        include_once 'projects.php';
-        ?>
-    </div>
+    <?php include_once 'projects.php'; ?>
 
 
     <h2 class="<?= $sectionHeaderClasses ?>">

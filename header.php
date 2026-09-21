@@ -16,14 +16,14 @@
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://umer936.com">
     <title>Umer Salman</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-          crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css"
+          rel="stylesheet">
     <link href="/newer.min.css" rel="stylesheet" as="style">
+    <link href="/assets/css/collections.css" rel="stylesheet" as="style">
 
     <?php
-    $currentURL = $_SERVER['REQUEST_URI'];
+    $currentPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?: '/';
     $navItems = [
             '/' => ['label' => 'home', 'color' => 'blue'],
             '/blog/' => ['label' => 'blog', 'color' => 'red'],
@@ -37,15 +37,15 @@
     $blue = '#6CE0F1';
     //        $blue = '#3987CD';
 
-    function generateLinkClass($currentURL, $targetURL)
+    function generateLinkClass($currentPath, $targetURL)
     {
-        return ($currentURL === $targetURL) ? 'active' : '';
+        return ($currentPath === $targetURL) ? 'active' : '';
     }
 
-    function generateLinkStyle($currentURL, $targetURL, $color)
+    function generateLinkStyle($currentPath, $targetURL, $color)
     {
         $style = "color: var(--$color);";
-        if ($currentURL === $targetURL) {
+        if ($currentPath === $targetURL) {
             $style .= "border-bottom: 5px solid var(--$color) !important;";
         }
 
@@ -62,32 +62,31 @@
     $logoLink = '/images/newer/logo_group_g464.svg';
     $sectionHeaderClasses = "container fs-1 text-center mt-5 section-header fw-bold";
     foreach ($navItems as $url => $item) {
-        if ($currentURL === $url) {
+        if ($currentPath === $url) {
             $itemColor = $item['color'];
             $logoLink = "/images/newer/logo_group_g464-$itemColor.svg";
             ?>
             <style>
-                :root {
-                    --<?= $itemColor ?>-translucent: <?= calculateTranslucentColor($$itemColor, 0.85) ?>;
-                    --bs-border-color: var(--<?= $itemColor ?>-translucent);
-                }
-
                 .card {
-                    --bs-card-border-color: <?= calculateTranslucentColor($$itemColor, 0.29) ?>;
+                    border-color: <?= calculateTranslucentColor($$itemColor, 0.29) ?>;
                 }
 
                 #logo-text {
-                    color: var(--<?= $itemColor ?>);
+                    color: <?= $$itemColor ?>;
                 }
 
                 .section-header {
-                    color: var(--<?= $itemColor ?>-translucent);
+                    color: <?= calculateTranslucentColor($$itemColor, 0.85) ?>;
                 }
             </style>
             <?php
         }
     }
     ?>
+    <link rel="preload" as="image" href="<?= htmlspecialchars($logoLink, ENT_QUOTES) ?>">
+    <?php if ($currentPath === '/') { ?>
+        <link rel="preload" as="image" href="/images/newer/umers_banner.svg">
+    <?php } ?>
 </head>
 <body>
 <nav class="navbar sticky-top navbar-expand-lg bg-nav">
@@ -111,8 +110,8 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-4 gap-2">
                 <?php foreach ($navItems as $url => $item) : ?>
                     <li class="nav-item">
-                        <a class="nav-link <?= generateLinkClass($currentURL, $url) ?>"
-                           style="<?= generateLinkStyle($currentURL, $url, $item['color']) ?>"
+                        <a class="nav-link <?= generateLinkClass($currentPath, $url) ?>"
+                           style="<?= generateLinkStyle($currentPath, $url, $item['color']) ?>"
                            href="<?= $url ?>">
                             <?= $item['label'] ?>
                         </a>

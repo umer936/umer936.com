@@ -58,21 +58,25 @@
 @font-face {
     font-family: "Mecha";
     src: url("/fonts/mecha_cf/Mecha.ttf") format("truetype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Quicksand";
-    src: url("/fonts/Quicksand.woff") format("truetype");
+    src: url("/fonts/Quicksand.woff") format("woff");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "OpenSans";
     src: url("/fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Play";
-    src: url("/fonts/Play.woff") format("truetype");
+    src: url("/fonts/Play.woff") format("woff");
+    font-display: swap;
 }
 
 .section-header {
