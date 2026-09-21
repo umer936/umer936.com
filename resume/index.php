@@ -1,6 +1,6 @@
 <?php
 include_once '../header.php';
-$resumePdf = '../resume-cv/Resume.pdf';
+$resumePdf = 'pdf.php';
 ?>
 
 <div id="pdf-container">
@@ -12,7 +12,7 @@ $resumePdf = '../resume-cv/Resume.pdf';
 </div>
 
 <div id="pdf-error-message" class="d-none">
-    <p>There was an issue loading the PDF. You can <a href="<?= htmlspecialchars($resumePdf, ENT_QUOTES) ?>">download it here</a>.</p>
+    <p>There was an issue loading the PDF. You can <a href="<?= htmlspecialchars($resumePdf, ENT_QUOTES) ?>?download=1">download it here</a>.</p>
 </div>
 
 <script>

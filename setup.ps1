@@ -21,6 +21,20 @@ function Get-ResumePdfPath {
     throw "Could not find a resume PDF in $SubmodulePath."
 }
 
+function Get-ResumeSymlinkTarget {
+    param(
+        [string]$SubmodulePath
+    )
+
+    $entry = git -C $SubmodulePath ls-tree -l HEAD -- Resume.pdf
+    if ($entry -match '^120000\s+blob\s+\S+\s+\S+\s+Resume\.pdf$') {
+        $target = git -C $SubmodulePath show HEAD:Resume.pdf
+        return $target.Trim()
+    }
+
+    return $null
+}
+
 Push-Location $RepoRoot
 try {
     git submodule update --init --recursive
@@ -31,10 +45,16 @@ try {
     }
 
     $resumePdf = Get-ResumePdfPath -SubmodulePath $resumeSubmodule
-    git -C $resumeSubmodule sparse-checkout init --no-cone | Out-Null
-    git -C $resumeSubmodule sparse-checkout set --no-cone $resumePdf | Out-Null
+    $paths = @($resumePdf)
+    $resumeTarget = Get-ResumeSymlinkTarget -SubmodulePath $resumeSubmodule
+    if ($resumeTarget) {
+        $paths += "/$resumeTarget"
+    }
 
-    Write-Host "Initialized submodules and sparse-checked resume-cv to $resumePdf"
+    git -C $resumeSubmodule sparse-checkout init --no-cone | Out-Null
+    git -C $resumeSubmodule sparse-checkout set --no-cone @paths | Out-Null
+
+    Write-Host "Initialized submodules and sparse-checked resume-cv to $($paths -join ', ')"
 }
 finally {
     Pop-Location
