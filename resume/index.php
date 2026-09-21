@@ -1,6 +1,6 @@
 <?php
 include_once '../header.php';
-$resumePdf = '../resume-cv/2023_Resume.pdf';
+$resumePdf = '../resume-cv/Resume.pdf';
 ?>
 
 <div id="pdf-container">
