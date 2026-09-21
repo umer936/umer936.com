@@ -6,16 +6,57 @@ if ($resumeRoot === false) {
 }
 
 $download = isset($_GET['download']);
-$candidates = [
-    $resumeRoot . DIRECTORY_SEPARATOR . 'Resume.pdf',
-    $resumeRoot . DIRECTORY_SEPARATOR . 'output_pdfs' . DIRECTORY_SEPARATOR . '2023_Resume.pdf',
-];
+$trackedFiles = [];
+$returnCode = 0;
+exec('git -C ' . escapeshellarg($resumeRoot) . ' ls-tree -r --name-only HEAD', $trackedFiles, $returnCode);
+
+if ($returnCode !== 0) {
+    http_response_code(500);
+    exit('Could not inspect resume repository.');
+}
+
+$pdfCandidates = array_values(array_filter($trackedFiles, static function ($path) {
+    return preg_match('/\.pdf$/i', $path);
+}));
 
 $pdfPath = null;
-foreach ($candidates as $candidate) {
-    if (is_file($candidate) && is_readable($candidate)) {
-        $pdfPath = $candidate;
-        break;
+$pdfDownloadName = null;
+
+$rootLevelCandidates = array_values(array_filter($pdfCandidates, static function ($path) {
+    return strpos($path, '/') === false;
+}));
+
+if (!empty($rootLevelCandidates)) {
+    $preferredRoot = in_array('Resume.pdf', $rootLevelCandidates, true)
+        ? 'Resume.pdf'
+        : $rootLevelCandidates[0];
+
+    $preferredRootPath = $resumeRoot . DIRECTORY_SEPARATOR . $preferredRoot;
+    if (is_file($preferredRootPath) && is_readable($preferredRootPath)) {
+        $pdfPath = $preferredRootPath;
+        $pdfDownloadName = basename($preferredRootPath);
+    }
+}
+
+if ($pdfPath === null) {
+    $currentOutputCandidates = array_values(array_filter($pdfCandidates, static function ($path) {
+        return str_starts_with($path, 'output_pdfs/') && !str_starts_with($path, 'output_pdfs/old/');
+    }));
+
+    if (!empty($currentOutputCandidates)) {
+        $preferredOutputPath = $resumeRoot . DIRECTORY_SEPARATOR . $currentOutputCandidates[0];
+        if (is_file($preferredOutputPath) && is_readable($preferredOutputPath)) {
+            $pdfPath = $preferredOutputPath;
+            $pdfDownloadName = basename($preferredOutputPath);
+        }
+    }
+}
+
+if ($pdfPath === null && !empty($pdfCandidates)) {
+    $fallbackPath = $resumeRoot . DIRECTORY_SEPARATOR . $pdfCandidates[0];
+    if (is_file($fallbackPath) && is_readable($fallbackPath)) {
+        $pdfPath = $fallbackPath;
+        $pdfDownloadName = basename($fallbackPath);
     }
 }
 
@@ -26,7 +67,7 @@ if ($pdfPath === null) {
 
 header('Content-Type: application/pdf');
 header('Content-Length: ' . filesize($pdfPath));
-header('Content-Disposition: ' . ($download ? 'attachment' : 'inline') . '; filename="Resume.pdf"');
+header('Content-Disposition: ' . ($download ? 'attachment' : 'inline') . '; filename="' . $pdfDownloadName . '"');
 header('X-Content-Type-Options: nosniff');
 
 readfile($pdfPath);
