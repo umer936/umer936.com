@@ -17,3 +17,7 @@
 	path = talks
 	url = https://github.com/umer936/conference-talks.git
 	branch = main
+[submodule "resume-cv"]
+	path = resume-cv
+	url = https://github.com/umer936/My-Resume-CV.git
+	branch = master
