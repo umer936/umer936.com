@@ -206,6 +206,13 @@ return [
     ],
     'projects' => [
         [
+            'title' => 'Rhythm (Project Tracker)',
+            'text' => 'A personal planner for tracking goals, daily habits, and projects, with contact follow-ups to help keep in touch.',
+            'years' => '2026-2026',
+            'categories' => [ProjectCategory::SOFTWARE],
+            'link' => ['title' => 'View App', 'link' => '/proj_tracker/'],
+        ],
+        [
             'title' => 'Aceso',
             'text' => 'Harnessing Technology to Support Children\'s Mental Health. Senior design project combining engineering and mental health awareness.',
             'years' => '2019-2020',
