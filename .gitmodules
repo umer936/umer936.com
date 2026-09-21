@@ -13,3 +13,7 @@
 [submodule "proj_tracker"]
 	path = proj_tracker
 	url = https://github.com/umer936/personal-project-tracker.git
+[submodule "talks"]
+	path = talks
+	url = https://github.com/umer936/conference-talks.git
+	branch = main

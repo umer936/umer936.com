@@ -37,16 +37,13 @@ ErrorDocument 404 /404.php
 # Prevent directory listing
 Options -Indexes
 
-# Conference talks redirects - maintain backward compatibility with old URLs
-# These redirect requests to old paths to the new submodule location
+# Conference talk URL compatibility
+# Requests for matching top-level talk directories are internally rewritten to /talks.
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
 
-    # Redirect /cakefest-* and conference talk directories to submodule
-    RewriteRule ^cakefest-2023(/.*)?$ conference-talks/talks/cakefest-2023$1 [L]
-    RewriteRule ^cakefest-2024(/.*)?$ conference-talks/talks/cakefest-2024$1 [L]
-    RewriteRule ^cakefest-2025(/.*)?$ conference-talks/talks/cakefest-2025$1 [L]
-    RewriteRule ^SwRI_AI_Talk(/.*)?$ conference-talks/talks/SwRI_AI_Talk$1 [L]
-    RewriteRule ^TMI-2026(/.*)?$ conference-talks/talks/TMI-2026$1 [L]
+    # Serve old top-level talk URLs from a matching directory in /talks.
+    RewriteCond %{DOCUMENT_ROOT}/talks/$1 -d
+    RewriteRule ^([^/]+)(/.*)?$ talks/$1$2 [L]
 </IfModule>
