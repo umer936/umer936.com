@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Idle Notation Calculator</title>
+<meta name="description" content="A calculator for idle/incremental games using K, M, B, T, AA, BB... large-number notation.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Idle Notation Calculator</h1>
+  <p>Built for idle/incremental games that use big-number suffixes like
+    <code>K</code>, <code>M</code>, <code>B</code>, <code>T</code>, <code>AA</code>, <code>BB</code> ... and beyond.</p>
+</header>
+
+<div class="card">
+  <div class="tabs">
+    <button class="tab-button active" data-tab="tab-basic">Basic Math</button>
+    <button class="tab-button" data-tab="tab-ttg">Time to Goal</button>
+    <button class="tab-button" data-tab="tab-rate">Rate Needed</button>
+    <button class="tab-button" data-tab="tab-proj">Projected Earnings</button>
+  </div>
+
+  <!-- Basic arithmetic -->
+  <section id="tab-basic" class="tab-panel active">
+    <div class="row">
+      <div class="field">
+        <label for="basicA">Value A</label>
+        <input id="basicA" type="text" placeholder="e.g. 330LL">
+      </div>
+      <div class="field" style="max-width: 90px;">
+        <label for="basicOp">Op</label>
+        <select id="basicOp">
+          <option value="+">+</option>
+          <option value="-">−</option>
+          <option value="*">×</option>
+          <option value="/" selected>÷</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="basicB">Value B</label>
+        <input id="basicB" type="text" placeholder="e.g. 40JJ">
+      </div>
+    </div>
+    <button class="calculate" id="basicCalc">Calculate</button>
+    <div class="result-box" id="basicResult"></div>
+  </section>
+
+  <!-- Time to goal -->
+  <section id="tab-ttg" class="tab-panel">
+    <div class="field">
+      <label for="ttgGoal">Goal amount</label>
+      <input id="ttgGoal" type="text" placeholder="e.g. 1AA">
+    </div>
+    <div class="field">
+      <label for="ttgCurrent">Current amount (optional, default 0)</label>
+      <input id="ttgCurrent" type="text" placeholder="e.g. 250M">
+    </div>
+    <div class="field">
+      <label for="ttgRate">Rate per second</label>
+      <input id="ttgRate" type="text" placeholder="e.g. 40JJ">
+    </div>
+    <button class="calculate" id="ttgCalc">Calculate time to goal</button>
+    <div class="result-box" id="ttgResult"></div>
+  </section>
+
+  <!-- Rate needed -->
+  <section id="tab-rate" class="tab-panel">
+    <div class="field">
+      <label for="rnGoal">Goal amount</label>
+      <input id="rnGoal" type="text" placeholder="e.g. 1AA">
+    </div>
+    <div class="field">
+      <label for="rnCurrent">Current amount (optional, default 0)</label>
+      <input id="rnCurrent" type="text" placeholder="e.g. 250M">
+    </div>
+    <div class="row">
+      <div class="field">
+        <label for="rnTime">Time available</label>
+        <input id="rnTime" type="number" step="any" placeholder="e.g. 30">
+      </div>
+      <div class="field">
+        <label for="rnUnit">Unit</label>
+        <select id="rnUnit">
+          <option value="seconds">Seconds</option>
+          <option value="minutes">Minutes</option>
+          <option value="hours">Hours</option>
+          <option value="days" selected>Days</option>
+          <option value="years">Years</option>
+        </select>
+      </div>
+    </div>
+    <button class="calculate" id="rnCalc">Calculate rate needed</button>
+    <div class="result-box" id="rnResult"></div>
+  </section>
+
+  <!-- Projected earnings -->
+  <section id="tab-proj" class="tab-panel">
+    <div class="field">
+      <label for="projRate">Rate per second</label>
+      <input id="projRate" type="text" placeholder="e.g. 40JJ">
+    </div>
+    <div class="row">
+      <div class="field">
+        <label for="projTime">Time</label>
+        <input id="projTime" type="number" step="any" placeholder="e.g. 3">
+      </div>
+      <div class="field">
+        <label for="projUnit">Unit</label>
+        <select id="projUnit">
+          <option value="seconds">Seconds</option>
+          <option value="minutes">Minutes</option>
+          <option value="hours" selected>Hours</option>
+          <option value="days">Days</option>
+          <option value="years">Years</option>
+        </select>
+      </div>
+    </div>
+    <div class="field">
+      <label for="projStart">Starting amount (optional, default 0)</label>
+      <input id="projStart" type="text" placeholder="e.g. 250M">
+    </div>
+    <button class="calculate" id="projCalc">Calculate projection</button>
+    <div class="result-box" id="projResult"></div>
+  </section>
+
+  <div class="settings">
+    <label for="precision">Decimal precision:</label>
+    <input id="precision" type="number" min="0" max="10" value="2">
+  </div>
+</div>
+
+<details class="reference">
+  <summary>Notation reference</summary>
+  <table>
+    <tr><th>Suffix</th><th>Power of 10</th></tr>
+    <tr><td>K</td><td>10³ (thousand)</td></tr>
+    <tr><td>M</td><td>10⁶ (million)</td></tr>
+    <tr><td>B</td><td>10⁹ (billion)</td></tr>
+    <tr><td>T</td><td>10¹² (trillion)</td></tr>
+    <tr><td>AA, BB, ... ZZ</td><td>10¹⁵ – 10⁹⁰</td></tr>
+    <tr><td>AAA, BBB, ... ZZZ</td><td>10⁹³ – 10¹⁶⁸</td></tr>
+    <tr><td>AAAA, BBBB, ...</td><td>keeps going forever, +3 zeros per letter step</td></tr>
+  </table>
+</details>
+
+<footer>
+  <p>Part of <a href="/">umer936</a>'s IdleCalc project.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

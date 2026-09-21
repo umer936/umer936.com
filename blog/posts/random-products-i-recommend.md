@@ -1,0 +1,5 @@
+- usbc otg dongle
+- usbc ir blaster
+- odbii reader
+- tire compressor - https://www.amazon.com/AstroAI-Portable-Compressor-Inflator-Motorcycle/dp/B07QR4Q42L?crid=1P5KVYS76U3PO&keywords=car%2Btire%2Bpump&qid=1667951453&sprefix=car%2Btire%2B%2Caps%2C157&sr=8-3&linkCode=sl1&tag=dealcars-20&linkId=2e66eedeeb1adf70674ca40b9222ddd8&language=en_US&ref_=as_li_ss_tl&th=1 , https://www.amazon.com/dp/B07T6DQC54
+- jumper battery

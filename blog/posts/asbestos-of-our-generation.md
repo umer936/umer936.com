@@ -1,0 +1,10 @@
+- Microplastics
+- PFAS
+- Obesity (sugar, kinda fat, hfcs (corn subsidies))
+- Soda, energy drinks
+- Drinking
+- Weed, vapes
+- Fossil fuels
+- Cars
+- No walking
+- Caffeine 

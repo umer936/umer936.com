@@ -1,0 +1,11 @@
+- buttons 
+- passwords
+- Phones
+- webapp chats / tech support
+- user manuals
+- PDFs?
+- green screens
+- forms
+- YAML / config files
+- bash
+- Captchas
