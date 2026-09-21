@@ -10,3 +10,6 @@
 [submodule "2016scouting"]
 	path = scouting
 	url = https://github.com/umer936/Scouting.git
+[submodule "proj_tracker"]
+	path = proj_tracker
+	url = https://github.com/umer936/personal-project-tracker.git
